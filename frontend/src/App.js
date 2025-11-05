@@ -2,27 +2,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import { Line } from "react-chartjs-2";
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend,
-} from 'chart.js';
-
-// Register Chart.js components
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend
-);
+import "chart.js/auto";
 
 function App() {
   const [iocs, setIocs] = useState({});
@@ -196,35 +176,6 @@ function App() {
         tension: 0.4,
       },
     ],
-  };
-
-  const chartOptions = {
-    responsive: true,
-    plugins: {
-      legend: {
-        labels: {
-          color: "#fff"
-        }
-      }
-    },
-    scales: {
-      x: {
-        ticks: {
-          color: "#ccc"
-        },
-        grid: {
-          color: "rgba(255,255,255,0.1)"
-        }
-      },
-      y: {
-        ticks: {
-          color: "#ccc"
-        },
-        grid: {
-          color: "rgba(255,255,255,0.1)"
-        }
-      }
-    }
   };
 
   return (
@@ -411,7 +362,7 @@ function App() {
 
         {/* 🔹 Real-time Graph */}
         <div style={{ marginTop: "20px" }}>
-          <Line data={chartData} options={chartOptions} />
+          <Line data={chartData} options={{ responsive: true, plugins: { legend: { labels: { color: "#fff" } } }, scales: { x: { ticks: { color: "#ccc" } }, y: { ticks: { color: "#ccc" } } } }} />
         </div>
       </div>
 
