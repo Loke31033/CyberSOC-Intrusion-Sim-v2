@@ -1,6 +1,6 @@
 from flask import Flask, jsonify, send_file, request
 from flask_cors import CORS
-import os, json, threading, subprocess, psutil, platform, time
+import os, json, threading, subprocess, psutil, platform, time, random
 from datetime import datetime
 
 app = Flask(__name__)
@@ -44,14 +44,76 @@ def get_timeline():
                 timeline.append({"timestamp": timestamp, "description": desc})
     return jsonify(timeline)
 
+# ✅ Enhanced Smart Sensor API with live simulation
 @app.route('/api/sensors')
 def get_sensors():
-    path = os.path.join(REPORTS_DIR, 'sensor_findings.txt')
-    if not os.path.exists(path):
-        return jsonify({"sensor_findings": []})
-    with open(path) as f:
-        findings = [l for l in f.read().splitlines() if l.strip()]
-    return jsonify({"sensor_findings": findings})
+    """
+    Returns live Smart Sensor readings.
+    Reads from reports/sensor_findings.txt if exists,
+    else dynamically generates live temperature, motion, vibration values.
+    """
+    sensor_file = os.path.join(REPORTS_DIR, 'sensor_findings.txt')
+    findings = []
+
+    # If real or old findings exist, load them
+    if os.path.exists(sensor_file):
+        with open(sensor_file) as f:
+            findings = [l for l in f.read().splitlines() if l.strip()]
+
+    # 🧠 Generate live sensor readings
+    temp = round(random.uniform(20, 80), 2)      # °C
+    vib = round(random.uniform(0, 10), 2)        # vibration level
+    motion = random.choice([0, 1])               # 0 = none, 1 = detected
+    now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+    sensor_readings = {
+        "timestamp": now,
+        "temperature": temp,
+        "vibration": vib,
+        "motion": motion
+    }
+
+    # ⚠️ Detect anomalies
+    if temp > 70 or temp < 0:
+        findings.append(f"🔥 Abnormal temperature {temp}°C detected at {now}")
+    if vib > 7:
+        findings.append(f"⚠️ High vibration {vib} detected at {now}")
+    if motion == 1:
+        findings.append(f"🚨 Motion detected at {now}")
+
+    # Save only last 10 alerts
+    with open(sensor_file, "w") as f:
+        for line in findings[-10:]:
+            f.write(line + "\n")
+
+    # 📊 Maintain rolling history for chart data
+    history_file = os.path.join(REPORTS_DIR, 'sensor_history.json')
+    history = {"temp": [], "vib": [], "motion": []}
+    if os.path.exists(history_file):
+        try:
+            with open(history_file) as f:
+                history = json.load(f)
+        except:
+            pass
+
+    # Append new data
+    history["temp"].append(temp)
+    history["vib"].append(vib)
+    history["motion"].append(motion)
+    # Keep only last 20 samples
+    if len(history["temp"]) > 20:
+        history["temp"] = history["temp"][-20:]
+        history["vib"] = history["vib"][-20:]
+        history["motion"] = history["motion"][-20:]
+
+    with open(history_file, "w") as f:
+        json.dump(history, f, indent=2)
+
+    return jsonify({
+        "sensor_findings": findings[-10:],
+        "sensor_stats": history,
+        "live": sensor_readings
+    })
 
 @app.route('/api/system_health')
 def system_health():
@@ -111,7 +173,6 @@ def filter_timeline():
                 except Exception:
                     continue
     return jsonify(filtered)
-
 
 # --- Auto-start sensor listener (tries Phyphox listener, falls back to simulator if requested) ---
 def start_sensor_listener():
