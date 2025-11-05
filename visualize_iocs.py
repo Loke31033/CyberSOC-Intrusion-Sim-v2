@@ -1,39 +1,47 @@
-import json
 import csv
+import json
 import matplotlib.pyplot as plt
-from datetime import datetime
+import os
 
-# --- Load IOC data ---
-with open("reports/iocs.json", "r") as f:
-    iocs = json.load(f)
+timeline_path = os.path.join("reports", "timeline.csv")
+iocs_path = os.path.join("reports", "iocs.json")
 
-print("\n[+] Indicators of Compromise (IOCs):")
-for ioc in iocs:
-    print(f"- {ioc}")
+print("[+] Indicators of Compromise (IOCs):")
 
-# --- Load timeline data ---
+if os.path.exists(iocs_path):
+    with open(iocs_path) as f:
+        iocs = json.load(f)
+        for key, value in iocs.items():
+            print(f"- {key}")
+else:
+    print("[!] iocs.json not found")
+
+# Parse timeline.csv
 timestamps = []
 descriptions = []
 
-with open("reports/timeline.csv", "r") as f:
-    reader = csv.DictReader(f)
-    for row in reader:
-        try:
-            timestamps.append(datetime.strptime(row["timestamp"], "%Y-%m-%d %H:%M:%S"))
-            descriptions.append(row["description"])
-        except:
-            continue
+if os.path.exists(timeline_path):
+    with open(timeline_path, "r") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            if row["Timestamp"] and row["Description"]:
+                timestamps.append(row["Timestamp"])
+                descriptions.append(row["Description"])
+else:
+    print("[!] timeline.csv not found")
 
-# --- Plot timeline ---
 if timestamps:
-    plt.figure(figsize=(12, 4))
-    plt.plot(timestamps, range(len(timestamps)), marker="o", linestyle="-", color="red")
-    plt.title("Attack Timeline")
-    plt.xlabel("Time")
-    plt.ylabel("Events")
-    plt.yticks(range(len(timestamps)), descriptions)
+    print(f"[+] Found {len(timestamps)} events in timeline.csv")
+
+    # Optional: show bar chart of attack frequency by timestamp
+    plt.figure(figsize=(10, 4))
+    plt.hist(timestamps, bins=10, color='skyblue', edgecolor='black')
+    plt.xticks(rotation=45, ha='right')
+    plt.xlabel("Timestamps")
+    plt.ylabel("Number of Events")
+    plt.title("Brute-force Attempt Timeline")
     plt.tight_layout()
-    plt.grid(True)
     plt.show()
 else:
-    print("\n[!] No events found in timeline.csv. Try re-checking your logs.")
+    print("[!] No events found in timeline.csv. Try re-checking your logs.")
+

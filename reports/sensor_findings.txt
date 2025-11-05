@@ -1,0 +1,2 @@
+🔥 Abnormal temperature 78.27°C detected at 2025-11-05T13:54:18.790425
+⚠️ Excessive vibration (8.75) detected at 2025-11-05T13:54:23.828457
