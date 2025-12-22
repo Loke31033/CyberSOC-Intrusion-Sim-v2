@@ -1,0 +1,1870 @@
+[
+    {
+        "incident_id": "INC-2025-0139",
+        "timestamp": "Jul 31 11:28:11",
+        "severity": "MEDIUM",
+        "description": "Brute-force detected from 192.168.237.230 (3 attempts)",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0140",
+        "timestamp": "Jul 31 11:28:40",
+        "severity": "HIGH",
+        "description": "Brute-force detected from 192.168.237.230 (5 attempts)",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0141",
+        "timestamp": "Jul 31 14:42:46",
+        "severity": "MEDIUM",
+        "description": "Brute-force detected from 192.168.195.66 (3 attempts)",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0142",
+        "timestamp": "Jul 31 15:06:42",
+        "severity": "HIGH",
+        "description": "Brute-force detected from 192.168.195.66 (5 attempts)",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0143",
+        "timestamp": "Jul 31 21:24:39",
+        "severity": "MEDIUM",
+        "description": "Brute-force detected from 10.254.1.66 (3 attempts)",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0144",
+        "timestamp": "Jul 31 21:24:41",
+        "severity": "HIGH",
+        "description": "Brute-force detected from 10.254.1.66 (5 attempts)",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0145",
+        "timestamp": "Jul 31 22:23:33",
+        "severity": "MEDIUM",
+        "description": "Brute-force detected from 192.168.56.102 (3 attempts)",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0146",
+        "timestamp": "Jul 31 22:23:37",
+        "severity": "HIGH",
+        "description": "Brute-force detected from 192.168.56.102 (5 attempts)",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0147",
+        "timestamp": "2025-09-27T03:51:57.849742+00:00",
+        "severity": "MEDIUM",
+        "description": "Brute-force detected from 192.168.43.8 (3 attempts)",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0148",
+        "timestamp": "2025-09-27T03:51:59.865212+00:00",
+        "severity": "HIGH",
+        "description": "Brute-force detected from 192.168.43.8 (5 attempts)",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0149",
+        "timestamp": "2025-09-27T06:17:05.799444+00:00",
+        "severity": "MEDIUM",
+        "description": "Brute-force detected from 192.168.68.8 (3 attempts)",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0150",
+        "timestamp": "2025-09-27T06:17:09.367022+00:00",
+        "severity": "HIGH",
+        "description": "Brute-force detected from 192.168.68.8 (5 attempts)",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0151",
+        "timestamp": "2025-11-06T04:47:56.400607+00:00",
+        "severity": "MEDIUM",
+        "description": "Brute-force detected from 192.168.104.8 (3 attempts)",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0152",
+        "timestamp": "2025-11-06T04:47:59.407620+00:00",
+        "severity": "HIGH",
+        "description": "Brute-force detected from 192.168.104.8 (5 attempts)",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0153",
+        "timestamp": "2025-05-26T11:25:50.221863+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0154",
+        "timestamp": "2025-05-26T11:27:01.090868+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0155",
+        "timestamp": "2025-05-26T11:27:31.278530+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0156",
+        "timestamp": "2025-05-26T11:32:11.862921+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0157",
+        "timestamp": "2025-05-26T11:33:21.346704+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0158",
+        "timestamp": "2025-05-26T11:33:51.068025+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0159",
+        "timestamp": "2025-05-26T11:36:55.490676+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0160",
+        "timestamp": "2025-05-26T11:37:18.789749+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0161",
+        "timestamp": "2025-07-20T22:19:28.995051+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0162",
+        "timestamp": "2025-07-20T22:20:40.340431+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0163",
+        "timestamp": "2025-07-20T22:23:02.421734+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0164",
+        "timestamp": "2025-07-20T22:23:55.205443+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0165",
+        "timestamp": "2025-07-20T22:26:14.478264+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0166",
+        "timestamp": "2025-07-20T22:27:34.959861+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0167",
+        "timestamp": "2025-07-20T22:28:22.647225+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0168",
+        "timestamp": "2025-07-20T22:28:34.828231+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0169",
+        "timestamp": "2025-07-20T22:30:09.590745+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0170",
+        "timestamp": "2025-07-22T11:19:37.832148+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0171",
+        "timestamp": "2025-07-22T11:19:52.749550+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0172",
+        "timestamp": "2025-07-22T11:21:13.106079+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0173",
+        "timestamp": "2025-07-22T11:21:23.755779+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0174",
+        "timestamp": "2025-07-29T15:29:57.926567+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0175",
+        "timestamp": "2025-07-29T15:31:39.847638+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0176",
+        "timestamp": "2025-07-29T15:32:46.071211+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0177",
+        "timestamp": "2025-07-29T15:33:20.845322+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0178",
+        "timestamp": "2025-07-29T15:34:05.365453+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0179",
+        "timestamp": "2025-07-30T12:14:04.185602+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0180",
+        "timestamp": "2025-07-30T12:14:55.961223+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0181",
+        "timestamp": "2025-07-30T12:18:59.418475+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0182",
+        "timestamp": "2025-07-30T12:21:17.262037+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0183",
+        "timestamp": "2025-07-30T12:23:28.381556+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0184",
+        "timestamp": "2025-07-30T12:23:53.884287+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0185",
+        "timestamp": "2025-07-30T12:24:17.852260+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0186",
+        "timestamp": "2025-07-30T12:24:50.815706+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0187",
+        "timestamp": "2025-07-30T12:25:49.763879+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0188",
+        "timestamp": "2025-07-30T12:26:24.216122+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0189",
+        "timestamp": "2025-07-30T12:40:11.155165+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0190",
+        "timestamp": "2025-07-30T12:43:28.186215+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0191",
+        "timestamp": "2025-07-30T12:44:07.631531+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0192",
+        "timestamp": "2025-07-30T12:51:20.894725+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0193",
+        "timestamp": "2025-09-26T16:35:17.505863+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0194",
+        "timestamp": "2025-09-26T16:44:38.090163+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0195",
+        "timestamp": "2025-09-26T16:45:58.291760+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0196",
+        "timestamp": "2025-09-26T16:46:53.616166+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0197",
+        "timestamp": "2025-09-26T16:47:18.736811+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0198",
+        "timestamp": "2025-09-26T16:48:15.497497+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0199",
+        "timestamp": "2025-09-27T03:35:50.080684+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0200",
+        "timestamp": "2025-09-27T03:38:02.829402+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0201",
+        "timestamp": "2025-09-27T03:39:25.545373+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0202",
+        "timestamp": "2025-09-27T03:41:06.071472+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0203",
+        "timestamp": "2025-09-27T03:46:34.462214+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0204",
+        "timestamp": "2025-09-27T03:52:42.774963+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0205",
+        "timestamp": "2025-09-27T06:19:15.417346+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0206",
+        "timestamp": "2025-11-06T04:50:12.195023+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0207",
+        "timestamp": "2025-11-06T04:55:01.429492+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0208",
+        "timestamp": "Jul 31 11:28:11",
+        "severity": "MEDIUM",
+        "description": "Brute-force detected from 192.168.237.230 (3 attempts)",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0209",
+        "timestamp": "Jul 31 11:28:40",
+        "severity": "HIGH",
+        "description": "Brute-force detected from 192.168.237.230 (5 attempts)",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0210",
+        "timestamp": "Jul 31 14:42:46",
+        "severity": "MEDIUM",
+        "description": "Brute-force detected from 192.168.195.66 (3 attempts)",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0211",
+        "timestamp": "Jul 31 15:06:42",
+        "severity": "HIGH",
+        "description": "Brute-force detected from 192.168.195.66 (5 attempts)",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0212",
+        "timestamp": "Jul 31 21:24:39",
+        "severity": "MEDIUM",
+        "description": "Brute-force detected from 10.254.1.66 (3 attempts)",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0213",
+        "timestamp": "Jul 31 21:24:41",
+        "severity": "HIGH",
+        "description": "Brute-force detected from 10.254.1.66 (5 attempts)",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0214",
+        "timestamp": "Jul 31 22:23:33",
+        "severity": "MEDIUM",
+        "description": "Brute-force detected from 192.168.56.102 (3 attempts)",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0215",
+        "timestamp": "Jul 31 22:23:37",
+        "severity": "HIGH",
+        "description": "Brute-force detected from 192.168.56.102 (5 attempts)",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0216",
+        "timestamp": "2025-09-27T03:51:57.849742+00:00",
+        "severity": "MEDIUM",
+        "description": "Brute-force detected from 192.168.43.8 (3 attempts)",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0217",
+        "timestamp": "2025-09-27T03:51:59.865212+00:00",
+        "severity": "HIGH",
+        "description": "Brute-force detected from 192.168.43.8 (5 attempts)",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0218",
+        "timestamp": "2025-09-27T06:17:05.799444+00:00",
+        "severity": "MEDIUM",
+        "description": "Brute-force detected from 192.168.68.8 (3 attempts)",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0219",
+        "timestamp": "2025-09-27T06:17:09.367022+00:00",
+        "severity": "HIGH",
+        "description": "Brute-force detected from 192.168.68.8 (5 attempts)",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0220",
+        "timestamp": "2025-11-06T04:47:56.400607+00:00",
+        "severity": "MEDIUM",
+        "description": "Brute-force detected from 192.168.104.8 (3 attempts)",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0221",
+        "timestamp": "2025-11-06T04:47:59.407620+00:00",
+        "severity": "HIGH",
+        "description": "Brute-force detected from 192.168.104.8 (5 attempts)",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0222",
+        "timestamp": "2025-05-26T11:25:50.221863+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0223",
+        "timestamp": "2025-05-26T11:27:01.090868+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0224",
+        "timestamp": "2025-05-26T11:27:31.278530+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0225",
+        "timestamp": "2025-05-26T11:32:11.862921+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0226",
+        "timestamp": "2025-05-26T11:33:21.346704+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0227",
+        "timestamp": "2025-05-26T11:33:51.068025+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0228",
+        "timestamp": "2025-05-26T11:36:55.490676+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0229",
+        "timestamp": "2025-05-26T11:37:18.789749+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0230",
+        "timestamp": "2025-07-20T22:19:28.995051+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0231",
+        "timestamp": "2025-07-20T22:20:40.340431+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0232",
+        "timestamp": "2025-07-20T22:23:02.421734+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0233",
+        "timestamp": "2025-07-20T22:23:55.205443+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0234",
+        "timestamp": "2025-07-20T22:26:14.478264+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0235",
+        "timestamp": "2025-07-20T22:27:34.959861+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0236",
+        "timestamp": "2025-07-20T22:28:22.647225+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0237",
+        "timestamp": "2025-07-20T22:28:34.828231+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0238",
+        "timestamp": "2025-07-20T22:30:09.590745+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0239",
+        "timestamp": "2025-07-22T11:19:37.832148+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0240",
+        "timestamp": "2025-07-22T11:19:52.749550+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0241",
+        "timestamp": "2025-07-22T11:21:13.106079+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0242",
+        "timestamp": "2025-07-22T11:21:23.755779+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0243",
+        "timestamp": "2025-07-29T15:29:57.926567+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0244",
+        "timestamp": "2025-07-29T15:31:39.847638+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0245",
+        "timestamp": "2025-07-29T15:32:46.071211+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0246",
+        "timestamp": "2025-07-29T15:33:20.845322+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0247",
+        "timestamp": "2025-07-29T15:34:05.365453+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0248",
+        "timestamp": "2025-07-30T12:14:04.185602+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0249",
+        "timestamp": "2025-07-30T12:14:55.961223+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0250",
+        "timestamp": "2025-07-30T12:18:59.418475+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0251",
+        "timestamp": "2025-07-30T12:21:17.262037+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0252",
+        "timestamp": "2025-07-30T12:23:28.381556+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0253",
+        "timestamp": "2025-07-30T12:23:53.884287+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0254",
+        "timestamp": "2025-07-30T12:24:17.852260+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0255",
+        "timestamp": "2025-07-30T12:24:50.815706+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0256",
+        "timestamp": "2025-07-30T12:25:49.763879+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0257",
+        "timestamp": "2025-07-30T12:26:24.216122+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0258",
+        "timestamp": "2025-07-30T12:40:11.155165+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0259",
+        "timestamp": "2025-07-30T12:43:28.186215+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0260",
+        "timestamp": "2025-07-30T12:44:07.631531+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0261",
+        "timestamp": "2025-07-30T12:51:20.894725+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0262",
+        "timestamp": "2025-09-26T16:35:17.505863+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0263",
+        "timestamp": "2025-09-26T16:44:38.090163+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0264",
+        "timestamp": "2025-09-26T16:45:58.291760+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0265",
+        "timestamp": "2025-09-26T16:46:53.616166+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0266",
+        "timestamp": "2025-09-26T16:47:18.736811+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0267",
+        "timestamp": "2025-09-26T16:48:15.497497+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0268",
+        "timestamp": "2025-09-27T03:35:50.080684+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0269",
+        "timestamp": "2025-09-27T03:38:02.829402+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0270",
+        "timestamp": "2025-09-27T03:39:25.545373+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0271",
+        "timestamp": "2025-09-27T03:41:06.071472+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0272",
+        "timestamp": "2025-09-27T03:46:34.462214+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0273",
+        "timestamp": "2025-09-27T03:52:42.774963+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0274",
+        "timestamp": "2025-09-27T06:19:15.417346+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0275",
+        "timestamp": "2025-11-06T04:50:12.195023+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0276",
+        "timestamp": "2025-11-06T04:55:01.429492+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo detected",
+        "status": "OPEN",
+        "assigned_to": "Unassigned",
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0277",
+        "timestamp": "Jul 31 11:28:11",
+        "severity": "MEDIUM",
+        "description": "Brute-force detected from 192.168.237.230",
+        "status": "CLOSED",
+        "assigned_to": "SOC-Analyst-Lokeshwar",
+        "notes": [
+            {
+                "time": "2025-12-14T17:25:42.299539",
+                "note": "Outbound traffic verified. Threat confirmed."
+            }
+        ]
+    },
+    {
+        "incident_id": "INC-2025-0278",
+        "timestamp": "Jul 31 11:28:40",
+        "severity": "HIGH",
+        "description": "Brute-force detected from 192.168.237.230",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0279",
+        "timestamp": "Jul 31 14:42:46",
+        "severity": "MEDIUM",
+        "description": "Brute-force detected from 192.168.195.66",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0280",
+        "timestamp": "Jul 31 15:06:42",
+        "severity": "HIGH",
+        "description": "Brute-force detected from 192.168.195.66",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0281",
+        "timestamp": "Jul 31 21:24:39",
+        "severity": "MEDIUM",
+        "description": "Brute-force detected from 10.254.1.66",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0282",
+        "timestamp": "Jul 31 21:24:41",
+        "severity": "HIGH",
+        "description": "Brute-force detected from 10.254.1.66",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0283",
+        "timestamp": "Jul 31 22:23:33",
+        "severity": "MEDIUM",
+        "description": "Brute-force detected from 192.168.56.102",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0284",
+        "timestamp": "Jul 31 22:23:37",
+        "severity": "HIGH",
+        "description": "Brute-force detected from 192.168.56.102",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0285",
+        "timestamp": "2025-09-27T03:51:57.849742+00:00",
+        "severity": "MEDIUM",
+        "description": "Brute-force detected from 192.168.43.8",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0286",
+        "timestamp": "2025-09-27T03:51:59.865212+00:00",
+        "severity": "HIGH",
+        "description": "Brute-force detected from 192.168.43.8",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0287",
+        "timestamp": "2025-09-27T06:17:05.799444+00:00",
+        "severity": "MEDIUM",
+        "description": "Brute-force detected from 192.168.68.8",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0288",
+        "timestamp": "2025-09-27T06:17:09.367022+00:00",
+        "severity": "HIGH",
+        "description": "Brute-force detected from 192.168.68.8",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0289",
+        "timestamp": "2025-11-06T04:47:56.400607+00:00",
+        "severity": "MEDIUM",
+        "description": "Brute-force detected from 192.168.104.8",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0290",
+        "timestamp": "2025-11-06T04:47:59.407620+00:00",
+        "severity": "HIGH",
+        "description": "Brute-force detected from 192.168.104.8",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0291",
+        "timestamp": "2025-05-26T11:25:50.221863+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0292",
+        "timestamp": "2025-05-26T11:27:01.090868+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0293",
+        "timestamp": "2025-05-26T11:27:31.278530+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0294",
+        "timestamp": "2025-05-26T11:32:11.862921+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0295",
+        "timestamp": "2025-05-26T11:33:21.346704+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0296",
+        "timestamp": "2025-05-26T11:33:51.068025+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0297",
+        "timestamp": "2025-05-26T11:36:55.490676+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0298",
+        "timestamp": "2025-05-26T11:37:18.789749+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0299",
+        "timestamp": "2025-07-20T22:19:28.995051+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0300",
+        "timestamp": "2025-07-20T22:20:40.340431+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0301",
+        "timestamp": "2025-07-20T22:23:02.421734+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0302",
+        "timestamp": "2025-07-20T22:23:55.205443+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0303",
+        "timestamp": "2025-07-20T22:26:14.478264+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0304",
+        "timestamp": "2025-07-20T22:27:34.959861+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0305",
+        "timestamp": "2025-07-20T22:28:22.647225+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0306",
+        "timestamp": "2025-07-20T22:28:34.828231+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0307",
+        "timestamp": "2025-07-20T22:30:09.590745+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0308",
+        "timestamp": "2025-07-22T11:19:37.832148+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0309",
+        "timestamp": "2025-07-22T11:19:52.749550+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0310",
+        "timestamp": "2025-07-22T11:21:13.106079+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0311",
+        "timestamp": "2025-07-22T11:21:23.755779+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0312",
+        "timestamp": "2025-07-29T15:29:57.926567+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0313",
+        "timestamp": "2025-07-29T15:31:39.847638+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0314",
+        "timestamp": "2025-07-29T15:32:46.071211+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0315",
+        "timestamp": "2025-07-29T15:33:20.845322+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0316",
+        "timestamp": "2025-07-29T15:34:05.365453+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0317",
+        "timestamp": "2025-07-30T12:14:04.185602+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0318",
+        "timestamp": "2025-07-30T12:14:55.961223+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0319",
+        "timestamp": "2025-07-30T12:18:59.418475+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0320",
+        "timestamp": "2025-07-30T12:21:17.262037+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0321",
+        "timestamp": "2025-07-30T12:23:28.381556+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0322",
+        "timestamp": "2025-07-30T12:23:53.884287+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0323",
+        "timestamp": "2025-07-30T12:24:17.852260+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0324",
+        "timestamp": "2025-07-30T12:24:50.815706+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0325",
+        "timestamp": "2025-07-30T12:25:49.763879+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0326",
+        "timestamp": "2025-07-30T12:26:24.216122+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0327",
+        "timestamp": "2025-07-30T12:40:11.155165+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0328",
+        "timestamp": "2025-07-30T12:43:28.186215+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0329",
+        "timestamp": "2025-07-30T12:44:07.631531+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0330",
+        "timestamp": "2025-07-30T12:51:20.894725+05:30",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0331",
+        "timestamp": "2025-09-26T16:35:17.505863+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0332",
+        "timestamp": "2025-09-26T16:44:38.090163+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0333",
+        "timestamp": "2025-09-26T16:45:58.291760+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0334",
+        "timestamp": "2025-09-26T16:46:53.616166+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0335",
+        "timestamp": "2025-09-26T16:47:18.736811+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0336",
+        "timestamp": "2025-09-26T16:48:15.497497+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0337",
+        "timestamp": "2025-09-27T03:35:50.080684+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0338",
+        "timestamp": "2025-09-27T03:38:02.829402+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0339",
+        "timestamp": "2025-09-27T03:39:25.545373+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0340",
+        "timestamp": "2025-09-27T03:41:06.071472+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0341",
+        "timestamp": "2025-09-27T03:46:34.462214+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0342",
+        "timestamp": "2025-09-27T03:52:42.774963+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0343",
+        "timestamp": "2025-09-27T06:19:15.417346+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0344",
+        "timestamp": "2025-11-06T04:50:12.195023+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    },
+    {
+        "incident_id": "INC-2025-0345",
+        "timestamp": "2025-11-06T04:55:01.429492+00:00",
+        "severity": "HIGH",
+        "description": "Privilege escalation via sudo",
+        "status": "OPEN",
+        "assigned_to": null,
+        "notes": []
+    }
+]

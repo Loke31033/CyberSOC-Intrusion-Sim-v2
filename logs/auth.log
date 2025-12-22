@@ -1,992 +1,558 @@
-2025-10-15T06:21:46.256133+00:00 ubuntu useradd[817]: new group: name=loki, GID=1000
-2025-10-15T06:21:46.256137+00:00 ubuntu useradd[817]: new user: name=loki, UID=1000, GID=1000, home=/home/loki, shell=/bin/bash, from=none
-2025-10-15T06:21:46.256142+00:00 ubuntu useradd[817]: add 'loki' to group 'adm'
-2025-10-15T06:21:46.256152+00:00 ubuntu useradd[817]: add 'loki' to group 'cdrom'
-2025-10-15T06:21:46.256157+00:00 ubuntu useradd[817]: add 'loki' to group 'sudo'
-2025-10-15T06:21:46.256161+00:00 ubuntu useradd[817]: add 'loki' to group 'dip'
-2025-10-15T06:21:46.256166+00:00 ubuntu useradd[817]: add 'loki' to group 'plugdev'
-2025-10-15T06:21:46.256171+00:00 ubuntu useradd[817]: add 'loki' to group 'lxd'
-2025-10-15T06:21:46.256175+00:00 ubuntu useradd[817]: add 'loki' to shadow group 'adm'
-2025-10-15T06:21:46.256179+00:00 ubuntu useradd[817]: add 'loki' to shadow group 'cdrom'
-2025-10-15T06:21:46.256190+00:00 ubuntu useradd[817]: add 'loki' to shadow group 'sudo'
-2025-10-15T06:21:46.256195+00:00 ubuntu useradd[817]: add 'loki' to shadow group 'dip'
-2025-10-15T06:21:46.256199+00:00 ubuntu useradd[817]: add 'loki' to shadow group 'plugdev'
-2025-10-15T06:21:46.256204+00:00 ubuntu useradd[817]: add 'loki' to shadow group 'lxd'
-2025-10-15T06:21:46.256211+00:00 ubuntu passwd[825]: password for 'loki' changed by 'root'
-2025-10-15T06:21:46.341238+00:00 ubuntu systemd-logind[853]: New seat seat0.
-2025-10-15T06:21:46.341243+00:00 ubuntu systemd-logind[853]: Watching system buttons on /dev/input/event0 (Power Button)
-2025-10-15T06:21:46.341253+00:00 ubuntu systemd-logind[853]: Watching system buttons on /dev/input/event1 (Sleep Button)
-2025-10-15T06:21:46.341264+00:00 ubuntu systemd-logind[853]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
-2025-10-15T06:21:46.845449+00:00 ubuntu polkitd[846]: Loading rules from directory /etc/polkit-1/rules.d
-2025-10-15T06:21:46.891110+00:00 ubuntu polkitd[846]: Loading rules from directory /usr/share/polkit-1/rules.d
-2025-10-15T06:21:47.049591+00:00 ubuntu polkitd[846]: Finished loading, compiling and executing 6 rules
-2025-10-15T06:21:47.068927+00:00 ubuntu polkitd[846]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
-2025-10-15T06:24:55.975687+00:00 ubuntu login[934]: PAM unable to dlopen(pam_lastlog.so): /usr/lib/security/pam_lastlog.so: cannot open shared object file: No such file or directory
-2025-10-15T06:24:55.979356+00:00 ubuntu login[934]: PAM adding faulty module: pam_lastlog.so
-2025-10-15T06:25:01.767594+00:00 ubuntu CRON[1110]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-15T06:25:01.772449+00:00 ubuntu CRON[1111]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-15T06:25:01.810202+00:00 ubuntu CRON[1111]: pam_unix(cron:session): session closed for user root
-2025-10-15T06:25:01.928685+00:00 ubuntu CRON[1110]: pam_unix(cron:session): session closed for user root
-2025-10-15T06:25:04.487789+00:00 ubuntu login[934]: pam_unix(login:session): session opened for user loki(uid=1000) by loki(uid=0)
-2025-10-15T06:25:04.636133+00:00 ubuntu systemd-logind[853]: New session 1 of user loki.
-2025-10-15T06:25:04.824659+00:00 ubuntu (systemd): pam_unix(systemd-user:session): session opened for user loki(uid=1000) by loki(uid=0)
-2025-10-15T06:25:32.397342+00:00 ubuntu systemd-logind[680]: New seat seat0.
-2025-10-15T06:25:32.397347+00:00 ubuntu systemd-logind[680]: Watching system buttons on /dev/input/event0 (Power Button)
-2025-10-15T06:25:32.397351+00:00 ubuntu systemd-logind[680]: Watching system buttons on /dev/input/event1 (Sleep Button)
-2025-10-15T06:25:32.397443+00:00 ubuntu systemd-logind[680]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
-2025-10-15T06:25:32.325447+00:00 ubuntu polkitd[671]: Loading rules from directory /etc/polkit-1/rules.d
-2025-10-15T06:25:32.356616+00:00 ubuntu polkitd[671]: Loading rules from directory /usr/share/polkit-1/rules.d
-2025-10-15T06:25:32.584703+00:00 ubuntu polkitd[671]: Finished loading, compiling and executing 6 rules
-2025-10-15T06:25:32.613902+00:00 ubuntu polkitd[671]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
-2025-10-15T06:25:38.876908+00:00 ubuntu login[746]: PAM unable to dlopen(pam_lastlog.so): /usr/lib/security/pam_lastlog.so: cannot open shared object file: No such file or directory
-2025-10-15T06:25:38.877602+00:00 ubuntu login[746]: PAM adding faulty module: pam_lastlog.so
-2025-10-15T06:25:42.955816+00:00 ubuntu login[746]: pam_unix(login:session): session opened for user loki(uid=1000) by loki(uid=0)
-2025-10-15T06:25:43.083195+00:00 ubuntu systemd-logind[680]: New session 1 of user loki.
-2025-10-15T06:25:43.225625+00:00 ubuntu (systemd): pam_unix(systemd-user:session): session opened for user loki(uid=1000) by loki(uid=0)
-2025-10-16T04:22:52.081664+00:00 ubuntu systemd-logind[694]: New seat seat0.
-2025-10-16T04:22:52.081671+00:00 ubuntu systemd-logind[694]: Watching system buttons on /dev/input/event0 (Power Button)
-2025-10-16T04:22:52.081676+00:00 ubuntu systemd-logind[694]: Watching system buttons on /dev/input/event1 (Sleep Button)
-2025-10-16T04:22:52.081692+00:00 ubuntu systemd-logind[694]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
-2025-10-16T04:22:52.526254+00:00 ubuntu polkitd[677]: Loading rules from directory /etc/polkit-1/rules.d
-2025-10-16T04:22:52.529860+00:00 ubuntu polkitd[677]: Loading rules from directory /usr/share/polkit-1/rules.d
-2025-10-16T04:22:52.689468+00:00 ubuntu polkitd[677]: Finished loading, compiling and executing 6 rules
-2025-10-16T04:22:52.716304+00:00 ubuntu polkitd[677]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
-2025-10-16T04:23:00.503516+00:00 ubuntu login[801]: PAM unable to dlopen(pam_lastlog.so): /usr/lib/security/pam_lastlog.so: cannot open shared object file: No such file or directory
-2025-10-16T04:23:00.503705+00:00 ubuntu login[801]: PAM adding faulty module: pam_lastlog.so
-2025-10-16T04:23:04.434958+00:00 ubuntu login[801]: pam_unix(login:session): session opened for user loki(uid=1000) by loki(uid=0)
-2025-10-16T04:23:04.505081+00:00 ubuntu systemd-logind[694]: New session 1 of user loki.
-2025-10-16T04:23:04.620229+00:00 ubuntu (systemd): pam_unix(systemd-user:session): session opened for user loki(uid=1000) by loki(uid=0)
-2025-10-16T04:25:02.395458+00:00 ubuntu CRON[1012]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-16T04:25:03.224223+00:00 ubuntu CRON[1012]: pam_unix(cron:session): session closed for user root
-2025-10-16T05:15:34.976410+00:00 ubuntu systemd-logind[685]: New seat seat0.
-2025-10-16T05:15:34.976415+00:00 ubuntu systemd-logind[685]: Watching system buttons on /dev/input/event0 (Power Button)
-2025-10-16T05:15:34.976419+00:00 ubuntu systemd-logind[685]: Watching system buttons on /dev/input/event1 (Sleep Button)
-2025-10-16T05:15:34.976538+00:00 ubuntu systemd-logind[685]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
-2025-10-16T05:15:34.960374+00:00 ubuntu polkitd[676]: Loading rules from directory /etc/polkit-1/rules.d
-2025-10-16T05:15:34.965339+00:00 ubuntu polkitd[676]: Loading rules from directory /usr/share/polkit-1/rules.d
-2025-10-16T05:15:35.149937+00:00 ubuntu polkitd[676]: Finished loading, compiling and executing 6 rules
-2025-10-16T05:15:35.156059+00:00 ubuntu polkitd[676]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
-2025-10-16T05:15:41.914297+00:00 ubuntu login[749]: PAM unable to dlopen(pam_lastlog.so): /usr/lib/security/pam_lastlog.so: cannot open shared object file: No such file or directory
-2025-10-16T05:15:41.914484+00:00 ubuntu login[749]: PAM adding faulty module: pam_lastlog.so
-2025-10-16T05:15:46.433423+00:00 ubuntu login[749]: pam_unix(login:session): session opened for user loki(uid=1000) by loki(uid=0)
-2025-10-16T05:15:46.504371+00:00 ubuntu systemd-logind[685]: New session 1 of user loki.
-2025-10-16T05:15:46.681601+00:00 ubuntu (systemd): pam_unix(systemd-user:session): session opened for user loki(uid=1000) by loki(uid=0)
-2025-10-16T05:17:57.979432+00:00 ubuntu CRON[965]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-16T05:17:58.013546+00:00 ubuntu CRON[965]: pam_unix(cron:session): session closed for user root
-2025-10-16T05:20:14.864938+00:00 ubuntu sudo:     loki : TTY=tty1 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/bin/apt install -y virtualbox-guest-utils
-2025-10-16T05:20:14.876518+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-16T05:20:30.270105+00:00 ubuntu groupadd[1155]: group added to /etc/group: name=vboxsf, GID=110
-2025-10-16T05:20:30.293804+00:00 ubuntu groupadd[1155]: group added to /etc/gshadow: name=vboxsf
-2025-10-16T05:20:30.301918+00:00 ubuntu groupadd[1155]: new group: name=vboxsf, GID=110
-2025-10-16T05:20:45.822945+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-16T05:21:03.638206+00:00 ubuntu sudo:     loki : TTY=tty1 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/sbin/reboot
-2025-10-16T05:21:03.644153+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-16T05:21:03.676440+00:00 ubuntu systemd-logind[685]: The system will reboot now!
-2025-10-16T05:21:03.761668+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-16T05:21:03.808261+00:00 ubuntu systemd-logind[685]: System is rebooting.
-2025-10-16T05:27:10.315205+00:00 ubuntu systemd-logind[683]: New seat seat0.
-2025-10-16T05:27:10.315209+00:00 ubuntu systemd-logind[683]: Watching system buttons on /dev/input/event0 (Power Button)
-2025-10-16T05:27:10.315214+00:00 ubuntu systemd-logind[683]: Watching system buttons on /dev/input/event1 (Sleep Button)
-2025-10-16T05:27:10.315218+00:00 ubuntu systemd-logind[683]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
-2025-10-16T05:27:09.689045+00:00 ubuntu polkitd[673]: Loading rules from directory /etc/polkit-1/rules.d
-2025-10-16T05:27:09.698783+00:00 ubuntu polkitd[673]: Loading rules from directory /usr/share/polkit-1/rules.d
-2025-10-16T05:27:09.810222+00:00 ubuntu polkitd[673]: Finished loading, compiling and executing 6 rules
-2025-10-16T05:27:09.837656+00:00 ubuntu polkitd[673]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
-2025-10-16T05:27:18.193859+00:00 ubuntu login[762]: PAM unable to dlopen(pam_lastlog.so): /usr/lib/security/pam_lastlog.so: cannot open shared object file: No such file or directory
-2025-10-16T05:27:18.194062+00:00 ubuntu login[762]: PAM adding faulty module: pam_lastlog.so
-2025-10-16T05:27:24.117717+00:00 ubuntu login[762]: pam_unix(login:session): session opened for user loki(uid=1000) by loki(uid=0)
-2025-10-16T05:27:24.293522+00:00 ubuntu systemd-logind[683]: New session 1 of user loki.
-2025-10-16T05:27:24.374437+00:00 ubuntu (systemd): pam_unix(systemd-user:session): session opened for user loki(uid=1000) by loki(uid=0)
-2025-10-16T05:31:38.336711+00:00 ubuntu sudo:     loki : TTY=tty1 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/sbin/reboot
-2025-10-16T05:31:38.343094+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-16T05:31:38.362661+00:00 ubuntu systemd-logind[683]: The system will reboot now!
-2025-10-16T05:31:38.427845+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-16T05:31:38.673267+00:00 ubuntu systemd-logind[683]: System is rebooting.
-2025-10-16T05:31:56.549841+00:00 ubuntu systemd-logind[679]: New seat seat0.
-2025-10-16T05:31:56.549845+00:00 ubuntu systemd-logind[679]: Watching system buttons on /dev/input/event0 (Power Button)
-2025-10-16T05:31:56.549850+00:00 ubuntu systemd-logind[679]: Watching system buttons on /dev/input/event1 (Sleep Button)
-2025-10-16T05:31:56.549855+00:00 ubuntu systemd-logind[679]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
-2025-10-16T05:31:56.618331+00:00 ubuntu polkitd[672]: Loading rules from directory /etc/polkit-1/rules.d
-2025-10-16T05:31:56.639893+00:00 ubuntu polkitd[672]: Loading rules from directory /usr/share/polkit-1/rules.d
-2025-10-16T05:31:56.720015+00:00 ubuntu polkitd[672]: Finished loading, compiling and executing 6 rules
-2025-10-16T05:31:56.720069+00:00 ubuntu polkitd[672]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
-2025-10-16T05:32:07.881496+00:00 ubuntu login[758]: PAM unable to dlopen(pam_lastlog.so): /usr/lib/security/pam_lastlog.so: cannot open shared object file: No such file or directory
-2025-10-16T05:32:07.881715+00:00 ubuntu login[758]: PAM adding faulty module: pam_lastlog.so
-2025-10-16T05:32:12.508283+00:00 ubuntu login[758]: pam_unix(login:session): session opened for user loki(uid=1000) by loki(uid=0)
-2025-10-16T05:32:12.594189+00:00 ubuntu systemd-logind[679]: New session 1 of user loki.
-2025-10-16T05:32:12.663488+00:00 ubuntu (systemd): pam_unix(systemd-user:session): session opened for user loki(uid=1000) by loki(uid=0)
-2025-10-16T05:35:01.547666+00:00 ubuntu CRON[987]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-16T05:35:01.562440+00:00 ubuntu CRON[987]: pam_unix(cron:session): session closed for user root
-2025-10-16T05:35:20.321584+00:00 ubuntu sudo:     loki : TTY=tty1 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/bin/apt install -y build-essential dkms
-2025-10-16T05:35:20.327585+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-16T05:58:09.003755+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-16T05:59:36.751666+00:00 ubuntu sudo:     loki : TTY=tty1 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/bin/mkdir -p /mnt/cdrom
-2025-10-16T05:59:36.753797+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-16T05:59:36.766717+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-16T06:00:22.569250+00:00 ubuntu sudo:     loki : TTY=tty1 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/bin/mount /dev/cdrom /mnt/cdrom
-2025-10-16T06:00:22.571233+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-16T06:00:22.758500+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-16T06:05:30.966707+00:00 ubuntu systemd-logind[673]: New seat seat0.
-2025-10-16T06:05:30.966712+00:00 ubuntu systemd-logind[673]: Watching system buttons on /dev/input/event0 (Power Button)
-2025-10-16T06:05:30.966716+00:00 ubuntu systemd-logind[673]: Watching system buttons on /dev/input/event1 (Sleep Button)
-2025-10-16T06:05:30.966720+00:00 ubuntu systemd-logind[673]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
-2025-10-16T06:05:30.938496+00:00 ubuntu polkitd[667]: Loading rules from directory /etc/polkit-1/rules.d
-2025-10-16T06:05:30.959737+00:00 ubuntu polkitd[667]: Loading rules from directory /usr/share/polkit-1/rules.d
-2025-10-16T06:05:31.080388+00:00 ubuntu polkitd[667]: Finished loading, compiling and executing 6 rules
-2025-10-16T06:05:31.093872+00:00 ubuntu polkitd[667]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
-2025-10-16T06:06:15.302737+00:00 ubuntu login[769]: PAM unable to dlopen(pam_lastlog.so): /usr/lib/security/pam_lastlog.so: cannot open shared object file: No such file or directory
-2025-10-16T06:06:15.303311+00:00 ubuntu login[769]: PAM adding faulty module: pam_lastlog.so
-2025-10-16T06:06:20.374337+00:00 ubuntu login[769]: pam_unix(login:session): session opened for user loki(uid=1000) by loki(uid=0)
-2025-10-16T06:06:20.437897+00:00 ubuntu systemd-logind[673]: New session 1 of user loki.
-2025-10-16T06:06:20.489723+00:00 ubuntu (systemd): pam_unix(systemd-user:session): session opened for user loki(uid=1000) by loki(uid=0)
-2025-10-16T09:11:25.572400+00:00 ubuntu systemd-logind[680]: New seat seat0.
-2025-10-16T09:11:25.572474+00:00 ubuntu systemd-logind[680]: Watching system buttons on /dev/input/event0 (Power Button)
-2025-10-16T09:11:25.572482+00:00 ubuntu systemd-logind[680]: Watching system buttons on /dev/input/event1 (Sleep Button)
-2025-10-16T09:11:25.572486+00:00 ubuntu systemd-logind[680]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
-2025-10-16T09:11:25.452087+00:00 ubuntu polkitd[671]: Loading rules from directory /etc/polkit-1/rules.d
-2025-10-16T09:11:25.454808+00:00 ubuntu polkitd[671]: Loading rules from directory /usr/share/polkit-1/rules.d
-2025-10-16T09:11:25.625153+00:00 ubuntu polkitd[671]: Finished loading, compiling and executing 6 rules
-2025-10-16T09:11:25.671074+00:00 ubuntu polkitd[671]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        2025-10-16T09:13:56.946896+00:00 ubuntu systemd-logind[676]: New seat seat0.
-2025-10-16T09:13:56.946901+00:00 ubuntu systemd-logind[676]: Watching system buttons on /dev/input/event0 (Power Button)
-2025-10-16T09:13:56.946906+00:00 ubuntu systemd-logind[676]: Watching system buttons on /dev/input/event1 (Sleep Button)
-2025-10-16T09:13:56.946914+00:00 ubuntu systemd-logind[676]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
-2025-10-16T09:13:56.947040+00:00 ubuntu polkitd[670]: Loading rules from directory /etc/polkit-1/rules.d
-2025-10-16T09:13:56.947044+00:00 ubuntu polkitd[670]: Loading rules from directory /usr/share/polkit-1/rules.d
-2025-10-16T09:13:56.651495+00:00 ubuntu polkitd[670]: Finished loading, compiling and executing 6 rules
-2025-10-16T09:13:56.651630+00:00 ubuntu polkitd[670]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
-2025-10-16T09:14:04.835442+00:00 ubuntu login[752]: PAM unable to dlopen(pam_lastlog.so): /usr/lib/security/pam_lastlog.so: cannot open shared object file: No such file or directory
-2025-10-16T09:14:04.835644+00:00 ubuntu login[752]: PAM adding faulty module: pam_lastlog.so
-2025-10-16T09:14:08.768735+00:00 ubuntu login[752]: pam_unix(login:session): session opened for user loki(uid=1000) by loki(uid=0)
-2025-10-16T09:14:08.858111+00:00 ubuntu systemd-logind[676]: New session 1 of user loki.
-2025-10-16T09:14:08.944489+00:00 ubuntu (systemd): pam_unix(systemd-user:session): session opened for user loki(uid=1000) by loki(uid=0)
-2025-10-16T09:14:30.945263+00:00 ubuntu sudo:     loki : TTY=tty1 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/bin/systemctl status ssh
-2025-10-16T09:14:30.951191+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-16T09:14:31.015858+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-16T09:15:02.150747+00:00 ubuntu CRON[985]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-16T09:15:02.748263+00:00 ubuntu CRON[985]: pam_unix(cron:session): session closed for user root
-2025-10-16T09:17:01.945154+00:00 ubuntu CRON[988]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-16T09:17:01.998658+00:00 ubuntu CRON[988]: pam_unix(cron:session): session closed for user root
-2025-10-16T09:19:03.403684+00:00 ubuntu sudo:     loki : TTY=tty1 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/bin/apt install openssh-server
-2025-10-16T09:19:03.416266+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-16T09:19:18.115529+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-16T09:20:53.912413+00:00 ubuntu systemd-logind[677]: New seat seat0.
-2025-10-16T09:20:53.912423+00:00 ubuntu systemd-logind[677]: Watching system buttons on /dev/input/event0 (Power Button)
-2025-10-16T09:20:53.912427+00:00 ubuntu systemd-logind[677]: Watching system buttons on /dev/input/event1 (Sleep Button)
-2025-10-16T09:20:53.912491+00:00 ubuntu systemd-logind[677]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
-2025-10-16T09:20:54.267594+00:00 ubuntu polkitd[669]: Loading rules from directory /etc/polkit-1/rules.d
-2025-10-16T09:20:54.285601+00:00 ubuntu polkitd[669]: Loading rules from directory /usr/share/polkit-1/rules.d
-2025-10-16T09:20:54.386197+00:00 ubuntu polkitd[669]: Finished loading, compiling and executing 6 rules
-2025-10-16T09:20:54.406309+00:00 ubuntu polkitd[669]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
-2025-10-16T09:21:01.546768+00:00 ubuntu login[770]: PAM unable to dlopen(pam_lastlog.so): /usr/lib/security/pam_lastlog.so: cannot open shared object file: No such file or directory
-2025-10-16T09:21:01.548289+00:00 ubuntu login[770]: PAM adding faulty module: pam_lastlog.so
-2025-10-16T09:21:07.739063+00:00 ubuntu login[770]: pam_unix(login:session): session opened for user loki(uid=1000) by loki(uid=0)
-2025-10-16T09:21:07.843111+00:00 ubuntu systemd-logind[677]: New session 1 of user loki.
-2025-10-16T09:21:07.911584+00:00 ubuntu (systemd): pam_unix(systemd-user:session): session opened for user loki(uid=1000) by loki(uid=0)
-2025-10-16T09:21:26.791962+00:00 ubuntu sudo:     loki : TTY=tty1 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/bin/apt install openssh-server
-2025-10-16T09:21:26.794826+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-16T09:21:58.717184+00:00 ubuntu useradd[1245]: new user: name=sshd, UID=109, GID=65534, home=/run/sshd, shell=/usr/sbin/nologin, from=none
-2025-10-16T09:22:19.414728+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-16T09:23:19.699789+00:00 ubuntu sudo:     loki : TTY=tty1 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/bin/systemctl start ssh
-2025-10-16T09:23:19.704382+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-16T09:23:19.870766+00:00 ubuntu sshd[1441]: Server listening on 0.0.0.0 port 22.
-2025-10-16T09:23:19.871862+00:00 ubuntu sshd[1441]: Server listening on :: port 22.
-2025-10-16T09:23:19.878961+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-16T09:23:31.037244+00:00 ubuntu sudo:     loki : TTY=tty1 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/bin/systemctl enable ssh
-2025-10-16T09:23:31.039879+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-16T09:23:34.047479+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-16T09:23:43.774081+00:00 ubuntu sudo:     loki : TTY=tty1 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/bin/systemctl status ssh
-2025-10-16T09:23:43.774733+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-16T09:23:43.903288+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-16T09:25:36.458187+00:00 ubuntu systemd-logind[680]: New seat seat0.
-2025-10-16T09:25:36.458192+00:00 ubuntu systemd-logind[680]: Watching system buttons on /dev/input/event0 (Power Button)
-2025-10-16T09:25:36.458196+00:00 ubuntu systemd-logind[680]: Watching system buttons on /dev/input/event1 (Sleep Button)
-2025-10-16T09:25:36.458272+00:00 ubuntu systemd-logind[680]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
-2025-10-16T09:25:36.458615+00:00 ubuntu polkitd[674]: Loading rules from directory /etc/polkit-1/rules.d
-2025-10-16T09:25:36.458622+00:00 ubuntu polkitd[674]: Loading rules from directory /usr/share/polkit-1/rules.d
-2025-10-16T09:25:36.458719+00:00 ubuntu polkitd[674]: Finished loading, compiling and executing 6 rules
-2025-10-16T09:25:36.458723+00:00 ubuntu polkitd[674]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
-2025-10-16T09:25:36.775069+00:00 ubuntu sshd[734]: Server listening on 0.0.0.0 port 22.
-2025-10-16T09:25:36.775155+00:00 ubuntu sshd[734]: Server listening on :: port 22.
-2025-10-16T09:25:42.810348+00:00 ubuntu login                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 2025-10-16T09:27:31.723556+00:00 ubuntu systemd-logind[683]: New seat seat0.
-2025-10-16T09:27:31.723562+00:00 ubuntu systemd-logind[683]: Watching system buttons on /dev/input/event0 (Power Button)
-2025-10-16T09:27:31.723567+00:00 ubuntu systemd-logind[683]: Watching system buttons on /dev/input/event1 (Sleep Button)
-2025-10-16T09:27:31.723571+00:00 ubuntu systemd-logind[683]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
-2025-10-16T09:27:31.723706+00:00 ubuntu polkitd[676]: Loading rules from directory /etc/polkit-1/rules.d
-2025-10-16T09:27:30.915218+00:00 ubuntu polkitd[676]: Loading rules from directory /usr/share/polkit-1/rules.d
-2025-10-16T09:27:30.993642+00:00 ubuntu polkitd[676]: Finished loading, compiling and executing 6 rules
-2025-10-16T09:27:31.043374+00:00 ubuntu polkitd[676]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
-2025-10-16T09:27:32.408698+00:00 ubuntu sshd[770]: Server listening on 0.0.0.0 port 22.
-2025-10-16T09:27:32.408970+00:00 ubuntu sshd[770]: Server listening on :: port 22.
-2025-10-16T09:27:37.749373+00:00 ubuntu login[783]: PAM unable to dlopen(pam_lastlog.so): /usr/lib/security/pam_lastlog.so: cannot open shared object file: No such file or directory
-2025-10-16T09:27:37.749550+00:00 ubuntu login[783]: PAM adding faulty module: pam_lastlog.so
-2025-10-16T09:27:41.331210+00:00 ubuntu login[783]: pam_unix(login:session): session opened for user loki(uid=1000) by loki(uid=0)
-2025-10-16T09:27:41.396019+00:00 ubuntu systemd-logind[683]: New session 1 of user loki.
-2025-10-16T09:27:41.559178+00:00 ubuntu (systemd): pam_unix(systemd-user:session): session opened for user loki(uid=1000) by loki(uid=0)
-2025-10-16T09:29:29.162231+00:00 ubuntu systemd-logind[680]: New seat seat0.
-2025-10-16T09:29:29.162235+00:00 ubuntu systemd-logind[680]: Watching system buttons on /dev/input/event0 (Power Button)
-2025-10-16T09:29:29.162239+00:00 ubuntu systemd-logind[680]: Watching system buttons on /dev/input/event1 (Sleep Button)
-2025-10-16T09:29:29.162306+00:00 ubuntu systemd-logind[680]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
-2025-10-16T09:29:29.162327+00:00 ubuntu polkitd[674]: Loading rules from directory /etc/polkit-1/rules.d
-2025-10-16T09:29:29.162332+00:00 ubuntu polkitd[674]: Loading rules from directory /usr/share/polkit-1/rules.d
-2025-10-16T09:29:29.162404+00:00 ubuntu polkitd[674]: Finished loading, compiling and executing 6 rules
-2025-10-16T09:29:29.162408+00:00 ubuntu polkitd[674]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
-2025-10-16T09:29:29.285020+00:00 ubuntu sshd[766]: Server listening on 0.0.0.0 port 22.
-2025-10-16T09:29:29.285203+00:00 ubuntu sshd[766]: Server listening on :: port 22.
-2025-10-16T09:29:35.346703+00:00 ubuntu login[781]: PAM unable to dlopen(pam_lastlog.so): /usr/lib/security/pam_lastlog.so: cannot open shared object file: No such file or directory
-2025-10-16T09:29:35.347340+00:00 ubuntu login[781]: PAM adding faulty module: pam_lastlog.so
-2025-10-16T09:29:39.445913+00:00 ubuntu login[781]: pam_unix(login:session): session opened for user loki(uid=1000) by loki(uid=0)
-2025-10-16T09:29:39.560701+00:00 ubuntu systemd-logind[680]: New session 1 of user loki.
-2025-10-16T09:29:39.655400+00:00 ubuntu (systemd): pam_unix(systemd-user:session): session opened for user loki(uid=1000) by loki(uid=0)
-2025-10-16T09:30:07.977934+00:00 ubuntu sshd[988]: Accepted password for loki from 192.168.56.1 port 52261 ssh2
-2025-10-16T09:30:07.984730+00:00 ubuntu sshd[988]: pam_unix(sshd:session): session opened for user loki(uid=1000) by loki(uid=0)
-2025-10-16T09:30:07.999487+00:00 ubuntu systemd-logind[680]: New session 3 of user loki.
-2025-10-16T09:30:40.792104+00:00 ubuntu sudo:     loki : TTY=pts/0 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/bin/dpkg -i splunkforwarder-10.0.1-linux-64.deb
-2025-10-16T09:30:40.800494+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-16T09:30:41.143239+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-16T09:32:04.481851+00:00 ubuntu sudo:     loki : TTY=pts/0 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/bin/wget -O splunkforwarder-10.0.1-linux-64.deb https://download.splunk.com/products/universalforwarder/releases/10.0.1/linux/splunkforwarder-10.0.1-c486717c322b-linux-64.deb
-2025-10-16T09:32:04.508322+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-16T09:32:04.890178+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-16T09:33:11.272047+00:00 ubuntu sudo:     loki : TTY=pts/0 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/bin/wget -O splunkforwarder-10.0.1-c486717c322b-linux-amd64.deb https://download.splunk.com/products/universalforwarder/releases/10.0.1/linux/splunkforwarder-10.0.1-c486717c322b-linux-amd64.deb
-2025-10-16T09:33:11.277185+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-16T09:33:11.472601+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-16T09:35:01.255068+00:00 ubuntu CRON[1082]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-16T09:35:01.281585+00:00 ubuntu CRON[1082]: pam_unix(cron:session): session closed for user root
-2025-10-16T09:35:50.825839+00:00 ubuntu sudo: pam_unix(sudo:auth): authentication failure; logname=loki uid=1000 euid=0 tty=/dev/tty1 ruser=loki rhost=  user=loki
-2025-10-16T09:37:54.042251+00:00 ubuntu systemd-logind[681]: New seat seat0.
-2025-10-16T09:37:54.042322+00:00 ubuntu systemd-logind[681]: Watching system buttons on /dev/input/event0 (Power Button)
-2025-10-16T09:37:54.042330+00:00 ubuntu systemd-logind[681]: Watching system buttons on /dev/input/event1 (Sleep Button)
-2025-10-16T09:37:54.042743+00:00 ubuntu systemd-logind[681]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
-2025-10-16T09:37:54.104888+00:00 ubuntu polkitd[671]: Loading rules from directory /etc/polkit-1/rules.d
-2025-10-16T09:37:54.131628+00:00 ubuntu polkitd[671]: Loading rules from directory /usr/share/polkit-1/rules.d
-2025-10-16T09:37:54.246363+00:00 ubuntu polkitd[671]: Finished loading, compiling and executing 6 rules
-2025-10-16T09:37:54.258518+00:00 ubuntu polkitd[671]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
-2025-10-16T09:37:55.424024+00:00 ubuntu sshd[749]: Server listening on 0.0.0.0 port 22.
-2025-10-16T09:37:55.424622+00:00 ubuntu sshd[749]: Server listening on :: port 22.
-2025-10-16T09:38:01.406612+00:00 ubuntu login[764]: PAM unable to dlopen(pam_lastlog.so): /usr/lib/security/pam_lastlog.so: cannot open shared object file: No such file or directory
-2025-10-16T09:38:01.406903+00:00 ubuntu login[764]: PAM adding faulty module: pam_lastlog.so
-2025-10-16T09:38:07.676477+00:00 ubuntu login[764]: pam_unix(login:session): session opened for user loki(uid=1000) by loki(uid=0)
-2025-10-16T09:38:07.762968+00:00 ubuntu systemd-logind[681]: New session 1 of user loki.
-2025-10-16T09:38:07.913982+00:00 ubuntu (systemd): pam_unix(systemd-user:session): session opened for user loki(uid=1000) by loki(uid=0)
-2025-10-16T09:38:31.764206+00:00 ubuntu sshd[988]: Accepted password for loki from 192.168.43.204 port 56920 ssh2
-2025-10-16T09:38:31.775134+00:00 ubuntu sshd[988]: pam_unix(sshd:session): session opened for user loki(uid=1000) by loki(uid=0)
-2025-10-16T09:38:31.796856+00:00 ubuntu systemd-logind[681]: New session 3 of user loki.
-2025-10-16T09:38:57.820548+00:00 ubuntu sudo:     loki : TTY=pts/0 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/bin/wget -O splunkforwarder-10.0.1-c486717c322b-linux-amd64.deb https://download.splunk.com/products/universalforwarder/releases/10.0.1/linux/splunkforwarder-10.0.1-c486717c322b-linux-amd64.deb
-2025-10-16T09:38:57.822839+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-16T09:42:48.340159+00:00 ubuntu sshd[1059]: Accepted password for loki from 192.168.43.204 port 50201 ssh2
-2025-10-16T09:42:48.352620+00:00 ubuntu sshd[1059]: pam_unix(sshd:session): session opened for user loki(uid=1000) by loki(uid=0)
-2025-10-16T09:42:48.376477+00:00 ubuntu systemd-logind[681]: New session 4 of user loki.
-2025-10-16T09:43:01.026143+00:00 ubuntu sudo:     loki : TTY=pts/2 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/bin/wget -O splunkforwarder-10.0.1-c486717c322b-linux-amd64.deb https://download.splunk.com/products/universalforwarder/releases/10.0.1/linux/splunkforwarder-10.0.1-c486717c322b-linux-amd64.deb
-2025-10-16T09:43:01.281033+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-16T09:44:53.751765+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-16T09:45:01.657396+00:00 ubuntu CRON[1132]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-16T09:45:03.060305+00:00 ubuntu CRON[1132]: pam_unix(cron:session): session closed for user root
-2025-10-16T09:45:38.821172+00:00 ubuntu sudo:     loki : TTY=pts/2 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/bin/dpkg -i splunkforwarder-10.0.1-c486717c322b-linux-amd64.deb splunkforwarder-10.0.1-linux-64.deb
-2025-10-16T09:45:38.829492+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-16T09:45:49.626548+00:00 ubuntu groupadd[1154]: group added to /etc/group: name=splunkfwd, GID=1001
-2025-10-16T09:45:49.658748+00:00 ubuntu groupadd[1154]: group added to /etc/gshadow: name=splunkfwd
-2025-10-16T09:45:49.670590+00:00 ubuntu groupadd[1154]: new group: name=splunkfwd, GID=1001
-2025-10-16T09:45:49.983105+00:00 ubuntu useradd[1161]: new user: name=splunkfwd, UID=1001, GID=1001, home=/opt/splunkforwarder, shell=/bin/bash, from=/dev/pts/3
-2025-10-16T09:46:21.928883+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-16T09:51:06.326302+00:00 ubuntu sudo:     loki : TTY=pts/2 ; PWD=/home/loki ; USER=root ; COMMAND=/opt/splunkforwarder/bin/splunk start --accept-license
-2025-10-16T09:51:06.467558+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-16T09:51:50.319261+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-16T09:51:50.351256+00:00 ubuntu sudo:     loki : TTY=pts/2 ; PWD=/home/loki ; USER=root ; COMMAND=/opt/splunkforwarder/bin/splunk enable boot-start
-2025-10-16T09:51:50.362789+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-16T09:51:50.416034+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-16T09:52:45.120488+00:00 ubuntu sudo:     loki : TTY=pts/2 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/bin/apt update
-2025-10-16T09:52:45.124239+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-16T09:54:15.311657+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-16T09:54:15.343297+00:00 ubuntu sudo:     loki : TTY=pts/2 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/bin/apt install -y auditd audispd-plugins
-2025-10-16T09:54:15.348928+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-16T09:54:50.339602+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-16T09:55:02.079610+00:00 ubuntu CRON[2174]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-16T09:55:02.788541+00:00 ubuntu CRON[2174]: pam_unix(cron:session): session closed for user root
-2025-10-16T09:55:13.650009+00:00 ubuntu sudo:     loki : TTY=pts/2 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/bin/nano /etc/audit/audit.rules
-2025-10-16T09:55:13.673314+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-16T09:55:53.596162+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-16T09:56:17.575349+00:00 ubuntu sudo:     loki : TTY=pts/2 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/bin/python3 /tmp/windows_events_simulator.py
-2025-10-16T09:56:17.581351+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-16T09:57:57.544612+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-16T09:58:18.534296+00:00 ubuntu sshd[988]: pam_unix(sshd:session): session closed for user loki
-2025-10-16T09:58:19.001698+00:00 ubuntu systemd-logind[681]: Session 3 logged out. Waiting for processes to exit.
-2025-10-16T09:58:19.015402+00:00 ubuntu systemd-logind[681]: Removed session 3.
-2025-10-16T10:02:47.133046+00:00 ubuntu sudo:     loki : TTY=pts/2 ; PWD=/home/loki ; USER=root ; COMMAND=/opt/splunkforwarder/bin/splunk start --accept-license
-2025-10-16T10:02:47.268738+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-16T10:02:58.391219+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-16T10:02:58.474520+00:00 ubuntu sudo:     loki : TTY=pts/2 ; PWD=/home/loki ; USER=root ; COMMAND=/opt/splunkforwarder/bin/splunk enable boot-start
-2025-10-16T10:02:58.498090+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-16T10:02:58.957094+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-16T10:02:59.139159+00:00 ubuntu sudo:     loki : TTY=pts/2 ; PWD=/home/loki ; USER=root ; COMMAND=/opt/splunkforwarder/bin/splunk add forward-server 192.168.43.8:9997
-2025-10-16T10:02:59.189504+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-16T10:03:23.245051+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-16T10:03:23.313912+00:00 ubuntu sudo:     loki : TTY=pts/2 ; PWD=/home/loki ; USER=root ; COMMAND=/opt/splunkforwarder/bin/splunk add monitor /var/log/
-2025-10-16T10:03:23.317991+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-16T10:03:43.960097+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-16T10:03:44.034809+00:00 ubuntu sudo:     loki : TTY=pts/2 ; PWD=/home/loki ; USER=root ; COMMAND=/opt/splunkforwarder/bin/splunk add monitor /var/log/windows_events.log
-2025-10-16T10:03:44.046650+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-16T10:04:18.236917+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-16T10:05:05.600873+00:00 ubuntu CRON[2379]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-16T10:05:09.413861+00:00 ubuntu CRON[2379]: pam_unix(cron:session): session closed for user root
-2025-10-16T10:15:18.747839+00:00 ubuntu CRON[2400]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-16T10:15:20.105792+00:00 ubuntu CRON[2400]: pam_unix(cron:session): session closed for user root
-2025-10-16T10:17:02.702396+00:00 ubuntu CRON[2405]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-16T10:17:04.335373+00:00 ubuntu CRON[2405]: pam_unix(cron:session): session closed for user root
-2025-10-16T15:52:07.525406+00:00 ubuntu systemd-logind[710]: New seat seat0.
-2025-10-16T15:52:07.525417+00:00 ubuntu systemd-logind[710]: Watching system buttons on /dev/input/event0 (Power Button)
-2025-10-16T15:52:07.525422+00:00 ubuntu systemd-logind[710]: Watching system buttons on /dev/input/event1 (Sleep Button)
-2025-10-16T15:52:07.525427+00:00 ubuntu systemd-logind[710]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
-2025-10-16T15:52:06.519551+00:00 ubuntu polkitd[703]: Loading rules from directory /etc/polkit-1/rules.d
-2025-10-16T15:52:06.544772+00:00 ubuntu polkitd[703]: Loading rules from directory /usr/share/polkit-1/rules.d
-2025-10-16T15:52:06.965325+00:00 ubuntu polkitd[703]: Finished loading, compiling and executing 6 rules
-2025-10-16T15:52:06.965434+00:00 ubuntu polkitd[703]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
-2025-10-16T15:52:08.397757+00:00 ubuntu sshd[804]: Server listening on 0.0.0.0 port 22.
-2025-10-16T15:52:08.397867+00:00 ubuntu sshd[804]: Server listening on :: port 22.
-2025-10-16T15:55:03.099643+00:00 ubuntu CRON[1032]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-16T15:55:03.893657+00:00 ubuntu CRON[1032]: pam_unix(cron:session): session closed for user root
-2025-10-16T15:56:10.115468+00:00 ubuntu login[807]: PAM unable to dlopen(pam_lastlog.so): /usr/lib/security/pam_lastlog.so: cannot open shared object file: No such file or directory
-2025-10-16T15:56:10.118300+00:00 ubuntu login[807]: PAM adding faulty module: pam_lastlog.so
-2025-10-16T15:56:16.057979+00:00 ubuntu login[807]: pam_unix(login:session): session opened for user loki(uid=1000) by loki(uid=0)
-2025-10-16T15:56:16.168460+00:00 ubuntu systemd-logind[710]: New session 2 of user loki.
-2025-10-16T15:56:16.406469+00:00 ubuntu (systemd): pam_unix(systemd-user:session): session opened for user loki(uid=1000) by loki(uid=0)
-2025-10-16T16:05:03.310641+00:00 ubuntu CRON[1173]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-16T16:05:04.222655+00:00 ubuntu CRON[1173]: pam_unix(cron:session): session closed for user root
-2025-10-16T16:15:02.369198+00:00 ubuntu CRON[1212]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-16T16:15:03.061507+00:00 ubuntu CRON[1212]: pam_unix(cron:session): session closed for user root
-2025-10-16T16:17:01.258927+00:00 ubuntu CRON[1217]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-16T16:17:01.440249+00:00 ubuntu CRON[1217]: pam_unix(cron:session): session closed for user root
-2025-10-16T16:21:07.258749+00:00 ubuntu sudo:     loki : TTY=tty1 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/bin/systemctl status ssh
-2025-10-16T16:21:07.287462+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-16T16:21:07.647353+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-16T16:25:09.778975+00:00 ubuntu CRON[1235]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-16T16:25:12.371391+00:00 ubuntu CRON[1235]: pam_unix(cron:session): session closed for user root
-2025-10-16T16:28:06.235964+00:00 ubuntu sshd[1245]: Received disconnect from 192.168.56.101 port 41922:11: Bye Bye [preauth]
-2025-10-16T16:28:06.266540+00:00 ubuntu sshd[1245]: Disconnected from authenticating user root 192.168.56.101 port 41922 [preauth]
-2025-10-16T16:28:07.051139+00:00 ubuntu sshd[1249]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.56.101  user=root
-2025-10-16T16:28:07.110595+00:00 ubuntu sshd[1248]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.56.101  user=root
-2025-10-16T16:28:07.118000+00:00 ubuntu sshd[1247]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.56.101  user=root
-2025-10-16T16:28:07.123297+00:00 ubuntu sshd[1250]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.56.101  user=root
-2025-10-16T16:28:08.986657+00:00 ubuntu sshd[1250]: Failed password for root from 192.168.56.101 port 56802 ssh2
-2025-10-16T16:28:09.020963+00:00 ubuntu sshd[1247]: Failed password for root from 192.168.56.101 port 56774 ssh2
-2025-10-16T16:28:09.052513+00:00 ubuntu sshd[1249]: Failed password for root from 192.168.56.101 port 56792 ssh2
-2025-10-16T16:28:09.111194+00:00 ubuntu sshd[1248]: Failed password for root from 192.168.56.101 port 56776 ssh2
-2025-10-16T16:28:10.162229+00:00 ubuntu sshd[1249]: Received disconnect from 192.168.56.101 port 56792:11: Bye Bye [preauth]
-2025-10-16T16:28:10.185555+00:00 ubuntu sshd[1249]: Disconnected from authenticating user root 192.168.56.101 port 56792 [preauth]
-2025-10-16T16:28:10.340001+00:00 ubuntu sshd[1248]: Received disconnect from 192.168.56.101 port 56776:11: Bye Bye [preauth]
-2025-10-16T16:28:10.464835+00:00 ubuntu sshd[1248]: Disconnected from authenticating user root 192.168.56.101 port 56776 [preauth]
-2025-10-16T16:28:10.485725+00:00 ubuntu sshd[1247]: Received disconnect from 192.168.56.101 port 56774:11: Bye Bye [preauth]
-2025-10-16T16:28:10.486006+00:00 ubuntu sshd[1247]: Disconnected from authenticating user root 192.168.56.101 port 56774 [preauth]
-2025-10-16T16:28:10.546695+00:00 ubuntu sshd[1250]: Received disconnect from 192.168.56.101 port 56802:11: Bye Bye [preauth]
-2025-10-16T16:28:10.547584+00:00 ubuntu sshd[1250]: Disconnected from authenticating user root 192.168.56.101 port 56802 [preauth]
-2025-10-16T16:28:10.739643+00:00 ubuntu sshd[1255]: Invalid user admin from 192.168.56.101 port 56806
-2025-10-16T16:28:10.777818+00:00 ubuntu sshd[1256]: Invalid user admin from 192.168.56.101 port 56820
-2025-10-16T16:28:10.795744+00:00 ubuntu sshd[1256]: pam_unix(sshd:auth): check pass; user unknown
-2025-10-16T16:28:10.796883+00:00 ubuntu sshd[1255]: pam_unix(sshd:auth): check pass; user unknown
-2025-10-16T16:28:10.798024+00:00 ubuntu sshd[1256]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.56.101 
-2025-10-16T16:28:10.801335+00:00 ubuntu sshd[1255]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.56.101 
-2025-10-16T16:28:10.825563+00:00 ubuntu sshd[1257]: Invalid user admin from 192.168.56.101 port 56836
-2025-10-16T16:28:10.843670+00:00 ubuntu sshd[1257]: pam_unix(sshd:auth): check pass; user unknown
-2025-10-16T16:28:10.843873+00:00 ubuntu sshd[1257]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.56.101 
-2025-10-16T16:28:10.889658+00:00 ubuntu sshd[1258]: Invalid user admin from 192.168.56.101 port 56838
-2025-10-16T16:28:10.900826+00:00 ubuntu sshd[1258]: pam_unix(sshd:auth): check pass; user unknown
-2025-10-16T16:28:10.901088+00:00 ubuntu sshd[1258]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.56.101 
-2025-10-16T16:28:12.410881+00:00 ubuntu sshd[1255]: Failed password for invalid user admin from 192.168.56.101 port 56806 ssh2
-2025-10-16T16:28:12.434325+00:00 ubuntu sshd[1256]: Failed password for invalid user admin from 192.168.56.101 port 56820 ssh2
-2025-10-16T16:28:12.443682+00:00 ubuntu sshd[1257]: Failed password for invalid user admin from 192.168.56.101 port 56836 ssh2
-2025-10-16T16:28:12.516190+00:00 ubuntu sshd[1258]: Failed password for invalid user admin from 192.168.56.101 port 56838 ssh2
-2025-10-16T16:28:13.699418+00:00 ubuntu sshd[1257]: Received disconnect from 192.168.56.101 port 56836:11: Bye Bye [preauth]
-2025-10-16T16:28:13.702604+00:00 ubuntu sshd[1257]: Disconnected from invalid user admin 192.168.56.101 port 56836 [preauth]
-2025-10-16T16:28:13.836308+00:00 ubuntu sshd[1263]: Invalid user user from 192.168.56.101 port 56840
-2025-10-16T16:28:13.845442+00:00 ubuntu sshd[1263]: pam_unix(sshd:auth): check pass; user unknown
-2025-10-16T16:28:13.846497+00:00 ubuntu sshd[1263]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.56.101 
-2025-10-16T16:28:14.344970+00:00 ubuntu sshd[1256]: Received disconnect from 192.168.56.101 port 56820:11: Bye Bye [preauth]
-2025-10-16T16:28:14.345464+00:00 ubuntu sshd[1256]: Disconnected from invalid user admin 192.168.56.101 port 56820 [preauth]
-2025-10-16T16:28:14.346413+00:00 ubuntu sshd[1255]: Received disconnect from 192.168.56.101 port 56806:11: Bye Bye [preauth]
-2025-10-16T16:28:14.349960+00:00 ubuntu sshd[1255]: Disconnected from invalid user admin 192.168.56.101 port 56806 [preauth]
-2025-10-16T16:28:14.354585+00:00 ubuntu sshd[1258]: Received disconnect from 192.168.56.101 port 56838:11: Bye Bye [preauth]
-2025-10-16T16:28:14.370156+00:00 ubuntu sshd[1258]: Disconnected from invalid user admin 192.168.56.101 port 56838 [preauth]
-2025-10-16T16:28:14.500877+00:00 ubuntu sshd[1266]: Invalid user user from 192.168.56.101 port 56862
-2025-10-16T16:28:14.511529+00:00 ubuntu sshd[1266]: pam_unix(sshd:auth): check pass; user unknown
-2025-10-16T16:28:14.515050+00:00 ubuntu sshd[1266]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.56.101 
-2025-10-16T16:28:14.544784+00:00 ubuntu sshd[1265]: Invalid user user from 192.168.56.101 port 56856
-2025-10-16T16:28:14.557113+00:00 ubuntu sshd[1265]: pam_unix(sshd:auth): check pass; user unknown
-2025-10-16T16:28:14.557335+00:00 ubuntu sshd[1265]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.56.101 
-2025-10-16T16:28:14.580938+00:00 ubuntu sshd[1267]: Invalid user user from 192.168.56.101 port 56874
-2025-10-16T16:28:14.585108+00:00 ubuntu sshd[1267]: pam_unix(sshd:auth): check pass; user unknown
-2025-10-16T16:28:14.586076+00:00 ubuntu sshd[1267]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.56.101 
-2025-10-16T16:28:16.066129+00:00 ubuntu sshd[1265]: Failed password for invalid user user from 192.168.56.101 port 56856 ssh2
-2025-10-16T16:28:16.070187+00:00 ubuntu sshd[1266]: Failed password for invalid user user from 192.168.56.101 port 56862 ssh2
-2025-10-16T16:28:16.074192+00:00 ubuntu sshd[1267]: Failed password for invalid user user from 192.168.56.101 port 56874 ssh2
-2025-10-16T16:28:16.400069+00:00 ubuntu sshd[1263]: Failed password for invalid user user from 192.168.56.101 port 56840 ssh2
-2025-10-16T16:28:16.916893+00:00 ubuntu sshd[1266]: Received disconnect from 192.168.56.101 port 56862:11: Bye Bye [preauth]
-2025-10-16T16:28:16.928067+00:00 ubuntu sshd[1266]: Disconnected from invalid user user 192.168.56.101 port 56862 [preauth]
-2025-10-16T16:28:16.945228+00:00 ubuntu sshd[1265]: Received disconnect from 192.168.56.101 port 56856:11: Bye Bye [preauth]
-2025-10-16T16:28:16.951087+00:00 ubuntu sshd[1265]: Disconnected from invalid user user 192.168.56.101 port 56856 [preauth]
-2025-10-16T16:28:16.973952+00:00 ubuntu sshd[1267]: Received disconnect from 192.168.56.101 port 56874:11: Bye Bye [preauth]
-2025-10-16T16:28:16.974273+00:00 ubuntu sshd[1267]: Disconnected from invalid user user 192.168.56.101 port 56874 [preauth]
-2025-10-16T16:28:17.139750+00:00 ubuntu sshd[1273]: Invalid user test from 192.168.56.101 port 34078
-2025-10-16T16:28:17.147034+00:00 ubuntu sshd[1273]: pam_unix(sshd:auth): check pass; user unknown
-2025-10-16T16:28:17.147187+00:00 ubuntu sshd[1273]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.56.101 
-2025-10-16T16:28:17.153846+00:00 ubuntu sshd[1271]: Invalid user test from 192.168.56.101 port 34060
-2025-10-16T16:28:17.172585+00:00 ubuntu sshd[1271]: pam_unix(sshd:auth): check pass; user unknown
-2025-10-16T16:28:17.172836+00:00 ubuntu sshd[1271]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.56.101 
-2025-10-16T16:28:17.183194+00:00 ubuntu sshd[1272]: Invalid user test from 192.168.56.101 port 34064
-2025-10-16T16:28:17.265791+00:00 ubuntu sshd[1272]: pam_unix(sshd:auth): check pass; user unknown
-2025-10-16T16:28:17.266107+00:00 ubuntu sshd[1272]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.56.101 
-2025-10-16T16:28:18.563470+00:00 ubuntu sshd[1263]: Received disconnect from 192.168.56.101 port 56840:11: Bye Bye [preauth]
-2025-10-16T16:28:18.570661+00:00 ubuntu sshd[1263]: Disconnected from invalid user user 192.168.56.101 port 56840 [preauth]
-2025-10-16T16:28:18.684658+00:00 ubuntu sshd[1277]: Invalid user test from 192.168.56.101 port 34088
-2025-10-16T16:28:18.689200+00:00 ubuntu sshd[1277]: pam_unix(sshd:auth): check pass; user unknown
-2025-10-16T16:28:18.689683+00:00 ubuntu sshd[1277]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.56.101 
-2025-10-16T16:28:19.063371+00:00 ubuntu sshd[1273]: Failed password for invalid user test from 192.168.56.101 port 34078 ssh2
-2025-10-16T16:28:19.081783+00:00 ubuntu sshd[1271]: Failed password for invalid user test from 192.168.56.101 port 34060 ssh2
-2025-10-16T16:28:19.315171+00:00 ubuntu sshd[1272]: Failed password for invalid user test from 192.168.56.101 port 34064 ssh2
-2025-10-16T16:28:20.694778+00:00 ubuntu sshd[1273]: Received disconnect from 192.168.56.101 port 34078:11: Bye Bye [preauth]
-2025-10-16T16:28:20.699693+00:00 ubuntu sshd[1273]: Disconnected from invalid user test 192.168.56.101 port 34078 [preauth]
-2025-10-16T16:28:20.716546+00:00 ubuntu sshd[1271]: Received disconnect from 192.168.56.101 port 34060:11: Bye Bye [preauth]
-2025-10-16T16:28:20.716857+00:00 ubuntu sshd[1271]: Disconnected from invalid user test 192.168.56.101 port 34060 [preauth]
-2025-10-16T16:28:20.726219+00:00 ubuntu sshd[1272]: Received disconnect from 192.168.56.101 port 34064:11: Bye Bye [preauth]
-2025-10-16T16:28:20.732273+00:00 ubuntu sshd[1272]: Disconnected from invalid user test 192.168.56.101 port 34064 [preauth]
-2025-10-16T16:28:20.742263+00:00 ubuntu sshd[1277]: Failed password for invalid user test from 192.168.56.101 port 34088 ssh2
-2025-10-16T16:28:20.909063+00:00 ubuntu sshd[1279]: Invalid user administrator from 192.168.56.101 port 34096
-2025-10-16T16:28:20.941874+00:00 ubuntu sshd[1279]: pam_unix(sshd:auth): check pass; user unknown
-2025-10-16T16:28:20.941989+00:00 ubuntu sshd[1279]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.56.101 
-2025-10-16T16:28:20.963411+00:00 ubuntu sshd[1280]: Invalid user administrator from 192.168.56.101 port 34104
-2025-10-16T16:28:20.975645+00:00 ubuntu sshd[1281]: Invalid user administrator from 192.168.56.101 port 34116
-2025-10-16T16:28:20.985616+00:00 ubuntu sshd[1280]: pam_unix(sshd:auth): check pass; user unknown
-2025-10-16T16:28:20.986000+00:00 ubuntu sshd[1280]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.56.101 
-2025-10-16T16:28:20.994276+00:00 ubuntu sshd[1281]: pam_unix(sshd:auth): check pass; user unknown
-2025-10-16T16:28:20.994996+00:00 ubuntu sshd[1281]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.56.101 
-2025-10-16T16:28:22.289109+00:00 ubuntu sshd[1277]: Received disconnect from 192.168.56.101 port 34088:11: Bye Bye [preauth]
-2025-10-16T16:28:22.289573+00:00 ubuntu sshd[1277]: Disconnected from invalid user test 192.168.56.101 port 34088 [preauth]
-2025-10-16T16:28:22.411811+00:00 ubuntu sshd[1285]: Invalid user administrator from 192.168.56.101 port 34130
-2025-10-16T16:28:22.419947+00:00 ubuntu sshd[1285]: pam_unix(sshd:auth): check pass; user unknown
-2025-10-16T16:28:22.420356+00:00 ubuntu sshd[1285]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.56.101 
-2025-10-16T16:28:22.588952+00:00 ubuntu sshd[1279]: Failed password for invalid user administrator from 192.168.56.101 port 34096 ssh2
-2025-10-16T16:28:22.631237+00:00 ubuntu sshd[1280]: Failed password for invalid user administrator from 192.168.56.101 port 34104 ssh2
-2025-10-16T16:28:22.646989+00:00 ubuntu sshd[1281]: Failed password for invalid user administrator from 192.168.56.101 port 34116 ssh2
-2025-10-16T16:28:24.012539+00:00 ubuntu sshd[1285]: Failed password for invalid user administrator from 192.168.56.101 port 34130 ssh2
-2025-10-16T16:28:24.098566+00:00 ubuntu sshd[1285]: Connection closed by invalid user administrator 192.168.56.101 port 34130 [preauth]
-2025-10-16T16:28:24.251630+00:00 ubuntu sshd[1279]: Connection closed by invalid user administrator 192.168.56.101 port 34096 [preauth]
-2025-10-16T16:28:24.281579+00:00 ubuntu sshd[1280]: Connection closed by invalid user administrator 192.168.56.101 port 34104 [preauth]
-2025-10-16T16:28:24.303837+00:00 ubuntu sshd[1281]: Connection closed by invalid user administrator 192.168.56.101 port 34116 [preauth]
-2025-10-16T16:35:16.019549+00:00 ubuntu CRON[1296]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-16T16:35:16.133714+00:00 ubuntu CRON[1296]: pam_unix(cron:session): session closed for user root
-2025-10-16T16:41:07.176797+00:00 ubuntu sudo:     loki : TTY=tty1 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/bin/cat /var/log/auth.log
-2025-10-16T16:41:07.193415+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-16T16:41:08.050828+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-16T16:45:03.718937+00:00 ubuntu CRON[1311]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-16T16:45:03.884182+00:00 ubuntu CRON[1311]: pam_unix(cron:session): session closed for user root
-2025-10-16T16:55:10.923493+00:00 ubuntu CRON[1324]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-16T16:55:11.267341+00:00 ubuntu CRON[1324]: pam_unix(cron:session): session closed for user root
-2025-10-16T17:05:05.969915+00:00 ubuntu CRON[1339]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-16T17:05:06.142657+00:00 ubuntu CRON[1339]: pam_unix(cron:session): session closed for user root
-2025-10-16T17:15:06.441628+00:00 ubuntu CRON[1351]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-16T17:15:06.506651+00:00 ubuntu CRON[1351]: pam_unix(cron:session): session closed for user root
-2025-10-16T17:17:01.520539+00:00 ubuntu CRON[1424]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-16T17:17:01.563626+00:00 ubuntu CRON[1424]: pam_unix(cron:session): session closed for user root
-2025-10-16T17:25:02.049401+00:00 ubuntu CRON[1545]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-16T17:25:02.118034+00:00 ubuntu CRON[1545]: pam_unix(cron:session): session closed for user root
-2025-10-16T17:35:48.565671+00:00 ubuntu CRON[1561]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-16T17:35:52.290183+00:00 ubuntu CRON[1561]: pam_unix(cron:session): session closed for user root
-2025-10-16T17:45:03.475029+00:00 ubuntu CRON[1571]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-16T17:45:03.655325+00:00 ubuntu CRON[1571]: pam_unix(cron:session): session closed for user root
-2025-10-16T17:55:13.898175+00:00 ubuntu CRON[1587]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-16T17:55:14.258593+00:00 ubuntu CRON[1587]: pam_unix(cron:session): session closed for user root
-2025-10-17T03:20:27.984027+00:00 ubuntu systemd-logind[721]: New seat seat0.
-2025-10-17T03:20:27.984032+00:00 ubuntu systemd-logind[721]: Watching system buttons on /dev/input/event0 (Power Button)
-2025-10-17T03:20:27.984036+00:00 ubuntu systemd-logind[721]: Watching system buttons on /dev/input/event1 (Sleep Button)
-2025-10-17T03:20:27.984042+00:00 ubuntu systemd-logind[721]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
-2025-10-17T03:20:26.403996+00:00 ubuntu polkitd[702]: Loading rules from directory /etc/polkit-1/rules.d
-2025-10-17T03:20:26.624275+00:00 ubuntu polkitd[702]: Loading rules from directory /usr/share/polkit-1/rules.d
-2025-10-17T03:20:28.152703+00:00 ubuntu polkitd[702]: Finished loading, compiling and executing 6 rules
-2025-10-17T03:20:28.152922+00:00 ubuntu polkitd[702]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
-2025-10-17T03:20:47.343942+00:00 ubuntu sshd[883]: Server listening on 0.0.0.0 port 22.
-2025-10-17T03:20:47.344043+00:00 ubuntu sshd[883]: Server listening on :: port 22.
-2025-10-17T03:21:46.882865+00:00 ubuntu login[898]: PAM unable to dlopen(pam_lastlog.so): /usr/lib/security/pam_lastlog.so: cannot open shared object file: No such file or directory
-2025-10-17T03:21:46.883273+00:00 ubuntu login[898]: PAM adding faulty module: pam_lastlog.so
-2025-10-17T03:21:52.231955+00:00 ubuntu login[898]: pam_unix(login:session): session opened for user loki(uid=1000) by loki(uid=0)
-2025-10-17T03:21:52.387360+00:00 ubuntu systemd-logind[721]: New session 1 of user loki.
-2025-10-17T03:21:52.485921+00:00 ubuntu (systemd): pam_unix(systemd-user:session): session opened for user loki(uid=1000) by loki(uid=0)
-2025-10-17T03:23:18.503619+00:00 ubuntu sudo:     loki : TTY=tty1 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/bin/tail -f /opt/splunkforwarder/var/log/splunk/splunkd.log
-2025-10-17T03:23:18.514436+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-17T03:25:01.492234+00:00 ubuntu CRON[1213]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-17T03:25:03.898011+00:00 ubuntu CRON[1213]: pam_unix(cron:session): session closed for user root
-2025-10-17T03:25:32.342902+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-17T03:30:59.139802+00:00 ubuntu sshd[1228]: Accepted password for loki from 192.168.56.1 port 59214 ssh2
-2025-10-17T03:30:59.588341+00:00 ubuntu sshd[1228]: pam_unix(sshd:session): session opened for user loki(uid=1000) by loki(uid=0)
-2025-10-17T03:31:00.633962+00:00 ubuntu systemd-logind[721]: New session 4 of user loki.
-2025-10-17T03:31:24.689107+00:00 ubuntu sudo:     loki : TTY=pts/0 ; PWD=/home/loki ; USER=root ; COMMAND=/opt/splunkforwarder/bin/splunk status
-2025-10-17T03:31:24.715915+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-17T03:31:26.455902+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-17T03:31:26.585775+00:00 ubuntu sudo:     loki : TTY=pts/0 ; PWD=/home/loki ; USER=root ; COMMAND=/opt/splunkforwarder/bin/splunk list monitor
-2025-10-17T03:31:26.597127+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-17T03:31:53.672849+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-17T03:31:53.750484+00:00 ubuntu sudo:     loki : TTY=pts/0 ; PWD=/home/loki ; USER=root ; COMMAND=/opt/splunkforwarder/bin/splunk list forward-server
-2025-10-17T03:31:53.783037+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-17T03:32:56.833526+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-17T03:32:56.969170+00:00 ubuntu sudo:     loki : TTY=pts/0 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/bin/tail -20 /var/log/auth.log
-2025-10-17T03:32:56.990167+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-17T03:32:57.033996+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-17T03:32:57.202230+00:00 ubuntu sudo:     loki : TTY=pts/0 ; PWD=/home/loki ; USER=root ; COMMAND=/opt/splunkforwarder/bin/splunk search 'index=* host=ubuntu' -auth admin:changeme -maxout 1
-2025-10-17T03:32:57.239519+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-17T03:33:04.360704+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-17T03:33:16.442521+00:00 ubuntu sudo:     loki : TTY=pts/0 ; PWD=/home/loki ; USER=root ; COMMAND=/opt/splunkforwarder/bin/splunk status
-2025-10-17T03:33:16.588397+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-17T03:33:18.127315+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-17T03:33:18.277949+00:00 ubuntu sudo:     loki : TTY=pts/0 ; PWD=/home/loki ; USER=root ; COMMAND=/opt/splunkforwarder/bin/splunk list monitor
-2025-10-17T03:33:18.306555+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-17T03:34:02.260873+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-17T03:34:02.426658+00:00 ubuntu sudo:     loki : TTY=pts/0 ; PWD=/home/loki ; USER=root ; COMMAND=/opt/splunkforwarder/bin/splunk list forward-server
-2025-10-17T03:34:02.442321+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-17T03:34:57.928106+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-17T03:34:58.127000+00:00 ubuntu sudo:     loki : TTY=pts/0 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/bin/tail -20 /var/log/auth.log
-2025-10-17T03:34:58.191742+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-17T03:34:58.221894+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-17T03:34:58.341869+00:00 ubuntu sudo:     loki : TTY=pts/0 ; PWD=/home/loki ; USER=root ; COMMAND=/opt/splunkforwarder/bin/splunk search 'index=* host=ubuntu' -auth admin:changeme -maxout 1
-2025-10-17T03:34:58.393006+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-17T03:35:02.630698+00:00 ubuntu CRON[1561]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-17T03:35:02.933864+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-17T03:35:03.865355+00:00 ubuntu CRON[1561]: pam_unix(cron:session): session closed for user root
-2025-10-17T03:35:22.113586+00:00 ubuntu sudo:     loki : TTY=pts/0 ; PWD=/home/loki ; USER=root ; COMMAND=/opt/splunkforwarder/bin/splunk status
-2025-10-17T03:35:22.237566+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-17T03:35:22.896773+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-17T03:35:22.978039+00:00 ubuntu sudo:     loki : TTY=pts/0 ; PWD=/home/loki ; USER=root ; COMMAND=/opt/splunkforwarder/bin/splunk list monitor
-2025-10-17T03:35:22.986211+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-17T03:36:02.698240+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-17T03:36:02.881250+00:00 ubuntu sudo:     loki : TTY=pts/0 ; PWD=/home/loki ; USER=root ; COMMAND=/opt/splunkforwarder/bin/splunk list forward-server
-2025-10-17T03:36:02.905840+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-17T03:36:25.237229+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-17T03:36:25.347084+00:00 ubuntu sudo:     loki : TTY=pts/0 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/bin/tail -20 /var/log/auth.log
-2025-10-17T03:36:25.368759+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-17T03:36:25.403399+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-17T03:36:25.542447+00:00 ubuntu sudo:     loki : TTY=pts/0 ; PWD=/home/loki ; USER=root ; COMMAND=/opt/splunkforwarder/bin/splunk search 'index=* host=ubuntu' -auth admin:changeme -maxout 1
-2025-10-17T03:36:25.579295+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-17T03:36:28.884392+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-17T03:38:15.520962+00:00 ubuntu sudo:     loki : TTY=pts/0 ; PWD=/home/loki ; USER=root ; COMMAND=/opt/splunkforwarder/bin/splunk status
-2025-10-17T03:38:15.555583+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-17T03:38:16.779452+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-17T03:38:16.846983+00:00 ubuntu sudo:     loki : TTY=pts/0 ; PWD=/home/loki ; USER=root ; COMMAND=/opt/splunkforwarder/bin/splunk list forward-server
-2025-10-17T03:38:16.851281+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-17T03:38:51.863787+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-17T03:38:55.702073+00:00 ubuntu sudo:     loki : TTY=pts/0 ; PWD=/home/loki ; USER=root ; COMMAND=/opt/splunkforwarder/bin/splunk status
-2025-10-17T03:38:55.707038+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-17T03:38:56.817816+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-17T03:38:56.935139+00:00 ubuntu sudo:     loki : TTY=pts/0 ; PWD=/home/loki ; USER=root ; COMMAND=/opt/splunkforwarder/bin/splunk list forward-server
-2025-10-17T03:38:56.941668+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-17T03:39:32.508416+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-17T03:40:31.556627+00:00 ubuntu sudo:     loki : TTY=pts/0 ; PWD=/home/loki ; USER=root ; COMMAND=/opt/splunkforwarder/bin/splunk stop
-2025-10-17T03:40:31.643570+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-17T03:40:43.092616+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-17T03:40:43.167741+00:00 ubuntu sudo:     loki : TTY=pts/0 ; PWD=/home/loki ; USER=root ; COMMAND=/opt/splunkforwarder/bin/splunk start --accept-license --no-prompt --answer-yes
-2025-10-17T03:40:43.186906+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-17T03:40:52.799058+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-17T03:40:52.856947+00:00 ubuntu sudo:     loki : TTY=pts/0 ; PWD=/home/loki ; USER=root ; COMMAND=/opt/splunkforwarder/bin/splunk edit user admin -password newpassword -auth admin:changeme
-2025-10-17T03:40:52.869043+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-17T03:41:01.998726+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-17T03:43:08.800561+00:00 ubuntu sudo:     loki : TTY=pts/0 ; PWD=/home/loki ; USER=root ; COMMAND=/opt/splunkforwarder/bin/splunk stop
-2025-10-17T03:43:08.838472+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-17T03:43:18.663338+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-17T03:43:18.760121+00:00 ubuntu sudo:     loki : TTY=pts/0 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/bin/rm -f /opt/splunkforwarder/etc/passwd
-2025-10-17T03:43:18.761749+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-17T03:43:18.816364+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-17T03:43:18.983855+00:00 ubuntu sudo:     loki : TTY=pts/0 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/bin/rm -f /opt/splunkforwarder/etc/.ui_login
-2025-10-17T03:43:19.038079+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-17T03:43:19.053568+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-17T03:43:19.270283+00:00 ubuntu sudo:     loki : TTY=pts/0 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/bin/rm -f /opt/splunkforwarder/etc/authToken
-2025-10-17T03:43:19.310648+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-17T03:43:19.327532+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-17T03:43:19.389794+00:00 ubuntu sudo:     loki : TTY=pts/0 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/bin/rm -f /opt/splunkforwarder/var/lock/splunk/*
-2025-10-17T03:43:19.430941+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-17T03:43:19.463887+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-17T03:43:19.637661+00:00 ubuntu sudo:     loki : TTY=pts/0 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/bin/rm -rf /opt/splunkforwarder/var/run/splunk/*
-2025-10-17T03:43:19.648205+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-17T03:43:19.677269+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-17T03:45:04.220622+00:00 ubuntu CRON[2183]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-17T03:45:04.841915+00:00 ubuntu CRON[2183]: pam_unix(cron:session): session closed for user root
-2025-10-17T03:53:25.906771+00:00 ubuntu sshd[2211]: Accepted password for loki from 192.168.4.204 port 54814 ssh2
-2025-10-17T03:53:26.754229+00:00 ubuntu sshd[2211]: pam_unix(sshd:session): session opened for user loki(uid=1000) by loki(uid=0)
-2025-10-17T03:53:27.785774+00:00 ubuntu systemd-logind[721]: New session 7 of user loki.
-2025-10-17T03:54:26.983487+00:00 ubuntu sshd[2267]: Received disconnect from 192.168.4.204 port 54814:11: disconnected by user
-2025-10-17T03:54:28.059429+00:00 ubuntu sshd[2267]: Disconnected from user loki 192.168.4.204 port 54814
-2025-10-17T03:54:28.193688+00:00 ubuntu sshd[2211]: pam_unix(sshd:session): session closed for user loki
-2025-10-17T03:54:28.221732+00:00 ubuntu systemd-logind[721]: Session 7 logged out. Waiting for processes to exit.
-2025-10-17T03:54:28.255458+00:00 ubuntu systemd-logind[721]: Removed session 7.
-2025-10-17T03:55:02.174573+00:00 ubuntu CRON[2269]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-17T03:55:02.792362+00:00 ubuntu CRON[2269]: pam_unix(cron:session): session closed for user root
-2025-10-17T03:55:17.041638+00:00 ubuntu sshd[2273]: Accepted password for loki from 192.168.4.204 port 51313 ssh2
-2025-10-17T03:55:17.150603+00:00 ubuntu sshd[2273]: pam_unix(sshd:session): session opened for user loki(uid=1000) by loki(uid=0)
-2025-10-17T03:55:17.305489+00:00 ubuntu systemd-logind[721]: New session 9 of user loki.
-2025-10-17T03:56:02.947253+00:00 ubuntu sudo:     loki : TTY=pts/1 ; PWD=/home/loki ; USER=root ; COMMAND=/opt/splunkforwarder/bin/splunk stop
-2025-10-17T03:56:03.349622+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-17T03:56:33.163144+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-17T03:56:33.393339+00:00 ubuntu sudo:     loki : TTY=pts/1 ; PWD=/home/loki ; USER=splunkfwd ; COMMAND=/usr/bin/tee /opt/splunkforwarder/etc/system/local/outputs.conf
-2025-10-17T03:56:33.417928+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user splunkfwd(uid=1001) by loki(uid=1000)
-2025-10-17T03:56:33.480893+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user splunkfwd
-2025-10-17T03:56:33.872796+00:00 ubuntu sudo:     loki : TTY=pts/1 ; PWD=/home/loki ; USER=splunkfwd ; COMMAND=/usr/bin/tee /opt/splunkforwarder/etc/system/local/inputs.conf
-2025-10-17T03:56:33.944762+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user splunkfwd(uid=1001) by loki(uid=1000)
-2025-10-17T03:56:34.122416+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user splunkfwd
-2025-10-17T03:56:50.163633+00:00 ubuntu sudo:     loki : TTY=pts/1 ; PWD=/home/loki ; USER=splunkfwd ; COMMAND=/opt/splunkforwarder/bin/splunk start
-2025-10-17T03:56:50.235534+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user splunkfwd(uid=1001) by loki(uid=1000)
-2025-10-17T03:57:23.462115+00:00 ubuntu polkitd[702]: Registered Authentication Agent for unix-process:2415:231310 (system bus name :1.22 [/usr/bin/pkttyagent --notify-fd 5 --fallback], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
-2025-10-17T03:57:24.317856+00:00 ubuntu polkitd[702]: Identity `unix-group:admin' is not valid, ignoring: No UNIX group with name admin: Success
-2025-10-17T03:57:43.203810+00:00 ubuntu polkitd[702]: Operator of unix-process:2415:231310 successfully authenticated as unix-user:loki to gain ONE-SHOT authorization for action org.freedesktop.systemd1.manage-units for system-bus-name::1.23 [systemctl start SplunkForwarder] (owned by unix-user:splunkfwd)
-2025-10-17T03:57:45.555526+00:00 ubuntu polkitd[702]: Unregistered Authentication Agent for unix-process:2415:231310 (system bus name :1.22, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
-2025-10-17T03:57:45.582446+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user splunkfwd
-2025-10-17T03:57:46.351207+00:00 ubuntu sudo:     loki : TTY=pts/1 ; PWD=/home/loki ; USER=splunkfwd ; COMMAND=/opt/splunkforwarder/bin/splunk status
-2025-10-17T03:57:46.465893+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user splunkfwd(uid=1001) by loki(uid=1000)
-2025-10-17T03:57:47.018314+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user splunkfwd
-2025-10-17T03:57:47.405518+00:00 ubuntu sudo:     loki : TTY=pts/1 ; PWD=/home/loki ; USER=splunkfwd ; COMMAND=/opt/splunkforwarder/bin/splunk list forward-server
-2025-10-17T03:57:47.445332+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user splunkfwd(uid=1001) by loki(uid=1000)
-2025-10-17T03:58:05.869790+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user splunkfwd
-2025-10-17T04:04:53.199320+00:00 ubuntu sudo:     loki : TTY=pts/1 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/bin/tee -a /var/log/auth.log
-Oct 17 04:04:49 ubuntu sshd[12345]: Failed password for root from 192.168.4.100 port 22
-2025-10-17T04:04:53.478558+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-17T04:04:53.505956+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-17T04:04:53.844191+00:00 ubuntu sudo:     loki : TTY=pts/1 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/bin/tee -a /var/log/auth.log
-2025-10-17T04:04:53.874121+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-Oct 17 04:04:53 ubuntu sshd[12346]: Failed password for invalid user admin from 192.168.4.101 port 22
-2025-10-17T04:04:53.988177+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-17T04:04:54.166027+00:00 ubuntu sudo:     loki : TTY=pts/1 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/bin/tail -f /opt/splunkforwarder/var/log/splunk/splunkd.log
-2025-10-17T04:04:54.211888+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-17T04:05:03.121589+00:00 ubuntu CRON[2633]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-17T04:05:03.515083+00:00 ubuntu CRON[2633]: pam_unix(cron:session): session closed for user root
-2025-10-17T04:05:07.567746+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-17T04:07:33.501197+00:00 ubuntu sudo:     loki : TTY=pts/1 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/bin/tail -f /opt/splunkforwarder/var/log/splunk/metrics.log
-2025-10-17T04:07:33.637120+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-17T04:10:07.481932+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-17T04:10:13.562987+00:00 ubuntu sudo:     loki : TTY=pts/1 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/bin/ls -la /var/log/auth.log
-2025-10-17T04:10:13.743498+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-17T04:10:14.163058+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-                                                                                                                                                                                                                                                                                                                                                                       2025-10-17T15:22:38.492440+00:00 ubuntu systemd-logind[708]: New seat seat0.
-2025-10-17T15:22:38.492445+00:00 ubuntu systemd-logind[708]: Watching system buttons on /dev/input/event0 (Power Button)
-2025-10-17T15:22:38.492450+00:00 ubuntu systemd-logind[708]: Watching system buttons on /dev/input/event1 (Sleep Button)
-2025-10-17T15:22:38.492961+00:00 ubuntu systemd-logind[708]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
-2025-10-17T15:22:38.451018+00:00 ubuntu polkitd[699]: Loading rules from directory /etc/polkit-1/rules.d
-2025-10-17T15:22:38.457574+00:00 ubuntu polkitd[699]: Loading rules from directory /usr/share/polkit-1/rules.d
-2025-10-17T15:22:38.620951+00:00 ubuntu polkitd[699]: Finished loading, compiling and executing 6 rules
-2025-10-17T15:22:38.710607+00:00 ubuntu polkitd[699]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
-2025-10-17T15:22:40.850572+00:00 ubuntu sshd[784]: Server listening on 0.0.0.0 port 22.
-2025-10-17T15:22:40.881773+00:00 ubuntu sshd[784]: Server listening on :: port 22.
-2025-10-17T15:22:45.022421+00:00 ubuntu login[805]: PAM unable to dlopen(pam_lastlog.so): /usr/lib/security/pam_lastlog.so: cannot open shared object file: No such file or directory
-2025-10-17T15:22:45.022748+00:00 ubuntu login[805]: PAM adding faulty module: pam_lastlog.so
-2025-10-17T15:22:51.698089+00:00 ubuntu login[805]: pam_unix(login:session): session opened for user loki(uid=1000) by loki(uid=0)
-2025-10-17T15:22:51.912551+00:00 ubuntu systemd-logind[708]: New session 1 of user loki.
-2025-10-17T15:22:52.610149+00:00 ubuntu (systemd): pam_unix(systemd-user:session): session opened for user loki(uid=1000) by loki(uid=0)
-2025-10-17T15:25:01.629955+00:00 ubuntu CRON[1187]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-17T15:25:02.013789+00:00 ubuntu CRON[1187]: pam_unix(cron:session): session closed for user root
-2025-10-17T15:29:46.281317+00:00 ubuntu systemd-logind[1227]: New seat seat0.
-2025-10-17T15:29:46.334000+00:00 ubuntu systemd-logind[1227]: Watching system buttons on /dev/input/event0 (Power Button)
-2025-10-17T15:29:46.335093+00:00 ubuntu systemd-logind[1227]: Watching system buttons on /dev/input/event1 (Sleep Button)
-2025-10-17T15:29:46.340830+00:00 ubuntu systemd-logind[1227]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
-2025-10-17T15:29:46.363979+00:00 ubuntu systemd-logind[1227]: New session 1 of user loki.
-2025-10-17T15:32:31.387224+00:00 ubuntu sshd[1235]: Accepted password for loki from 10.13.174.204 port 62919 ssh2
-2025-10-17T15:32:31.402598+00:00 ubuntu sshd[1235]: pam_unix(sshd:session): session opened for user loki(uid=1000) by loki(uid=0)
-2025-10-17T15:32:31.536651+00:00 ubuntu systemd-logind[1227]: New session 4 of user loki.
-2025-10-17T15:35:02.544419+00:00 ubuntu CRON[1301]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-17T15:35:03.087908+00:00 ubuntu CRON[1301]: pam_unix(cron:session): session closed for user root
-2025-10-17T15:36:55.373728+00:00 ubuntu sudo:     loki : TTY=pts/0 ; PWD=/home/loki ; USER=root ; COMMAND=/opt/splunkforwarder/bin/splunk stop
-2025-10-17T15:36:55.467599+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-17T15:37:29.263166+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-17T15:37:29.358275+00:00 ubuntu sudo:     loki : TTY=pts/0 ; PWD=/home/loki ; USER=splunkfwd ; COMMAND=/usr/bin/tee /opt/splunkforwarder/etc/system/local/outputs.conf
-2025-10-17T15:37:29.362562+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user splunkfwd(uid=1001) by loki(uid=1000)
-2025-10-17T15:37:29.408724+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user splunkfwd
-2025-10-17T15:37:29.467992+00:00 ubuntu sudo:     loki : TTY=pts/0 ; PWD=/home/loki ; USER=splunkfwd ; COMMAND=/usr/bin/tee /opt/splunkforwarder/etc/system/local/inputs.conf
-2025-10-17T15:37:29.483366+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user splunkfwd(uid=1001) by loki(uid=1000)
-2025-10-17T15:37:29.506250+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user splunkfwd
-2025-10-17T15:41:22.295985+00:00 ubuntu sudo:     loki : TTY=pts/0 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/bin/hostnamectl set-hostname ubuntu-forwarder
-2025-10-17T15:41:22.340841+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-17T15:41:23.132585+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-17T15:44:39.817757+00:00 ubuntu sudo:     loki : TTY=pts/0 ; PWD=/home/loki ; USER=splunkfwd ; COMMAND=/opt/splunkforwarder/bin/splunk start
-2025-10-17T15:44:39.866083+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user splunkfwd(uid=1001) by loki(uid=1000)
-2025-10-17T15:44:52.345134+00:00 ubuntu polkitd[699]: Registered Authentication Agent for unix-process:1436:136169 (system bus name :1.21 [/usr/bin/pkttyagent --notify-fd 5 --fallback], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
-2025-10-17T15:44:52.600688+00:00 ubuntu polkitd[699]: Identity `unix-group:admin' is not valid, ignoring: No UNIX group with name admin: Success
-2025-10-17T15:45:01.518034+00:00 ubuntu CRON[1447]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-17T15:45:01.549793+00:00 ubuntu CRON[1447]: pam_unix(cron:session): session closed for user root
-2025-10-17T15:45:03.459828+00:00 ubuntu polkitd[699]: Operator of unix-process:1436:136169 successfully authenticated as unix-user:loki to gain ONE-SHOT authorization for action org.freedesktop.systemd1.manage-units for system-bus-name::1.22 [systemctl start SplunkForwarder] (owned by unix-user:splunkfwd)
-2025-10-17T15:45:03.922165+00:00 ubuntu polkitd[699]: Unregistered Authentication Agent for unix-process:unknown (system bus name :1.21, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
-2025-10-17T15:45:03.923580+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user splunkfwd
-2025-10-17T15:45:03.987122+00:00 ubuntu sudo:     loki : TTY=pts/0 ; PWD=/home/loki ; USER=splunkfwd ; COMMAND=/opt/splunkforwarder/bin/splunk status
-2025-10-17T15:45:03.997872+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user splunkfwd(uid=1001) by loki(uid=1000)
-2025-10-17T15:45:04.094744+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user splunkfwd
-2025-10-17T15:45:04.145979+00:00 ubuntu sudo:     loki : TTY=pts/0 ; PWD=/home/loki ; USER=splunkfwd ; COMMAND=/opt/splunkforwarder/bin/splunk list forward-server
-2025-10-17T15:45:04.151393+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user splunkfwd(uid=1001) by loki(uid=1000)
-2025-10-17T15:45:08.463673+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user splunkfwd
-2025-10-17T15:47:38.643480+00:00 ubuntu dbus-daemon[694]: [system] Failed to activate service 'org.freedesktop.fwupd': timed out (service_start_timeout=25000ms)
-2025-10-17T15:55:01.951923+00:00 ubuntu CRON[1656]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-17T15:55:02.087208+00:00 ubuntu CRON[1656]: pam_unix(cron:session): session closed for user root
-2025-10-17T15:55:32.272156+00:00 ubuntu sshd[1660]: Received disconnect from 10.13.174.8 port 38776:11: Bye Bye [preauth]
-2025-10-17T15:55:32.330742+00:00 ubuntu sshd[1660]: Disconnected from authenticating user root 10.13.174.8 port 38776 [preauth]
-2025-10-17T15:55:32.614851+00:00 ubuntu sshd[1662]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.13.174.8  user=root
-2025-10-17T15:55:32.620507+00:00 ubuntu sshd[1663]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.13.174.8  user=root
-2025-10-17T15:55:34.977154+00:00 ubuntu sshd[1662]: Failed password for root from 10.13.174.8 port 38790 ssh2
-2025-10-17T15:55:34.984529+00:00 ubuntu sshd[1663]: Failed password for root from 10.13.174.8 port 38788 ssh2
-2025-10-17T15:55:37.970946+00:00 ubuntu sshd[1663]: Failed password for root from 10.13.174.8 port 38788 ssh2
-2025-10-17T15:55:38.000480+00:00 ubuntu sshd[1662]: Failed password for root from 10.13.174.8 port 38790 ssh2
-2025-10-17T15:55:39.333677+00:00 ubuntu sshd[1663]: Received disconnect from 10.13.174.8 port 38788:11: Bye Bye [preauth]
-2025-10-17T15:55:39.334730+00:00 ubuntu sshd[1663]: Disconnected from authenticating user root 10.13.174.8 port 38788 [preauth]
-2025-10-17T15:55:39.335413+00:00 ubuntu sshd[1662]: Received disconnect from 10.13.174.8 port 38790:11: Bye Bye [preauth]
-2025-10-17T15:55:39.338862+00:00 ubuntu sshd[1663]: PAM 1 more authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.13.174.8  user=root
-2025-10-17T15:55:39.340285+00:00 ubuntu sshd[1662]: Disconnected from authenticating user root 10.13.174.8 port 38790 [preauth]
-2025-10-17T15:55:39.340565+00:00 ubuntu sshd[1662]: PAM 1 more authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.13.174.8  user=root
-2025-10-17T15:55:39.474102+00:00 ubuntu sshd[1666]: Invalid user admin from 10.13.174.8 port 58964
-2025-10-17T15:55:39.481472+00:00 ubuntu sshd[1666]: pam_unix(sshd:auth): check pass; user unknown
-2025-10-17T15:55:39.482733+00:00 ubuntu sshd[1666]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.13.174.8 
-2025-10-17T15:55:39.511431+00:00 ubuntu sshd[1667]: Invalid user admin from 10.13.174.8 port 58974
-2025-10-17T15:55:39.525502+00:00 ubuntu sshd[1667]: pam_unix(sshd:auth): check pass; user unknown
-2025-10-17T15:55:39.525972+00:00 ubuntu sshd[1667]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.13.174.8 
-2025-10-17T15:55:41.789233+00:00 ubuntu sshd[1666]: Failed password for invalid user admin from 10.13.174.8 port 58964 ssh2
-2025-10-17T15:55:41.844760+00:00 ubuntu sshd[1667]: Failed password for invalid user admin from 10.13.174.8 port 58974 ssh2
-2025-10-17T15:55:42.354202+00:00 ubuntu sshd[1666]: pam_unix(sshd:auth): check pass; user unknown
-2025-10-17T15:55:42.390174+00:00 ubuntu sshd[1667]: pam_unix(sshd:auth): check pass; user unknown
-2025-10-17T15:55:44.755838+00:00 ubuntu sshd[1666]: Failed password for invalid user admin from 10.13.174.8 port 58964 ssh2
-2025-10-17T15:55:44.787539+00:00 ubuntu sshd[1667]: Failed password for invalid user admin from 10.13.174.8 port 58974 ssh2
-2025-10-17T15:55:45.229042+00:00 ubuntu sshd[1666]: Received disconnect from 10.13.174.8 port 58964:11: Bye Bye [preauth]
-2025-10-17T15:55:45.230969+00:00 ubuntu sshd[1666]: Disconnected from invalid user admin 10.13.174.8 port 58964 [preauth]
-2025-10-17T15:55:45.231513+00:00 ubuntu sshd[1666]: PAM 1 more authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.13.174.8 
-2025-10-17T15:55:45.310645+00:00 ubuntu sshd[1667]: Received disconnect from 10.13.174.8 port 58974:11: Bye Bye [preauth]
-2025-10-17T15:55:45.317992+00:00 ubuntu sshd[1667]: Disconnected from invalid user admin 10.13.174.8 port 58974 [preauth]
-2025-10-17T15:55:45.331817+00:00 ubuntu sshd[1667]: PAM 1 more authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.13.174.8 
-2025-10-17T15:55:45.478175+00:00 ubuntu sshd[1670]: Invalid user user from 10.13.174.8 port 58982
-2025-10-17T15:55:45.489903+00:00 ubuntu sshd[1671]: Invalid user user from 10.13.174.8 port 58988
-2025-10-17T15:55:45.494844+00:00 ubuntu sshd[1671]: pam_unix(sshd:auth): check pass; user unknown
-2025-10-17T15:55:45.495213+00:00 ubuntu sshd[1671]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.13.174.8 
-2025-10-17T15:55:45.505090+00:00 ubuntu sshd[1670]: pam_unix(sshd:auth): check pass; user unknown
-2025-10-17T15:55:45.505748+00:00 ubuntu sshd[1670]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.13.174.8 
-2025-10-17T15:55:47.638836+00:00 ubuntu sshd[1671]: Failed password for invalid user user from 10.13.174.8 port 58988 ssh2
-2025-10-17T15:55:47.648580+00:00 ubuntu sshd[1670]: Failed password for invalid user user from 10.13.174.8 port 58982 ssh2
-2025-10-17T15:55:47.851533+00:00 ubuntu sshd[1671]: pam_unix(sshd:auth): check pass; user unknown
-2025-10-17T15:55:47.891995+00:00 ubuntu sshd[1670]: pam_unix(sshd:auth): check pass; user unknown
-2025-10-17T15:55:49.935889+00:00 ubuntu sshd[1671]: Failed password for invalid user user from 10.13.174.8 port 58988 ssh2
-2025-10-17T15:55:49.975985+00:00 ubuntu sshd[1670]: Failed password for invalid user user from 10.13.174.8 port 58982 ssh2
-2025-10-17T15:55:50.217775+00:00 ubuntu sshd[1671]: Received disconnect from 10.13.174.8 port 58988:11: Bye Bye [preauth]
-2025-10-17T15:55:50.218412+00:00 ubuntu sshd[1671]: Disconnected from invalid user user 10.13.174.8 port 58988 [preauth]
-2025-10-17T15:55:50.224854+00:00 ubuntu sshd[1671]: PAM 1 more authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.13.174.8 
-2025-10-17T15:55:50.260551+00:00 ubuntu sshd[1670]: Received disconnect from 10.13.174.8 port 58982:11: Bye Bye [preauth]
-2025-10-17T15:55:50.261900+00:00 ubuntu sshd[1670]: Disconnected from invalid user user 10.13.174.8 port 58982 [preauth]
-2025-10-17T15:55:50.313241+00:00 ubuntu sshd[1670]: PAM 1 more authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.13.174.8 
-2025-10-17T15:55:50.501374+00:00 ubuntu sshd[1674]: Invalid user test from 10.13.174.8 port 40668
-2025-10-17T15:55:50.511867+00:00 ubuntu sshd[1675]: Invalid user test from 10.13.174.8 port 40684
-2025-10-17T15:55:50.526099+00:00 ubuntu sshd[1675]: pam_unix(sshd:auth): check pass; user unknown
-2025-10-17T15:55:50.526425+00:00 ubuntu sshd[1675]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.13.174.8 
-2025-10-17T15:55:50.527969+00:00 ubuntu sshd[1674]: pam_unix(sshd:auth): check pass; user unknown
-2025-10-17T15:55:50.528656+00:00 ubuntu sshd[1674]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.13.174.8 
-2025-10-17T15:55:52.358705+00:00 ubuntu sshd[1675]: Failed password for invalid user test from 10.13.174.8 port 40684 ssh2
-2025-10-17T15:55:52.359674+00:00 ubuntu sshd[1674]: Failed password for invalid user test from 10.13.174.8 port 40668 ssh2
-2025-10-17T15:55:54.045329+00:00 ubuntu sshd[1674]: pam_unix(sshd:auth): check pass; user unknown
-2025-10-17T15:55:54.047284+00:00 ubuntu sshd[1675]: pam_unix(sshd:auth): check pass; user unknown
-2025-10-17T15:55:56.420754+00:00 ubuntu sshd[1674]: Failed password for invalid user test from 10.13.174.8 port 40668 ssh2
-2025-10-17T15:55:56.423598+00:00 ubuntu sshd[1675]: Failed password for invalid user test from 10.13.174.8 port 40684 ssh2
-2025-10-17T15:55:57.695922+00:00 ubuntu sshd[1674]: Connection closed by invalid user test 10.13.174.8 port 40668 [preauth]
-2025-10-17T15:55:57.696501+00:00 ubuntu sshd[1674]: PAM 1 more authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.13.174.8 
-2025-10-17T15:55:57.697059+00:00 ubuntu sshd[1675]: Connection closed by invalid user test 10.13.174.8 port 40684 [preauth]
-2025-10-17T15:55:57.697325+00:00 ubuntu sshd[1675]: PAM 1 more authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.13.174.8 
-2025-10-17T16:05:02.002245+00:00 ubuntu CRON[1689]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-17T16:05:02.070808+00:00 ubuntu CRON[1689]: pam_unix(cron:session): session closed for user root
-2025-10-17T16:14:57.808106+00:00 ubuntu sudo:     loki : TTY=pts/0 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/bin/tail -f /var/log/auth.log
-2025-10-17T16:14:57.889266+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-17T16:15:01.173610+00:00 ubuntu CRON[1706]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-17T16:15:01.226463+00:00 ubuntu CRON[1706]: pam_unix(cron:session): session closed for user root
-2025-10-17T16:15:40.971638+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-17T16:17:01.270651+00:00 ubuntu CRON[1717]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-17T16:17:01.296008+00:00 ubuntu CRON[1717]: pam_unix(cron:session): session closed for user root
-2025-10-17T16:17:40.901575+00:00 ubuntu sudo:     loki : TTY=pts/0 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/sbin/iptables -A INPUT -s 10.13.174.8 -j DROP
-2025-10-17T16:17:40.925466+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-17T16:17:41.669786+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-17T16:18:19.173559+00:00 ubuntu sudo:     loki : TTY=pts/0 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/bin/apt install fail2ban -y
-2025-10-17T16:18:19.186287+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-17T16:20:00.587109+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-17T16:25:01.415930+00:00 ubuntu CRON[2043]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-17T16:25:01.448679+00:00 ubuntu CRON[2043]: pam_unix(cron:session): session closed for user root
-2025-10-17T16:34:21.150250+00:00 ubuntu sudo:     loki : TTY=pts/0 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/bin/apt update
-2025-10-17T16:34:21.184781+00:00 ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-17T16:34:27.404406+00:00 ubuntu sudo: pam_unix(sudo:session): session closed for user root
-2025-10-17T16:35:01.524230+00:00 ubuntu CRON[2257]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-17T16:35:01.534232+00:00 ubuntu CRON[2257]: pam_unix(cron:session): session closed for user root
-2025-10-18T11:40:14.270397+00:00 ubuntu-forwarder systemd-logind[725]: New seat seat0.
-2025-10-18T11:40:14.270401+00:00 ubuntu-forwarder systemd-logind[725]: Watching system buttons on /dev/input/event0 (Power Button)
-2025-10-18T11:40:14.270406+00:00 ubuntu-forwarder systemd-logind[725]: Watching system buttons on /dev/input/event1 (Sleep Button)
-2025-10-18T11:40:14.270411+00:00 ubuntu-forwarder systemd-logind[725]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
-2025-10-18T11:40:15.673851+00:00 ubuntu-forwarder polkitd[699]: Loading rules from directory /etc/polkit-1/rules.d
-2025-10-18T11:40:15.682374+00:00 ubuntu-forwarder polkitd[699]: Loading rules from directory /usr/share/polkit-1/rules.d
-2025-10-18T11:40:16.019820+00:00 ubuntu-forwarder polkitd[699]: Finished loading, compiling and executing 6 rules
-2025-10-18T11:40:16.181200+00:00 ubuntu-forwarder polkitd[699]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
-2025-10-18T11:40:18.384007+00:00 ubuntu-forwarder sshd[892]: Server listening on 0.0.0.0 port 22.
-2025-10-18T11:40:18.390313+00:00 ubuntu-forwarder sshd[892]: Server listening on :: port 22.
-2025-10-18T11:40:29.025030+00:00 ubuntu-forwarder login[895]: PAM unable to dlopen(pam_lastlog.so): /usr/lib/security/pam_lastlog.so: cannot open shared object file: No such file or directory
-2025-10-18T11:40:29.025520+00:00 ubuntu-forwarder login[895]: PAM adding faulty module: pam_lastlog.so
-2025-10-18T11:40:35.297828+00:00 ubuntu-forwarder login[895]: pam_unix(login:session): session opened for user loki(uid=1000) by loki(uid=0)
-2025-10-18T11:40:35.438907+00:00 ubuntu-forwarder systemd-logind[725]: New session 1 of user loki.
-2025-10-18T11:40:35.493800+00:00 ubuntu-forwarder (systemd): pam_unix(systemd-user:session): session opened for user loki(uid=1000) by loki(uid=0)
-2025-10-18T11:43:55.714052+00:00 ubuntu-forwarder sshd[1223]: Accepted password for loki from 10.13.174.204 port 61328 ssh2
-2025-10-18T11:43:55.724465+00:00 ubuntu-forwarder sshd[1223]: pam_unix(sshd:session): session opened for user loki(uid=1000) by loki(uid=0)
-2025-10-18T11:43:55.744890+00:00 ubuntu-forwarder systemd-logind[725]: New session 3 of user loki.
-2025-10-18T11:45:01.765015+00:00 ubuntu-forwarder CRON[1291]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-18T11:45:01.897019+00:00 ubuntu-forwarder CRON[1291]: pam_unix(cron:session): session closed for user root
-2025-10-18T11:45:07.470005+00:00 ubuntu-forwarder sudo:     loki : TTY=pts/0 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/bin/apt update
-2025-10-18T11:45:07.530005+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-18T11:47:12.148581+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session closed for user root
-2025-10-18T11:47:12.208689+00:00 ubuntu-forwarder sudo:     loki : TTY=pts/0 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/bin/apt upgrade -y
-2025-10-18T11:47:12.215702+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-18T11:47:38.868993+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session closed for user root
-2025-10-18T11:47:57.297809+00:00 ubuntu-forwarder sudo:     loki : TTY=pts/0 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/bin/apt install docker.io -y
-2025-10-18T11:47:57.305735+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-18T11:55:01.991703+00:00 ubuntu-forwarder CRON[1664]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-18T11:55:02.026157+00:00 ubuntu-forwarder CRON[1664]: pam_unix(cron:session): session closed for user root
-2025-10-18T12:03:09.000259+00:00 ubuntu-forwarder useradd[1792]: new user: name=dnsmasq, UID=999, GID=65534, home=/var/lib/misc, shell=/usr/sbin/nologin, from=/dev/pts/2
-2025-10-18T12:03:44.022127+00:00 ubuntu-forwarder groupadd[2062]: group added to /etc/group: name=docker, GID=111
-2025-10-18T12:03:44.382671+00:00 ubuntu-forwarder groupadd[2062]: group added to /etc/gshadow: name=docker
-2025-10-18T12:03:44.435959+00:00 ubuntu-forwarder groupadd[2062]: new group: name=docker, GID=111
-2025-10-18T12:05:01.210370+00:00 ubuntu-forwarder CRON[2338]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-18T12:05:01.284965+00:00 ubuntu-forwarder CRON[2338]: pam_unix(cron:session): session closed for user root
-2025-10-18T12:05:20.701122+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session closed for user root
-2025-10-18T12:06:10.325968+00:00 ubuntu-forwarder sudo:     loki : TTY=pts/0 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/bin/apt install docker-compose -y
-2025-10-18T12:06:10.354998+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-18T12:07:09.814006+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session closed for user root
-2025-10-18T12:08:27.829160+00:00 ubuntu-forwarder sudo:     loki : TTY=pts/0 ; PWD=/home/loki/dvwa ; USER=root ; COMMAND=/usr/bin/docker-compose up -d
-2025-10-18T12:08:27.885741+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-18T12:15:01.627959+00:00 ubuntu-forwarder CRON[2692]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-18T12:15:01.711565+00:00 ubuntu-forwarder CRON[2692]: pam_unix(cron:session): session closed for user root
-2025-10-18T12:17:01.505772+00:00 ubuntu-forwarder CRON[2728]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-18T12:17:01.937687+00:00 ubuntu-forwarder CRON[2728]: pam_unix(cron:session): session closed for user root
-2025-10-18T12:25:01.106988+00:00 ubuntu-forwarder CRON[2749]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-18T12:25:01.299131+00:00 ubuntu-forwarder CRON[2749]: pam_unix(cron:session): session closed for user root
-2025-10-18T12:35:01.690790+00:00 ubuntu-forwarder CRON[2768]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-18T12:35:01.797447+00:00 ubuntu-forwarder CRON[2768]: pam_unix(cron:session): session closed for user root
-2025-10-18T12:37:14.415523+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session closed for user root
-2025-10-18T12:38:19.325668+00:00 ubuntu-forwarder sudo:     loki : TTY=pts/0 ; PWD=/home/loki/dvwa ; USER=root ; COMMAND=/usr/bin/docker ps
-2025-10-18T12:38:19.356712+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-18T12:38:20.586040+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session closed for user root
-2025-10-18T12:38:31.750362+00:00 ubuntu-forwarder sudo:     loki : TTY=pts/0 ; PWD=/home/loki/dvwa ; USER=root ; COMMAND=/usr/bin/docker logs dvwa
-2025-10-18T12:38:31.759697+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-18T12:38:31.960294+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session closed for user root
-2025-10-18T12:38:50.069195+00:00 ubuntu-forwarder sudo:     loki : TTY=pts/0 ; PWD=/home/loki/dvwa ; USER=root ; COMMAND=/usr/bin/docker logs
-2025-10-18T12:38:50.075385+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-18T12:38:50.265983+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session closed for user root
-2025-10-18T12:42:10.678658+00:00 ubuntu-forwarder sudo:     loki : TTY=pts/0 ; PWD=/home/loki/dvwa ; USER=root ; COMMAND=/usr/bin/docker exec -it dvwa mysql -u root -p
-2025-10-18T12:42:10.798508+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-18T12:42:11.030561+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session closed for user root
-2025-10-18T12:42:38.651311+00:00 ubuntu-forwarder sudo:     loki : TTY=pts/0 ; PWD=/home/loki/dvwa ; USER=root ; COMMAND=/usr/bin/docker exec -it dvwa mysql -u root -p
-2025-10-18T12:42:38.675868+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-18T12:42:39.131020+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session closed for user root
-2025-10-18T12:43:29.767535+00:00 ubuntu-forwarder sudo:     loki : TTY=pts/0 ; PWD=/home/loki/dvwa ; USER=root ; COMMAND=/usr/bin/docker exec -it dvwa mysql -u root -ppasswd
-2025-10-18T12:43:29.783865+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-18T12:43:30.138384+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session closed for user root
-2025-10-18T12:45:01.941284+00:00 ubuntu-forwarder CRON[3440]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-18T12:45:02.013122+00:00 ubuntu-forwarder CRON[3440]: pam_unix(cron:session): session closed for user root
-2025-10-18T12:45:49.908571+00:00 ubuntu-forwarder sudo:     loki : TTY=pts/0 ; PWD=/home/loki/dvwa ; USER=root ; COMMAND=/usr/bin/docker run --rm -d -p 80:80 --name dvwa vulnerables/web-dvwa
-2025-10-18T12:45:49.930786+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-18T12:45:58.215119+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session closed for user root
-2025-10-18T12:46:28.347137+00:00 ubuntu-forwarder sudo:     loki : TTY=pts/0 ; PWD=/home/loki/dvwa ; USER=root ; COMMAND=/usr/bin/docker exec -i dvwa mysql -u root
-2025-10-18T12:46:28.360775+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-18T12:46:28.553896+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session closed for user root
-2025-10-18T12:46:28.741426+00:00 ubuntu-forwarder sudo:     loki : TTY=pts/0 ; PWD=/home/loki/dvwa ; USER=root ; COMMAND=/usr/bin/docker exec -i dvwa bash
-2025-10-18T12:46:28.751821+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-18T12:46:29.179737+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session closed for user root
-2025-10-18T12:46:34.716351+00:00 ubuntu-forwarder sudo:     loki : TTY=pts/0 ; PWD=/home/loki/dvwa ; USER=root ; COMMAND=/usr/bin/docker exec -it dvwa mysql -u root -e 'USE dvwa; SHOW TABLES;'
-2025-10-18T12:46:34.736481+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-18T12:46:34.892549+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session closed for user root
-2025-10-18T12:47:20.868189+00:00 ubuntu-forwarder sudo:     loki : TTY=pts/0 ; PWD=/home/loki/dvwa ; USER=root ; COMMAND=/usr/bin/mkdir -p /var/www/secret_docs
-2025-10-18T12:47:20.956439+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-18T12:47:21.023259+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session closed for user root
-2025-10-18T12:47:21.254694+00:00 ubuntu-forwarder sudo:     loki : TTY=pts/0 ; PWD=/home/loki/dvwa ; USER=root ; COMMAND=/usr/bin/chown -R www-data:www-data /var/www/secret_docs
-2025-10-18T12:47:21.262708+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-18T12:47:21.308068+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session closed for user root
-2025-10-18T12:52:09.579344+00:00 ubuntu-forwarder sudo:     loki : TTY=pts/0 ; PWD=/home/loki/dvwa ; USER=root ; COMMAND=/usr/bin/docker exec -it dvwa ls -la /var/www/html/secret_docs/
-2025-10-18T12:52:09.678537+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-18T12:52:11.664781+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session closed for user root
-2025-10-18T12:52:11.772690+00:00 ubuntu-forwarder sudo:     loki : TTY=pts/0 ; PWD=/home/loki/dvwa ; USER=root ; COMMAND=/usr/bin/docker exec -it dvwa cat /var/www/html/secret_docs/project_apollo.txt
-2025-10-18T12:52:11.796810+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-18T12:52:12.492906+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session closed for user root
-2025-10-18T12:52:31.634429+00:00 ubuntu-forwarder sudo:     loki : TTY=pts/0 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/bin/docker exec -it dvwa ls -la /var/www/html/secret_docs/
-2025-10-18T12:52:31.642152+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-18T12:52:31.982390+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session closed for user root
-2025-10-18T12:52:32.053296+00:00 ubuntu-forwarder sudo:     loki : TTY=pts/0 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/bin/docker exec -it dvwa cat /var/www/html/secret_docs/project_apollo.txt
-2025-10-18T12:52:32.067417+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-18T12:52:32.325389+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session closed for user root
-2025-10-18T12:55:07.654407+00:00 ubuntu-forwarder CRON[3629]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-18T12:55:07.682919+00:00 ubuntu-forwarder CRON[3629]: pam_unix(cron:session): session closed for user root
-2025-10-18T13:05:01.979387+00:00 ubuntu-forwarder CRON[3653]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-18T13:05:02.048147+00:00 ubuntu-forwarder CRON[3653]: pam_unix(cron:session): session closed for user root
-2025-10-18T13:15:01.736228+00:00 ubuntu-forwarder CRON[3666]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-18T13:15:02.888404+00:00 ubuntu-forwarder CRON[3666]: pam_unix(cron:session): session closed for user root
-2025-10-18T13:17:04.973382+00:00 ubuntu-forwarder CRON[3673]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-18T13:17:05.790183+00:00 ubuntu-forwarder CRON[3673]: pam_unix(cron:session): session closed for user root
-2025-10-18T13:25:01.113532+00:00 ubuntu-forwarder CRON[3685]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-18T13:25:01.138986+00:00 ubuntu-forwarder CRON[3685]: pam_unix(cron:session): session closed for user root
-2025-10-18T13:48:47.009193+00:00 ubuntu-forwarder CRON[3698]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-18T13:48:47.038352+00:00 ubuntu-forwarder CRON[3698]: pam_unix(cron:session): session closed for user root
-2025-10-18T13:55:01.606371+00:00 ubuntu-forwarder CRON[4162]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-18T13:55:01.625174+00:00 ubuntu-forwarder CRON[4162]: pam_unix(cron:session): session closed for user root
-2025-10-24T15:47:52.870392+00:00 ubuntu-forwarder systemd-logind[720]: New seat seat0.
-2025-10-24T15:47:52.870397+00:00 ubuntu-forwarder systemd-logind[720]: Watching system buttons on /dev/input/event0 (Power Button)
-2025-10-24T15:47:52.870401+00:00 ubuntu-forwarder systemd-logind[720]: Watching system buttons on /dev/input/event1 (Sleep Button)
-2025-10-24T15:47:52.870471+00:00 ubuntu-forwarder systemd-logind[720]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
-2025-10-24T15:47:52.870870+00:00 ubuntu-forwarder polkitd[707]: Loading rules from directory /etc/polkit-1/rules.d
-2025-10-24T15:47:52.870882+00:00 ubuntu-forwarder polkitd[707]: Loading rules from directory /usr/share/polkit-1/rules.d
-2025-10-24T15:47:52.845685+00:00 ubuntu-forwarder polkitd[707]: Finished loading, compiling and executing 6 rules
-2025-10-24T15:47:52.947179+00:00 ubuntu-forwarder polkitd[707]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
-2025-10-24T15:47:54.490560+00:00 ubuntu-forwarder sshd[820]: Server listening on 0.0.0.0 port 22.
-2025-10-24T15:47:54.512485+00:00 ubuntu-forwarder sshd[820]: Server listening on :: port 22.
-2025-10-24T15:48:18.545254+00:00 ubuntu-forwarder login[839]: PAM unable to dlopen(pam_lastlog.so): /usr/lib/security/pam_lastlog.so: cannot open shared object file: No such file or directory
-2025-10-24T15:48:18.545415+00:00 ubuntu-forwarder login[839]: PAM adding faulty module: pam_lastlog.so
-2025-10-24T15:48:22.830210+00:00 ubuntu-forwarder login[839]: pam_unix(login:session): session opened for user loki(uid=1000) by loki(uid=0)
-2025-10-24T15:48:22.908275+00:00 ubuntu-forwarder systemd-logind[720]: New session 1 of user loki.
-2025-10-24T15:48:23.025984+00:00 ubuntu-forwarder (systemd): pam_unix(systemd-user:session): session opened for user loki(uid=1000) by loki(uid=0)
-2025-10-24T15:55:17.624183+00:00 ubuntu-forwarder CRON[2107]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-24T15:55:19.437232+00:00 ubuntu-forwarder CRON[2107]: pam_unix(cron:session): session closed for user root
-2025-10-24T15:57:11.055847+00:00 ubuntu-forwarder sudo:     loki : TTY=tty1 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/bin/systemctl status ssh
-2025-10-24T15:57:11.073482+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-24T15:57:11.445780+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session closed for user root
-2025-10-24T16:04:12.436401+00:00 ubuntu-forwarder sshd[2150]: Connection closed by 10.18.160.8 port 38606 [preauth]
-2025-10-24T16:04:33.680450+00:00 ubuntu-forwarder sshd[2156]: Received disconnect from 10.18.160.8 port 60278:11: Bye Bye [preauth]
-2025-10-24T16:04:33.714765+00:00 ubuntu-forwarder sshd[2156]: Disconnected from authenticating user root 10.18.160.8 port 60278 [preauth]
-2025-10-24T16:04:38.042326+00:00 ubuntu-forwarder sshd[2159]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.18.160.8  user=root
-2025-10-24T16:04:38.404742+00:00 ubuntu-forwarder sshd[2158]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.18.160.8  user=root
-2025-10-24T16:04:39.719873+00:00 ubuntu-forwarder sshd[2159]: Failed password for root from 10.18.160.8 port 60298 ssh2
-2025-10-24T16:04:39.958439+00:00 ubuntu-forwarder sshd[2158]: Failed password for root from 10.18.160.8 port 60292 ssh2
-2025-10-24T16:04:42.371688+00:00 ubuntu-forwarder sshd[2159]: Failed password for root from 10.18.160.8 port 60298 ssh2
-2025-10-24T16:04:43.121968+00:00 ubuntu-forwarder sshd[2159]: Received disconnect from 10.18.160.8 port 60298:11: Bye Bye [preauth]
-2025-10-24T16:04:45.239993+00:00 ubuntu-forwarder sshd[2159]: Disconnected from authenticating user root 10.18.160.8 port 60298 [preauth]
-2025-10-24T16:04:45.515992+00:00 ubuntu-forwarder sshd[2158]: Failed password for root from 10.18.160.8 port 60292 ssh2
-2025-10-24T16:04:45.688706+00:00 ubuntu-forwarder sshd[2159]: PAM 1 more authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.18.160.8  user=root
-2025-10-24T16:04:45.689014+00:00 ubuntu-forwarder sshd[2158]: Received disconnect from 10.18.160.8 port 60292:11: Bye Bye [preauth]
-2025-10-24T16:04:46.121786+00:00 ubuntu-forwarder sshd[2158]: Disconnected from authenticating user root 10.18.160.8 port 60292 [preauth]
-2025-10-24T16:04:46.122616+00:00 ubuntu-forwarder sshd[2158]: PAM 1 more authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.18.160.8  user=root
-2025-10-24T16:04:54.991565+00:00 ubuntu-forwarder sshd[2175]: Invalid user admin from 10.18.160.8 port 60416
-2025-10-24T16:04:55.163238+00:00 ubuntu-forwarder sshd[2173]: Invalid user admin from 10.18.160.8 port 60412
-2025-10-24T16:04:56.948733+00:00 ubuntu-forwarder sshd[2175]: pam_unix(sshd:auth): check pass; user unknown
-2025-10-24T16:04:57.019201+00:00 ubuntu-forwarder sshd[2175]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.18.160.8 
-2025-10-24T16:04:58.809305+00:00 ubuntu-forwarder sshd[2173]: pam_unix(sshd:auth): check pass; user unknown
-2025-10-24T16:04:59.006946+00:00 ubuntu-forwarder sshd[2173]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.18.160.8 
-2025-10-24T16:05:00.778676+00:00 ubuntu-forwarder sshd[2175]: Failed password for invalid user admin from 10.18.160.8 port 60416 ssh2
-2025-10-24T16:05:01.244852+00:00 ubuntu-forwarder sshd[2173]: Failed password for invalid user admin from 10.18.160.8 port 60412 ssh2
-2025-10-24T16:05:04.158938+00:00 ubuntu-forwarder sshd[2175]: pam_unix(sshd:auth): check pass; user unknown
-2025-10-24T16:05:06.142083+00:00 ubuntu-forwarder sshd[2173]: pam_unix(sshd:auth): check pass; user unknown
-2025-10-24T16:05:08.807430+00:00 ubuntu-forwarder sshd[2173]: Failed password for invalid user admin from 10.18.160.8 port 60412 ssh2
-2025-10-24T16:05:08.872532+00:00 ubuntu-forwarder sshd[2175]: Failed password for invalid user admin from 10.18.160.8 port 60416 ssh2
-2025-10-24T16:05:08.873550+00:00 ubuntu-forwarder sshd[2175]: Connection closed by invalid user admin 10.18.160.8 port 60416 [preauth]
-2025-10-24T16:05:08.970966+00:00 ubuntu-forwarder sshd[2175]: PAM 1 more authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.18.160.8 
-2025-10-24T16:05:09.689944+00:00 ubuntu-forwarder CRON[2184]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-24T16:05:09.924936+00:00 ubuntu-forwarder sshd[2173]: Connection closed by invalid user admin 10.18.160.8 port 60412 [preauth]
-2025-10-24T16:05:10.093613+00:00 ubuntu-forwarder sshd[2173]: PAM 1 more authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.18.160.8 
-2025-10-24T16:05:10.901777+00:00 ubuntu-forwarder CRON[2184]: pam_unix(cron:session): session closed for user root
-2025-10-24T16:07:48.211053+00:00 ubuntu-forwarder sudo:     loki : TTY=tty1 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/bin/systemctl ssh
-2025-10-24T16:07:48.247388+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-24T16:07:48.330213+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session closed for user root
-2025-10-24T16:08:04.027703+00:00 ubuntu-forwarder sudo:     loki : TTY=tty1 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/bin/systemctl status ssh
-2025-10-24T16:08:04.033123+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-24T16:08:35.555439+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session closed for user root
-2025-10-24T16:08:45.084609+00:00 ubuntu-forwarder sudo:     loki : TTY=tty1 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/sbin/ufw allow all
-2025-10-24T16:08:45.088037+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-24T16:08:45.561465+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session closed for user root
-2025-10-24T16:08:58.959338+00:00 ubuntu-forwarder sudo:     loki : TTY=tty1 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/sbin/ufw verbose
-2025-10-24T16:08:58.967077+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-24T16:08:59.413505+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session closed for user root
-2025-10-24T16:09:56.493367+00:00 ubuntu-forwarder sudo:     loki : TTY=tty1 ; PWD=/home/loki ; USER=root ; COMMAND=/usr/sbin/iptables -A input -s 10.18.160.8 -j accept
-2025-10-24T16:09:56.497244+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session opened for user root(uid=0) by loki(uid=1000)
-2025-10-24T16:09:56.518369+00:00 ubuntu-forwarder sudo: pam_unix(sudo:session): session closed for user root
-2025-10-24T16:15:21.359254+00:00 ubuntu-forwarder CRON[2254]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-24T16:15:22.085537+00:00 ubuntu-forwarder CRON[2254]: pam_unix(cron:session): session closed for user root
-2025-10-24T16:17:04.000113+00:00 ubuntu-forwarder CRON[2260]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
-2025-10-24T16:17:04.137349+00:00 ubuntu-forwarder CRON[2260]: pam_unix(cron:session): session closed for user root
+2025-09-26T16:29:44.699522+00:00 Ubuntu systemd-logind[891]: New seat seat0.
+2025-09-26T16:29:44.699530+00:00 Ubuntu systemd-logind[891]: Watching system buttons on /dev/input/event0 (Power Button)
+2025-09-26T16:29:44.699532+00:00 Ubuntu systemd-logind[891]: Watching system buttons on /dev/input/event1 (Sleep Button)
+2025-09-26T16:29:44.699541+00:00 Ubuntu systemd-logind[891]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+2025-09-26T16:29:44.713873+00:00 Ubuntu polkitd[855]: Loading rules from directory /etc/polkit-1/rules.d
+2025-09-26T16:29:44.713888+00:00 Ubuntu polkitd[855]: Loading rules from directory /usr/share/polkit-1/rules.d
+2025-09-26T16:29:44.713898+00:00 Ubuntu polkitd[855]: Finished loading, compiling and executing 16 rules
+2025-09-26T16:29:44.713904+00:00 Ubuntu polkitd[855]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+2025-09-26T16:29:49.942790+00:00 Ubuntu useradd[1270]: new group: name=vboxuser, GID=1000
+2025-09-26T16:29:49.942960+00:00 Ubuntu useradd[1270]: new user: name=vboxuser, UID=1000, GID=1000, home=/home/vboxuser, shell=/bin/bash, from=none
+2025-09-26T16:29:49.945988+00:00 Ubuntu useradd[1270]: add 'vboxuser' to group 'adm'
+2025-09-26T16:29:49.946085+00:00 Ubuntu useradd[1270]: add 'vboxuser' to group 'cdrom'
+2025-09-26T16:29:49.946128+00:00 Ubuntu useradd[1270]: add 'vboxuser' to group 'sudo'
+2025-09-26T16:29:49.946168+00:00 Ubuntu useradd[1270]: add 'vboxuser' to group 'dip'
+2025-09-26T16:29:49.946228+00:00 Ubuntu useradd[1270]: add 'vboxuser' to group 'plugdev'
+2025-09-26T16:29:49.946464+00:00 Ubuntu useradd[1270]: add 'vboxuser' to group 'users'
+2025-09-26T16:29:49.946575+00:00 Ubuntu useradd[1270]: add 'vboxuser' to group 'lpadmin'
+2025-09-26T16:29:49.946595+00:00 Ubuntu useradd[1270]: add 'vboxuser' to shadow group 'adm'
+2025-09-26T16:29:49.946614+00:00 Ubuntu useradd[1270]: add 'vboxuser' to shadow group 'cdrom'
+2025-09-26T16:29:49.946640+00:00 Ubuntu useradd[1270]: add 'vboxuser' to shadow group 'sudo'
+2025-09-26T16:29:49.946658+00:00 Ubuntu useradd[1270]: add 'vboxuser' to shadow group 'dip'
+2025-09-26T16:29:49.946675+00:00 Ubuntu useradd[1270]: add 'vboxuser' to shadow group 'plugdev'
+2025-09-26T16:29:49.946694+00:00 Ubuntu useradd[1270]: add 'vboxuser' to shadow group 'users'
+2025-09-26T16:29:49.946712+00:00 Ubuntu useradd[1270]: add 'vboxuser' to shadow group 'lpadmin'
+2025-09-26T16:29:50.068470+00:00 Ubuntu passwd[1282]: password for 'vboxuser' changed by 'root'
+2025-09-26T16:29:50.097406+00:00 Ubuntu passwd[1289]: password for 'root' changed by 'root'
+2025-09-26T16:29:57.245227+00:00 Ubuntu gdm-launch-environment]: pam_unix(gdm-launch-environment:session): session opened for user gdm(uid=120) by (uid=0)
+2025-09-26T16:29:57.327224+00:00 Ubuntu systemd-logind[891]: New session c1 of user gdm.
+2025-09-26T16:29:57.430817+00:00 Ubuntu (systemd): pam_unix(systemd-user:session): session opened for user gdm(uid=120) by gdm(uid=0)
+2025-09-26T16:30:01.832584+00:00 Ubuntu CRON[1651]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-09-26T16:30:01.842777+00:00 Ubuntu CRON[1651]: pam_unix(cron:session): session closed for user root
+2025-09-26T16:30:03.952115+00:00 Ubuntu polkitd[855]: Registered Authentication Agent for unix-session:c1 (system bus name :1.42 [/usr/bin/gnome-shell], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+2025-09-26T16:30:15.024148+00:00 Ubuntu gdm-password]: gkr-pam: unable to locate daemon control file
+2025-09-26T16:30:15.025975+00:00 Ubuntu gdm-password]: gkr-pam: stashed password to try later in open session
+2025-09-26T16:30:15.039095+00:00 Ubuntu gdm-password]: pam_unix(gdm-password:session): session opened for user vboxuser(uid=1000) by vboxuser(uid=0)
+2025-09-26T16:30:15.077802+00:00 Ubuntu systemd-logind[891]: New session 3 of user vboxuser.
+2025-09-26T16:30:15.150355+00:00 Ubuntu (systemd): pam_unix(systemd-user:session): session opened for user vboxuser(uid=1000) by vboxuser(uid=0)
+2025-09-26T16:30:16.147915+00:00 Ubuntu gdm-password]: gkr-pam: unlocked login keyring
+2025-09-26T16:30:18.295404+00:00 Ubuntu gnome-keyring-daemon[2171]: The PKCS#11 component was already initialized
+2025-09-26T16:30:18.295747+00:00 Ubuntu gnome-keyring-daemon[2515]: discover_other_daemon: 1
+2025-09-26T16:30:18.295842+00:00 Ubuntu gnome-keyring-daemon[2171]: The Secret Service was already initialized
+2025-09-26T16:30:18.295897+00:00 Ubuntu gnome-keyring-daemon[2516]: discover_other_daemon: 1
+2025-09-26T16:30:18.295939+00:00 Ubuntu gnome-keyring-daemon[2517]: discover_other_daemon: 1
+2025-09-26T16:30:21.302816+00:00 Ubuntu polkitd[855]: Registered Authentication Agent for unix-session:3 (system bus name :1.82 [/usr/bin/gnome-shell], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+2025-09-26T16:30:24.223862+00:00 Ubuntu gdm-launch-environment]: pam_unix(gdm-launch-environment:session): session closed for user gdm
+2025-09-26T16:30:24.271913+00:00 Ubuntu systemd-logind[891]: Session c1 logged out. Waiting for processes to exit.
+2025-09-26T16:30:24.313101+00:00 Ubuntu polkitd[855]: Unregistered Authentication Agent for unix-session:c1 (system bus name :1.42, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+2025-09-26T16:30:24.329996+00:00 Ubuntu systemd-logind[891]: Removed session c1.
+2025-09-26T16:30:34.675291+00:00 Ubuntu (sd-pam): pam_unix(systemd-user:session): session closed for user gdm
+2025-09-26T16:35:01.851503+00:00 Ubuntu CRON[3745]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-09-26T16:35:01.863044+00:00 Ubuntu CRON[3745]: pam_unix(cron:session): session closed for user root
+2025-09-26T16:35:17.505863+00:00 Ubuntu sudo: vboxuser : TTY=pts/0 ; PWD=/home/vboxuser ; USER=root ; COMMAND=/usr/bin/cat /var/log/auth.log
+2025-09-26T16:35:17.507830+00:00 Ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vboxuser(uid=1000)
+2025-09-26T16:35:17.511576+00:00 Ubuntu sudo: pam_unix(sudo:session): session closed for user root
+2025-09-26T16:40:34.768199+00:00 Ubuntu systemd-logind[628]: New seat seat0.
+2025-09-26T16:40:34.768207+00:00 Ubuntu systemd-logind[628]: Watching system buttons on /dev/input/event0 (Power Button)
+2025-09-26T16:40:34.768209+00:00 Ubuntu systemd-logind[628]: Watching system buttons on /dev/input/event1 (Sleep Button)
+2025-09-26T16:40:34.768211+00:00 Ubuntu systemd-logind[628]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+2025-09-26T16:40:34.926814+00:00 Ubuntu polkitd[550]: Loading rules from directory /etc/polkit-1/rules.d
+2025-09-26T16:40:34.946349+00:00 Ubuntu polkitd[550]: Loading rules from directory /usr/share/polkit-1/rules.d
+2025-09-26T16:40:34.977433+00:00 Ubuntu polkitd[550]: Finished loading, compiling and executing 16 rules
+2025-09-26T16:40:34.983814+00:00 Ubuntu polkitd[550]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+2025-09-26T16:40:37.652697+00:00 Ubuntu gdm-launch-environment]: pam_unix(gdm-launch-environment:session): session opened for user gdm(uid=120) by (uid=0)
+2025-09-26T16:40:37.676325+00:00 Ubuntu systemd-logind[628]: New session c1 of user gdm.
+2025-09-26T16:40:37.736326+00:00 Ubuntu (systemd): pam_unix(systemd-user:session): session opened for user gdm(uid=120) by gdm(uid=0)
+2025-09-26T16:40:41.105397+00:00 Ubuntu polkitd[550]: Registered Authentication Agent for unix-session:c1 (system bus name :1.39 [/usr/bin/gnome-shell], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+2025-09-26T16:40:54.854348+00:00 Ubuntu gdm-password]: gkr-pam: unable to locate daemon control file
+2025-09-26T16:40:54.855295+00:00 Ubuntu gdm-password]: gkr-pam: stashed password to try later in open session
+2025-09-26T16:40:54.878778+00:00 Ubuntu gdm-password]: pam_unix(gdm-password:session): session opened for user vboxuser(uid=1000) by vboxuser(uid=0)
+2025-09-26T16:40:54.911504+00:00 Ubuntu systemd-logind[628]: New session 2 of user vboxuser.
+2025-09-26T16:40:54.976989+00:00 Ubuntu (systemd): pam_unix(systemd-user:session): session opened for user vboxuser(uid=1000) by vboxuser(uid=0)
+2025-09-26T16:40:55.635303+00:00 Ubuntu gdm-password]: gkr-pam: unlocked login keyring
+2025-09-26T16:40:56.607173+00:00 Ubuntu gnome-keyring-daemon[1642]: The PKCS#11 component was already initialized
+2025-09-26T16:40:56.608539+00:00 Ubuntu gnome-keyring-daemon[1841]: discover_other_daemon: 1
+2025-09-26T16:40:56.621479+00:00 Ubuntu gnome-keyring-daemon[1642]: The Secret Service was already initialized
+2025-09-26T16:40:56.622159+00:00 Ubuntu gnome-keyring-daemon[1845]: discover_other_daemon: 1
+2025-09-26T16:40:56.624666+00:00 Ubuntu gnome-keyring-daemon[1846]: discover_other_daemon: 1
+2025-09-26T16:40:59.380024+00:00 Ubuntu polkitd[550]: Registered Authentication Agent for unix-session:2 (system bus name :1.76 [/usr/bin/gnome-shell], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+2025-09-26T16:41:01.956938+00:00 Ubuntu gdm-launch-environment]: pam_unix(gdm-launch-environment:session): session closed for user gdm
+2025-09-26T16:41:01.998060+00:00 Ubuntu systemd-logind[628]: Session c1 logged out. Waiting for processes to exit.
+2025-09-26T16:41:02.042273+00:00 Ubuntu polkitd[550]: Unregistered Authentication Agent for unix-session:c1 (system bus name :1.39, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+2025-09-26T16:41:02.059305+00:00 Ubuntu systemd-logind[628]: Removed session c1.
+2025-09-26T16:44:38.090163+00:00 Ubuntu sudo: vboxuser : TTY=pts/0 ; PWD=/home/vboxuser ; USER=root ; COMMAND=/usr/bin/systemctl status ssh
+2025-09-26T16:44:38.092235+00:00 Ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vboxuser(uid=1000)
+2025-09-26T16:44:38.114543+00:00 Ubuntu sudo: pam_unix(sudo:session): session closed for user root
+2025-09-26T16:45:01.511508+00:00 Ubuntu CRON[2758]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-09-26T16:45:01.514396+00:00 Ubuntu CRON[2758]: pam_unix(cron:session): session closed for user root
+2025-09-26T16:45:58.291760+00:00 Ubuntu sudo: vboxuser : TTY=pts/0 ; PWD=/home/vboxuser ; USER=root ; COMMAND=/usr/bin/apt install openssh-server
+2025-09-26T16:45:58.293019+00:00 Ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vboxuser(uid=1000)
+2025-09-26T16:46:13.274226+00:00 Ubuntu useradd[3027]: new user: name=sshd, UID=122, GID=65534, home=/run/sshd, shell=/usr/sbin/nologin, from=none
+2025-09-26T16:46:16.928497+00:00 Ubuntu sudo: pam_unix(sudo:session): session closed for user root
+2025-09-26T16:46:53.616166+00:00 Ubuntu sudo: vboxuser : TTY=pts/0 ; PWD=/home/vboxuser ; USER=root ; COMMAND=/usr/bin/systemctl start ssh
+2025-09-26T16:46:53.617444+00:00 Ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vboxuser(uid=1000)
+2025-09-26T16:46:53.656045+00:00 Ubuntu sshd[3387]: Server listening on 0.0.0.0 port 22.
+2025-09-26T16:46:53.656233+00:00 Ubuntu sshd[3387]: Server listening on :: port 22.
+2025-09-26T16:46:53.659989+00:00 Ubuntu sudo: pam_unix(sudo:session): session closed for user root
+2025-09-26T16:47:18.736811+00:00 Ubuntu sudo: vboxuser : TTY=pts/0 ; PWD=/home/vboxuser ; USER=root ; COMMAND=/usr/bin/systemctl enable ssh
+2025-09-26T16:47:18.738289+00:00 Ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vboxuser(uid=1000)
+2025-09-26T16:47:19.870097+00:00 Ubuntu sudo: pam_unix(sudo:session): session closed for user root
+2025-09-26T16:48:15.497497+00:00 Ubuntu sudo: vboxuser : TTY=pts/0 ; PWD=/home/vboxuser ; USER=root ; COMMAND=/usr/bin/systemctl status ssh
+2025-09-26T16:48:15.499225+00:00 Ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vboxuser(uid=1000)
+2025-09-26T16:48:15.522591+00:00 Ubuntu sudo: pam_unix(sudo:session): session closed for user root
+2025-09-27T03:34:10.367617+00:00 Ubuntu systemd-logind[650]: Watching system buttons on /dev/input/event0 (Power Button)
+2025-09-27T03:34:10.367622+00:00 Ubuntu systemd-logind[650]: Watching system buttons on /dev/input/event1 (Sleep Button)
+2025-09-27T03:34:10.367649+00:00 Ubuntu systemd-logind[650]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+2025-09-27T03:34:10.367651+00:00 Ubuntu systemd-logind[650]: New seat seat0.
+2025-09-27T03:34:10.234874+00:00 Ubuntu polkitd[574]: Loading rules from directory /etc/polkit-1/rules.d
+2025-09-27T03:34:10.239863+00:00 Ubuntu polkitd[574]: Loading rules from directory /usr/share/polkit-1/rules.d
+2025-09-27T03:34:10.282532+00:00 Ubuntu polkitd[574]: Finished loading, compiling and executing 16 rules
+2025-09-27T03:34:10.287475+00:00 Ubuntu polkitd[574]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+2025-09-27T03:34:13.293615+00:00 Ubuntu sshd[1088]: Server listening on 0.0.0.0 port 22.
+2025-09-27T03:34:13.294811+00:00 Ubuntu sshd[1088]: Server listening on :: port 22.
+2025-09-27T03:34:13.585766+00:00 Ubuntu gdm-launch-environment]: pam_unix(gdm-launch-environment:session): session opened for user gdm(uid=120) by (uid=0)
+2025-09-27T03:34:13.618412+00:00 Ubuntu systemd-logind[650]: New session c1 of user gdm.
+2025-09-27T03:34:13.669950+00:00 Ubuntu (systemd): pam_unix(systemd-user:session): session opened for user gdm(uid=120) by gdm(uid=0)
+2025-09-27T03:34:17.109439+00:00 Ubuntu polkitd[574]: Registered Authentication Agent for unix-session:c1 (system bus name :1.36 [/usr/bin/gnome-shell], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+2025-09-27T03:34:27.450265+00:00 Ubuntu gdm-password]: gkr-pam: unable to locate daemon control file
+2025-09-27T03:34:27.450342+00:00 Ubuntu gdm-password]: gkr-pam: stashed password to try later in open session
+2025-09-27T03:34:27.474064+00:00 Ubuntu gdm-password]: pam_unix(gdm-password:session): session opened for user vboxuser(uid=1000) by vboxuser(uid=0)
+2025-09-27T03:34:27.508835+00:00 Ubuntu systemd-logind[650]: New session 2 of user vboxuser.
+2025-09-27T03:34:27.572092+00:00 Ubuntu (systemd): pam_unix(systemd-user:session): session opened for user vboxuser(uid=1000) by vboxuser(uid=0)
+2025-09-27T03:34:28.294898+00:00 Ubuntu gdm-password]: gkr-pam: unlocked login keyring
+2025-09-27T03:34:29.253145+00:00 Ubuntu gnome-keyring-daemon[1689]: The PKCS#11 component was already initialized
+2025-09-27T03:34:29.254068+00:00 Ubuntu gnome-keyring-daemon[1886]: discover_other_daemon: 1
+2025-09-27T03:34:29.269447+00:00 Ubuntu gnome-keyring-daemon[1689]: The Secret Service was already initialized
+2025-09-27T03:34:29.270403+00:00 Ubuntu gnome-keyring-daemon[1890]: discover_other_daemon: 1
+2025-09-27T03:34:29.273946+00:00 Ubuntu gnome-keyring-daemon[1891]: discover_other_daemon: 1
+2025-09-27T03:34:32.033427+00:00 Ubuntu polkitd[574]: Registered Authentication Agent for unix-session:2 (system bus name :1.77 [/usr/bin/gnome-shell], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+2025-09-27T03:34:34.550138+00:00 Ubuntu gdm-launch-environment]: pam_unix(gdm-launch-environment:session): session closed for user gdm
+2025-09-27T03:34:34.601094+00:00 Ubuntu systemd-logind[650]: Session c1 logged out. Waiting for processes to exit.
+2025-09-27T03:34:34.683833+00:00 Ubuntu polkitd[574]: Unregistered Authentication Agent for unix-session:c1 (system bus name :1.36, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+2025-09-27T03:34:34.697105+00:00 Ubuntu systemd-logind[650]: Removed session c1.
+2025-09-27T03:35:01.276921+00:00 Ubuntu CRON[2760]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-09-27T03:35:01.282218+00:00 Ubuntu CRON[2760]: pam_unix(cron:session): session closed for user root
+2025-09-27T03:35:50.080684+00:00 Ubuntu sudo: vboxuser : TTY=pts/0 ; PWD=/home/vboxuser ; USER=root ; COMMAND=/usr/bin/systemctl status ssh
+2025-09-27T03:35:50.082729+00:00 Ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vboxuser(uid=1000)
+2025-09-27T03:35:50.115794+00:00 Ubuntu sudo: pam_unix(sudo:session): session closed for user root
+2025-09-27T03:38:02.829402+00:00 Ubuntu sudo: vboxuser : TTY=pts/0 ; PWD=/home/vboxuser ; USER=root ; COMMAND=/usr/sbin/ufw allow 22/tcp
+2025-09-27T03:38:02.830731+00:00 Ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vboxuser(uid=1000)
+2025-09-27T03:38:03.063375+00:00 Ubuntu sudo: pam_unix(sudo:session): session closed for user root
+2025-09-27T03:39:25.545373+00:00 Ubuntu sudo: vboxuser : TTY=pts/0 ; PWD=/home/vboxuser ; USER=root ; COMMAND=/usr/sbin/ufw disable
+2025-09-27T03:39:25.547523+00:00 Ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vboxuser(uid=1000)
+2025-09-27T03:39:26.139139+00:00 Ubuntu sudo: pam_unix(sudo:session): session closed for user root
+2025-09-27T03:41:06.071472+00:00 Ubuntu sudo: vboxuser : TTY=pts/0 ; PWD=/home/vboxuser ; USER=root ; COMMAND=/usr/bin/apt update
+2025-09-27T03:41:06.074566+00:00 Ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vboxuser(uid=1000)
+2025-09-27T03:41:21.999849+00:00 Ubuntu sudo: pam_unix(sudo:session): session closed for user root
+2025-09-27T03:41:22.390347+00:00 Ubuntu pkexec: pam_unix(polkit-1:session): session opened for user root(uid=0) by vboxuser(uid=1000)
+2025-09-27T03:41:22.391322+00:00 Ubuntu pkexec[4134]: vboxuser: Executing command [USER=root] [TTY=unknown] [CWD=/home/vboxuser] [COMMAND=/usr/lib/update-notifier/package-system-locked]
+2025-09-27T03:45:01.290263+00:00 Ubuntu CRON[4752]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-09-27T03:45:01.293141+00:00 Ubuntu CRON[4752]: pam_unix(cron:session): session closed for user root
+2025-09-27T03:46:34.462214+00:00 Ubuntu sudo: vboxuser : TTY=pts/0 ; PWD=/home/vboxuser ; USER=root ; COMMAND=/usr/bin/systemctl status ssh
+2025-09-27T03:46:34.464704+00:00 Ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vboxuser(uid=1000)
+2025-09-27T03:46:37.402874+00:00 Ubuntu sudo: pam_unix(sudo:session): session closed for user root
+2025-09-27T03:51:55.525503+00:00 Ubuntu sshd[4775]: Received disconnect from 192.168.43.8 port 53090:11: Bye Bye [preauth]
+2025-09-27T03:51:55.525754+00:00 Ubuntu sshd[4775]: Disconnected from authenticating user vboxuser 192.168.43.8 port 53090 [preauth]
+2025-09-27T03:51:56.035595+00:00 Ubuntu sshd[4780]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.43.8  user=vboxuser
+2025-09-27T03:51:56.041723+00:00 Ubuntu sshd[4779]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.43.8  user=vboxuser
+2025-09-27T03:51:56.046257+00:00 Ubuntu sshd[4778]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.43.8  user=vboxuser
+2025-09-27T03:51:56.048098+00:00 Ubuntu sshd[4777]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.43.8  user=vboxuser
+2025-09-27T03:51:57.833710+00:00 Ubuntu sshd[4780]: Failed password for vboxuser from 192.168.43.8 port 53126 ssh2
+2025-09-27T03:51:57.848981+00:00 Ubuntu sshd[4778]: Failed password for vboxuser from 192.168.43.8 port 53102 ssh2
+2025-09-27T03:51:57.849742+00:00 Ubuntu sshd[4777]: Failed password for vboxuser from 192.168.43.8 port 53096 ssh2
+2025-09-27T03:51:57.850473+00:00 Ubuntu sshd[4779]: Failed password for vboxuser from 192.168.43.8 port 53112 ssh2
+2025-09-27T03:51:59.865212+00:00 Ubuntu sshd[4780]: Failed password for vboxuser from 192.168.43.8 port 53126 ssh2
+2025-09-27T03:51:59.881321+00:00 Ubuntu sshd[4777]: Failed password for vboxuser from 192.168.43.8 port 53096 ssh2
+2025-09-27T03:51:59.882957+00:00 Ubuntu sshd[4779]: Failed password for vboxuser from 192.168.43.8 port 53112 ssh2
+2025-09-27T03:51:59.884279+00:00 Ubuntu sshd[4778]: Failed password for vboxuser from 192.168.43.8 port 53102 ssh2
+2025-09-27T03:52:02.232887+00:00 Ubuntu sshd[4780]: Failed password for vboxuser from 192.168.43.8 port 53126 ssh2
+2025-09-27T03:52:02.247632+00:00 Ubuntu sshd[4779]: Failed password for vboxuser from 192.168.43.8 port 53112 ssh2
+2025-09-27T03:52:02.249604+00:00 Ubuntu sshd[4777]: Failed password for vboxuser from 192.168.43.8 port 53096 ssh2
+2025-09-27T03:52:02.254540+00:00 Ubuntu sshd[4778]: Failed password for vboxuser from 192.168.43.8 port 53102 ssh2
+2025-09-27T03:52:04.270412+00:00 Ubuntu sshd[4780]: Failed password for vboxuser from 192.168.43.8 port 53126 ssh2
+2025-09-27T03:52:04.294376+00:00 Ubuntu sshd[4777]: Failed password for vboxuser from 192.168.43.8 port 53096 ssh2
+2025-09-27T03:52:04.306068+00:00 Ubuntu sshd[4778]: Failed password for vboxuser from 192.168.43.8 port 53102 ssh2
+2025-09-27T03:52:04.306936+00:00 Ubuntu sshd[4779]: Failed password for vboxuser from 192.168.43.8 port 53112 ssh2
+2025-09-27T03:52:06.299793+00:00 Ubuntu sshd[4780]: Failed password for vboxuser from 192.168.43.8 port 53126 ssh2
+2025-09-27T03:52:06.320324+00:00 Ubuntu sshd[4777]: Failed password for vboxuser from 192.168.43.8 port 53096 ssh2
+2025-09-27T03:52:06.338028+00:00 Ubuntu sshd[4779]: Failed password for vboxuser from 192.168.43.8 port 53112 ssh2
+2025-09-27T03:52:06.351745+00:00 Ubuntu sshd[4778]: Failed password for vboxuser from 192.168.43.8 port 53102 ssh2
+2025-09-27T03:52:08.669441+00:00 Ubuntu sshd[4780]: Failed password for vboxuser from 192.168.43.8 port 53126 ssh2
+2025-09-27T03:52:08.693374+00:00 Ubuntu sshd[4777]: Failed password for vboxuser from 192.168.43.8 port 53096 ssh2
+2025-09-27T03:52:08.731776+00:00 Ubuntu sshd[4779]: Failed password for vboxuser from 192.168.43.8 port 53112 ssh2
+2025-09-27T03:52:08.745559+00:00 Ubuntu sshd[4778]: Failed password for vboxuser from 192.168.43.8 port 53102 ssh2
+2025-09-27T03:52:10.681421+00:00 Ubuntu sshd[4780]: error: maximum authentication attempts exceeded for vboxuser from 192.168.43.8 port 53126 ssh2 [preauth]
+2025-09-27T03:52:10.681668+00:00 Ubuntu sshd[4780]: Disconnecting authenticating user vboxuser 192.168.43.8 port 53126: Too many authentication failures [preauth]
+2025-09-27T03:52:10.681755+00:00 Ubuntu sshd[4780]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.43.8  user=vboxuser
+2025-09-27T03:52:10.681940+00:00 Ubuntu sshd[4780]: PAM service(sshd) ignoring max retries; 6 > 3
+2025-09-27T03:52:10.702598+00:00 Ubuntu sshd[4777]: error: maximum authentication attempts exceeded for vboxuser from 192.168.43.8 port 53096 ssh2 [preauth]
+2025-09-27T03:52:10.705312+00:00 Ubuntu sshd[4777]: Disconnecting authenticating user vboxuser 192.168.43.8 port 53096: Too many authentication failures [preauth]
+2025-09-27T03:52:10.706119+00:00 Ubuntu sshd[4777]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.43.8  user=vboxuser
+2025-09-27T03:52:10.707340+00:00 Ubuntu sshd[4777]: PAM service(sshd) ignoring max retries; 6 > 3
+2025-09-27T03:52:10.739503+00:00 Ubuntu sshd[4779]: error: maximum authentication attempts exceeded for vboxuser from 192.168.43.8 port 53112 ssh2 [preauth]
+2025-09-27T03:52:10.740842+00:00 Ubuntu sshd[4779]: Disconnecting authenticating user vboxuser 192.168.43.8 port 53112: Too many authentication failures [preauth]
+2025-09-27T03:52:10.741019+00:00 Ubuntu sshd[4779]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.43.8  user=vboxuser
+2025-09-27T03:52:10.741206+00:00 Ubuntu sshd[4779]: PAM service(sshd) ignoring max retries; 6 > 3
+2025-09-27T03:52:10.755542+00:00 Ubuntu sshd[4778]: error: maximum authentication attempts exceeded for vboxuser from 192.168.43.8 port 53102 ssh2 [preauth]
+2025-09-27T03:52:10.755600+00:00 Ubuntu sshd[4778]: Disconnecting authenticating user vboxuser 192.168.43.8 port 53102: Too many authentication failures [preauth]
+2025-09-27T03:52:10.755625+00:00 Ubuntu sshd[4778]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.43.8  user=vboxuser
+2025-09-27T03:52:10.755647+00:00 Ubuntu sshd[4778]: PAM service(sshd) ignoring max retries; 6 > 3
+2025-09-27T03:52:10.857905+00:00 Ubuntu sshd[4785]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.43.8  user=vboxuser
+2025-09-27T03:52:10.862396+00:00 Ubuntu sshd[4786]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.43.8  user=vboxuser
+2025-09-27T03:52:10.894289+00:00 Ubuntu sshd[4789]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.43.8  user=vboxuser
+2025-09-27T03:52:10.899988+00:00 Ubuntu sshd[4791]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.43.8  user=vboxuser
+2025-09-27T03:52:12.569687+00:00 Ubuntu sshd[4785]: Failed password for vboxuser from 192.168.43.8 port 54862 ssh2
+2025-09-27T03:52:12.573688+00:00 Ubuntu sshd[4786]: Failed password for vboxuser from 192.168.43.8 port 54866 ssh2
+2025-09-27T03:52:12.605130+00:00 Ubuntu sshd[4789]: Failed password for vboxuser from 192.168.43.8 port 54874 ssh2
+2025-09-27T03:52:12.611024+00:00 Ubuntu sshd[4791]: Failed password for vboxuser from 192.168.43.8 port 54880 ssh2
+2025-09-27T03:52:14.495911+00:00 Ubuntu sshd[4791]: Failed password for vboxuser from 192.168.43.8 port 54880 ssh2
+2025-09-27T03:52:14.950386+00:00 Ubuntu sshd[4785]: Failed password for vboxuser from 192.168.43.8 port 54862 ssh2
+2025-09-27T03:52:14.959417+00:00 Ubuntu sshd[4786]: Failed password for vboxuser from 192.168.43.8 port 54866 ssh2
+2025-09-27T03:52:14.980999+00:00 Ubuntu sshd[4789]: Failed password for vboxuser from 192.168.43.8 port 54874 ssh2
+2025-09-27T03:52:16.792131+00:00 Ubuntu sshd[4785]: Failed password for vboxuser from 192.168.43.8 port 54862 ssh2
+2025-09-27T03:52:16.797068+00:00 Ubuntu sshd[4786]: Failed password for vboxuser from 192.168.43.8 port 54866 ssh2
+2025-09-27T03:52:16.827049+00:00 Ubuntu sshd[4789]: Failed password for vboxuser from 192.168.43.8 port 54874 ssh2
+2025-09-27T03:52:16.863443+00:00 Ubuntu sshd[4791]: Failed password for vboxuser from 192.168.43.8 port 54880 ssh2
+2025-09-27T03:52:18.814597+00:00 Ubuntu sshd[4785]: Failed password for vboxuser from 192.168.43.8 port 54862 ssh2
+2025-09-27T03:52:18.827406+00:00 Ubuntu sshd[4786]: Failed password for vboxuser from 192.168.43.8 port 54866 ssh2
+2025-09-27T03:52:18.863710+00:00 Ubuntu sshd[4789]: Failed password for vboxuser from 192.168.43.8 port 54874 ssh2
+2025-09-27T03:52:18.901475+00:00 Ubuntu sshd[4791]: Failed password for vboxuser from 192.168.43.8 port 54880 ssh2
+2025-09-27T03:52:20.879162+00:00 Ubuntu sshd[4785]: Failed password for vboxuser from 192.168.43.8 port 54862 ssh2
+2025-09-27T03:52:20.894724+00:00 Ubuntu sshd[4786]: Failed password for vboxuser from 192.168.43.8 port 54866 ssh2
+2025-09-27T03:52:20.907520+00:00 Ubuntu sshd[4789]: Failed password for vboxuser from 192.168.43.8 port 54874 ssh2
+2025-09-27T03:52:20.939744+00:00 Ubuntu sshd[4791]: Failed password for vboxuser from 192.168.43.8 port 54880 ssh2
+2025-09-27T03:52:21.821845+00:00 Ubuntu sshd[4789]: Connection reset by authenticating user vboxuser 192.168.43.8 port 54874 [preauth]
+2025-09-27T03:52:21.822974+00:00 Ubuntu sshd[4791]: Connection reset by authenticating user vboxuser 192.168.43.8 port 54880 [preauth]
+2025-09-27T03:52:21.823082+00:00 Ubuntu sshd[4791]: PAM 4 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.43.8  user=vboxuser
+2025-09-27T03:52:21.823126+00:00 Ubuntu sshd[4791]: PAM service(sshd) ignoring max retries; 5 > 3
+2025-09-27T03:52:21.823738+00:00 Ubuntu sshd[4789]: PAM 4 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.43.8  user=vboxuser
+2025-09-27T03:52:21.823767+00:00 Ubuntu sshd[4789]: PAM service(sshd) ignoring max retries; 5 > 3
+2025-09-27T03:52:22.908941+00:00 Ubuntu sshd[4785]: Failed password for vboxuser from 192.168.43.8 port 54862 ssh2
+2025-09-27T03:52:22.927605+00:00 Ubuntu sshd[4786]: Failed password for vboxuser from 192.168.43.8 port 54866 ssh2
+2025-09-27T03:52:23.437343+00:00 Ubuntu sshd[4785]: error: maximum authentication attempts exceeded for vboxuser from 192.168.43.8 port 54862 ssh2 [preauth]
+2025-09-27T03:52:23.437491+00:00 Ubuntu sshd[4785]: Disconnecting authenticating user vboxuser 192.168.43.8 port 54862: Too many authentication failures [preauth]
+2025-09-27T03:52:23.439593+00:00 Ubuntu sshd[4785]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.43.8  user=vboxuser
+2025-09-27T03:52:23.439847+00:00 Ubuntu sshd[4785]: PAM service(sshd) ignoring max retries; 6 > 3
+2025-09-27T03:52:23.456112+00:00 Ubuntu sshd[4786]: error: maximum authentication attempts exceeded for vboxuser from 192.168.43.8 port 54866 ssh2 [preauth]
+2025-09-27T03:52:23.457138+00:00 Ubuntu sshd[4786]: Disconnecting authenticating user vboxuser 192.168.43.8 port 54866: Too many authentication failures [preauth]
+2025-09-27T03:52:23.457235+00:00 Ubuntu sshd[4786]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.43.8  user=vboxuser
+2025-09-27T03:52:23.457301+00:00 Ubuntu sshd[4786]: PAM service(sshd) ignoring max retries; 6 > 3
+2025-09-27T03:52:42.774963+00:00 Ubuntu sudo: vboxuser : TTY=pts/0 ; PWD=/home/vboxuser ; USER=root ; COMMAND=/usr/bin/cat /var/log/auth.log
+2025-09-27T03:52:42.787223+00:00 Ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vboxuser(uid=1000)
+2025-09-27T03:52:42.810501+00:00 Ubuntu sudo: pam_unix(sudo:session): session closed for user root
+2025-09-27T03:55:01.462523+00:00 Ubuntu CRON[4797]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-09-27T03:55:01.464936+00:00 Ubuntu CRON[4797]: pam_unix(cron:session): session closed for user root
+2025-09-27T03:57:19.021222+00:00 Ubuntu sshd[4804]: Accepted password for vboxuser from 192.168.43.8 port 58530 ssh2
+2025-09-27T03:57:19.032423+00:00 Ubuntu sshd[4804]: pam_unix(sshd:session): session opened for user vboxuser(uid=1000) by vboxuser(uid=0)
+2025-09-27T03:57:19.033553+00:00 Ubuntu systemd-logind[650]: New session 7 of user vboxuser.
+2025-09-27T03:57:19.291322+00:00 Ubuntu sshd[4870]: Received disconnect from 192.168.43.8 port 58530:11: disconnected by user
+2025-09-27T03:57:19.291938+00:00 Ubuntu sshd[4870]: Disconnected from user vboxuser 192.168.43.8 port 58530
+2025-09-27T03:57:19.294417+00:00 Ubuntu sshd[4804]: pam_unix(sshd:session): session closed for user vboxuser
+2025-09-27T03:57:19.306288+00:00 Ubuntu systemd-logind[650]: Session 7 logged out. Waiting for processes to exit.
+2025-09-27T03:57:21.138744+00:00 Ubuntu systemd-logind[650]: Removed session 7.
+2025-09-27T04:02:29.452507+00:00 Ubuntu dbus-daemon[544]: [system] Failed to activate service 'org.bluez': timed out (service_start_timeout=25000ms)
+2025-09-27T04:05:01.472272+00:00 Ubuntu CRON[5034]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-09-27T04:05:01.475160+00:00 Ubuntu CRON[5034]: pam_unix(cron:session): session closed for user root
+2025-09-27T04:12:04.024795+00:00 Ubuntu gdm-password]: pam_unix(gdm-password:auth): conversation failed
+2025-09-27T04:15:01.480291+00:00 Ubuntu CRON[5071]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-09-27T04:15:01.490713+00:00 Ubuntu CRON[5071]: pam_unix(cron:session): session closed for user root
+2025-09-27T04:17:01.487908+00:00 Ubuntu CRON[5075]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-09-27T04:17:01.500067+00:00 Ubuntu CRON[5075]: pam_unix(cron:session): session closed for user root
+2025-09-27T04:25:01.514879+00:00 Ubuntu CRON[5100]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-09-27T04:25:01.517038+00:00 Ubuntu CRON[5100]: pam_unix(cron:session): session closed for user root
+2025-09-27T04:35:01.522339+00:00 Ubuntu CRON[5147]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-09-27T04:35:01.525171+00:00 Ubuntu CRON[5147]: pam_unix(cron:session): session closed for user root
+2025-09-27T04:45:01.020292+00:00 Ubuntu CRON[5178]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-09-27T04:45:01.023019+00:00 Ubuntu CRON[5178]: pam_unix(cron:session): session closed for user root
+2025-09-27T04:55:01.028322+00:00 Ubuntu CRON[5190]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-09-27T04:55:01.030820+00:00 Ubuntu CRON[5190]: pam_unix(cron:session): session closed for user root
+2025-09-27T05:05:01.034755+00:00 Ubuntu CRON[5210]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-09-27T05:05:01.045236+00:00 Ubuntu CRON[5210]: pam_unix(cron:session): session closed for user root
+2025-09-27T05:15:01.042551+00:00 Ubuntu CRON[5258]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-09-27T05:15:01.045601+00:00 Ubuntu CRON[5258]: pam_unix(cron:session): session closed for user root
+2025-09-27T05:17:01.051073+00:00 Ubuntu CRON[5263]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-09-27T05:17:01.061198+00:00 Ubuntu CRON[5263]: pam_unix(cron:session): session closed for user root
+2025-09-27T05:25:01.057634+00:00 Ubuntu CRON[5279]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-09-27T05:25:01.061012+00:00 Ubuntu CRON[5279]: pam_unix(cron:session): session closed for user root
+2025-09-27T05:35:01.746969+00:00 Ubuntu CRON[5288]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-09-27T05:35:01.750818+00:00 Ubuntu CRON[5288]: pam_unix(cron:session): session closed for user root
+2025-09-27T05:45:01.755386+00:00 Ubuntu CRON[5299]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-09-27T05:45:01.757845+00:00 Ubuntu CRON[5299]: pam_unix(cron:session): session closed for user root
+2025-09-27T05:55:01.764454+00:00 Ubuntu CRON[5317]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-09-27T05:55:01.774857+00:00 Ubuntu CRON[5317]: pam_unix(cron:session): session closed for user root
+2025-09-27T06:02:40.861243+00:00 Ubuntu gdm-password]: gkr-pam: unlocked login keyring
+2025-09-27T06:05:01.772473+00:00 Ubuntu CRON[5554]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-09-27T06:05:01.774902+00:00 Ubuntu CRON[5554]: pam_unix(cron:session): session closed for user root
+2025-09-27T06:11:46.080061+00:00 Ubuntu gdm-password]: pam_unix(gdm-password:auth): conversation failed
+2025-09-27T06:11:46.080344+00:00 Ubuntu gdm-password]: pam_unix(gdm-password:auth): auth could not identify password for [vboxuser]
+2025-09-27T06:11:47.158330+00:00 Ubuntu gdm-password]: pam_unix(gdm-password:auth): conversation failed
+2025-09-27T06:11:47.158560+00:00 Ubuntu gdm-password]: pam_unix(gdm-password:auth): auth could not identify password for [vboxuser]
+2025-09-27T06:11:52.505923+00:00 Ubuntu gdm-password]: pam_unix(gdm-password:auth): authentication failure; logname=vboxuser uid=0 euid=0 tty=/dev/tty1 ruser= rhost=  user=vboxuser
+2025-09-27T06:12:01.830125+00:00 Ubuntu gdm-password]: pam_unix(gdm-password:auth): authentication failure; logname=vboxuser uid=0 euid=0 tty=/dev/tty1 ruser= rhost=  user=vboxuser
+2025-09-27T06:12:17.575686+00:00 Ubuntu gdm-password]: gkr-pam: unlocked login keyring
+2025-09-27T06:15:14.341381+00:00 Ubuntu systemd-logind[675]: New seat seat0.
+2025-09-27T06:15:14.341383+00:00 Ubuntu systemd-logind[675]: Watching system buttons on /dev/input/event0 (Power Button)
+2025-09-27T06:15:14.341385+00:00 Ubuntu systemd-logind[675]: Watching system buttons on /dev/input/event1 (Sleep Button)
+2025-09-27T06:15:14.341394+00:00 Ubuntu systemd-logind[675]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+2025-09-27T06:15:14.341436+00:00 Ubuntu polkitd[618]: Loading rules from directory /etc/polkit-1/rules.d
+2025-09-27T06:15:14.324860+00:00 Ubuntu polkitd[618]: Loading rules from directory /usr/share/polkit-1/rules.d
+2025-09-27T06:15:14.357127+00:00 Ubuntu polkitd[618]: Finished loading, compiling and executing 16 rules
+2025-09-27T06:15:14.363609+00:00 Ubuntu polkitd[618]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+2025-09-27T06:15:17.166241+00:00 Ubuntu sshd[1041]: Server listening on 0.0.0.0 port 22.
+2025-09-27T06:15:17.166352+00:00 Ubuntu sshd[1041]: Server listening on :: port 22.
+2025-09-27T06:15:17.546933+00:00 Ubuntu gdm-launch-environment]: pam_unix(gdm-launch-environment:session): session opened for user gdm(uid=120) by (uid=0)
+2025-09-27T06:15:17.591955+00:00 Ubuntu systemd-logind[675]: New session c1 of user gdm.
+2025-09-27T06:15:17.642195+00:00 Ubuntu (systemd): pam_unix(systemd-user:session): session opened for user gdm(uid=120) by gdm(uid=0)
+2025-09-27T06:15:20.952726+00:00 Ubuntu polkitd[618]: Registered Authentication Agent for unix-session:c1 (system bus name :1.41 [/usr/bin/gnome-shell], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+2025-09-27T06:15:28.666952+00:00 Ubuntu gdm-password]: gkr-pam: unable to locate daemon control file
+2025-09-27T06:15:28.667018+00:00 Ubuntu gdm-password]: gkr-pam: stashed password to try later in open session
+2025-09-27T06:15:28.691858+00:00 Ubuntu gdm-password]: pam_unix(gdm-password:session): session opened for user vboxuser(uid=1000) by vboxuser(uid=0)
+2025-09-27T06:15:28.728589+00:00 Ubuntu systemd-logind[675]: New session 2 of user vboxuser.
+2025-09-27T06:15:28.790020+00:00 Ubuntu (systemd): pam_unix(systemd-user:session): session opened for user vboxuser(uid=1000) by vboxuser(uid=0)
+2025-09-27T06:15:29.478862+00:00 Ubuntu gdm-password]: gkr-pam: unlocked login keyring
+2025-09-27T06:15:30.552730+00:00 Ubuntu gnome-keyring-daemon[1648]: The Secret Service was already initialized
+2025-09-27T06:15:30.553760+00:00 Ubuntu gnome-keyring-daemon[1844]: discover_other_daemon: 1
+2025-09-27T06:15:30.556749+00:00 Ubuntu gnome-keyring-daemon[1648]: The PKCS#11 component was already initialized
+2025-09-27T06:15:30.557203+00:00 Ubuntu gnome-keyring-daemon[1845]: discover_other_daemon: 1
+2025-09-27T06:15:30.559189+00:00 Ubuntu gnome-keyring-daemon[1846]: discover_other_daemon: 1
+2025-09-27T06:15:34.065151+00:00 Ubuntu polkitd[618]: Registered Authentication Agent for unix-session:2 (system bus name :1.77 [/usr/bin/gnome-shell], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+2025-09-27T06:15:36.161691+00:00 Ubuntu gdm-launch-environment]: pam_unix(gdm-launch-environment:session): session closed for user gdm
+2025-09-27T06:15:36.200275+00:00 Ubuntu systemd-logind[675]: Session c1 logged out. Waiting for processes to exit.
+2025-09-27T06:15:36.240050+00:00 Ubuntu polkitd[618]: Unregistered Authentication Agent for unix-session:c1 (system bus name :1.41, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+2025-09-27T06:15:36.276320+00:00 Ubuntu systemd-logind[675]: Removed session c1.
+2025-09-27T06:16:23.109541+00:00 Ubuntu pkexec: pam_unix(polkit-1:session): session opened for user root(uid=0) by vboxuser(uid=1000)
+2025-09-27T06:16:23.110382+00:00 Ubuntu pkexec[2655]: vboxuser: Executing command [USER=root] [TTY=unknown] [CWD=/home/vboxuser] [COMMAND=/usr/lib/update-notifier/package-system-locked]
+2025-09-27T06:17:01.385428+00:00 Ubuntu CRON[2668]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-09-27T06:17:01.390638+00:00 Ubuntu CRON[2668]: pam_unix(cron:session): session closed for user root
+2025-09-27T06:17:02.976360+00:00 Ubuntu sshd[2671]: Received disconnect from 192.168.68.8 port 47306:11: Bye Bye [preauth]
+2025-09-27T06:17:02.976488+00:00 Ubuntu sshd[2671]: Disconnected from authenticating user vboxuser 192.168.68.8 port 47306 [preauth]
+2025-09-27T06:17:03.511748+00:00 Ubuntu sshd[2675]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.68.8  user=vboxuser
+2025-09-27T06:17:03.682576+00:00 Ubuntu sshd[2673]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.68.8  user=vboxuser
+2025-09-27T06:17:03.687388+00:00 Ubuntu sshd[2674]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.68.8  user=vboxuser
+2025-09-27T06:17:03.688465+00:00 Ubuntu sshd[2676]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.68.8  user=vboxuser
+2025-09-27T06:17:05.623630+00:00 Ubuntu sshd[2675]: Failed password for vboxuser from 192.168.68.8 port 47332 ssh2
+2025-09-27T06:17:05.793314+00:00 Ubuntu sshd[2673]: Failed password for vboxuser from 192.168.68.8 port 47310 ssh2
+2025-09-27T06:17:05.799444+00:00 Ubuntu sshd[2676]: Failed password for vboxuser from 192.168.68.8 port 47344 ssh2
+2025-09-27T06:17:05.799835+00:00 Ubuntu sshd[2674]: Failed password for vboxuser from 192.168.68.8 port 47324 ssh2
+2025-09-27T06:17:09.367022+00:00 Ubuntu sshd[2675]: Failed password for vboxuser from 192.168.68.8 port 47332 ssh2
+2025-09-27T06:17:09.528727+00:00 Ubuntu sshd[2676]: Failed password for vboxuser from 192.168.68.8 port 47344 ssh2
+2025-09-27T06:17:09.535915+00:00 Ubuntu sshd[2673]: Failed password for vboxuser from 192.168.68.8 port 47310 ssh2
+2025-09-27T06:17:09.537677+00:00 Ubuntu sshd[2674]: Failed password for vboxuser from 192.168.68.8 port 47324 ssh2
+2025-09-27T06:17:11.777449+00:00 Ubuntu sshd[2675]: Failed password for vboxuser from 192.168.68.8 port 47332 ssh2
+2025-09-27T06:17:12.121399+00:00 Ubuntu sshd[2676]: Failed password for vboxuser from 192.168.68.8 port 47344 ssh2
+2025-09-27T06:17:12.128275+00:00 Ubuntu sshd[2673]: Failed password for vboxuser from 192.168.68.8 port 47310 ssh2
+2025-09-27T06:17:12.176393+00:00 Ubuntu sshd[2674]: Failed password for vboxuser from 192.168.68.8 port 47324 ssh2
+2025-09-27T06:17:13.815498+00:00 Ubuntu sshd[2675]: Failed password for vboxuser from 192.168.68.8 port 47332 ssh2
+2025-09-27T06:17:13.827362+00:00 Ubuntu sshd[2676]: Failed password for vboxuser from 192.168.68.8 port 47344 ssh2
+2025-09-27T06:17:13.840524+00:00 Ubuntu sshd[2673]: Failed password for vboxuser from 192.168.68.8 port 47310 ssh2
+2025-09-27T06:17:13.898896+00:00 Ubuntu sshd[2674]: Failed password for vboxuser from 192.168.68.8 port 47324 ssh2
+2025-09-27T06:17:16.341787+00:00 Ubuntu sshd[2675]: Failed password for vboxuser from 192.168.68.8 port 47332 ssh2
+2025-09-27T06:17:16.535915+00:00 Ubuntu sshd[2676]: Failed password for vboxuser from 192.168.68.8 port 47344 ssh2
+2025-09-27T06:17:16.557248+00:00 Ubuntu sshd[2673]: Failed password for vboxuser from 192.168.68.8 port 47310 ssh2
+2025-09-27T06:17:16.610649+00:00 Ubuntu sshd[2674]: Failed password for vboxuser from 192.168.68.8 port 47324 ssh2
+2025-09-27T06:17:20.416438+00:00 Ubuntu sshd[2675]: Failed password for vboxuser from 192.168.68.8 port 47332 ssh2
+2025-09-27T06:17:20.614462+00:00 Ubuntu sshd[2676]: Failed password for vboxuser from 192.168.68.8 port 47344 ssh2
+2025-09-27T06:17:20.624462+00:00 Ubuntu sshd[2673]: Failed password for vboxuser from 192.168.68.8 port 47310 ssh2
+2025-09-27T06:17:20.681751+00:00 Ubuntu sshd[2674]: Failed password for vboxuser from 192.168.68.8 port 47324 ssh2
+2025-09-27T06:17:22.414569+00:00 Ubuntu sshd[2675]: error: maximum authentication attempts exceeded for vboxuser from 192.168.68.8 port 47332 ssh2 [preauth]
+2025-09-27T06:17:22.414725+00:00 Ubuntu sshd[2675]: Disconnecting authenticating user vboxuser 192.168.68.8 port 47332: Too many authentication failures [preauth]
+2025-09-27T06:17:22.414800+00:00 Ubuntu sshd[2675]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.68.8  user=vboxuser
+2025-09-27T06:17:22.414873+00:00 Ubuntu sshd[2675]: PAM service(sshd) ignoring max retries; 6 > 3
+2025-09-27T06:17:22.610175+00:00 Ubuntu sshd[2676]: error: maximum authentication attempts exceeded for vboxuser from 192.168.68.8 port 47344 ssh2 [preauth]
+2025-09-27T06:17:22.610239+00:00 Ubuntu sshd[2676]: Disconnecting authenticating user vboxuser 192.168.68.8 port 47344: Too many authentication failures [preauth]
+2025-09-27T06:17:22.610269+00:00 Ubuntu sshd[2676]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.68.8  user=vboxuser
+2025-09-27T06:17:22.610314+00:00 Ubuntu sshd[2676]: PAM service(sshd) ignoring max retries; 6 > 3
+2025-09-27T06:17:22.622868+00:00 Ubuntu sshd[2673]: error: maximum authentication attempts exceeded for vboxuser from 192.168.68.8 port 47310 ssh2 [preauth]
+2025-09-27T06:17:22.623027+00:00 Ubuntu sshd[2673]: Disconnecting authenticating user vboxuser 192.168.68.8 port 47310: Too many authentication failures [preauth]
+2025-09-27T06:17:22.623398+00:00 Ubuntu sshd[2673]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.68.8  user=vboxuser
+2025-09-27T06:17:22.623476+00:00 Ubuntu sshd[2673]: PAM service(sshd) ignoring max retries; 6 > 3
+2025-09-27T06:17:22.681571+00:00 Ubuntu sshd[2674]: error: maximum authentication attempts exceeded for vboxuser from 192.168.68.8 port 47324 ssh2 [preauth]
+2025-09-27T06:17:22.682977+00:00 Ubuntu sshd[2674]: Disconnecting authenticating user vboxuser 192.168.68.8 port 47324: Too many authentication failures [preauth]
+2025-09-27T06:17:22.683026+00:00 Ubuntu sshd[2674]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.68.8  user=vboxuser
+2025-09-27T06:17:22.683052+00:00 Ubuntu sshd[2674]: PAM service(sshd) ignoring max retries; 6 > 3
+2025-09-27T06:17:23.198939+00:00 Ubuntu sshd[2681]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.68.8  user=vboxuser
+2025-09-27T06:17:23.698584+00:00 Ubuntu sshd[2683]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.68.8  user=vboxuser
+2025-09-27T06:17:23.700184+00:00 Ubuntu sshd[2684]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.68.8  user=vboxuser
+2025-09-27T06:17:23.713909+00:00 Ubuntu sshd[2687]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.68.8  user=vboxuser
+2025-09-27T06:17:25.054427+00:00 Ubuntu sshd[2681]: Failed password for vboxuser from 192.168.68.8 port 32782 ssh2
+2025-09-27T06:17:25.553632+00:00 Ubuntu sshd[2683]: Failed password for vboxuser from 192.168.68.8 port 32794 ssh2
+2025-09-27T06:17:25.555689+00:00 Ubuntu sshd[2684]: Failed password for vboxuser from 192.168.68.8 port 32808 ssh2
+2025-09-27T06:17:25.569524+00:00 Ubuntu sshd[2687]: Failed password for vboxuser from 192.168.68.8 port 32810 ssh2
+2025-09-27T06:17:26.797621+00:00 Ubuntu sshd[2681]: Failed password for vboxuser from 192.168.68.8 port 32782 ssh2
+2025-09-27T06:17:27.271627+00:00 Ubuntu sshd[2683]: Failed password for vboxuser from 192.168.68.8 port 32794 ssh2
+2025-09-27T06:17:27.332559+00:00 Ubuntu sshd[2684]: Failed password for vboxuser from 192.168.68.8 port 32808 ssh2
+2025-09-27T06:17:27.355558+00:00 Ubuntu sshd[2687]: Failed password for vboxuser from 192.168.68.8 port 32810 ssh2
+2025-09-27T06:17:29.517506+00:00 Ubuntu sshd[2681]: Failed password for vboxuser from 192.168.68.8 port 32782 ssh2
+2025-09-27T06:17:29.978658+00:00 Ubuntu sshd[2683]: Failed password for vboxuser from 192.168.68.8 port 32794 ssh2
+2025-09-27T06:17:30.050382+00:00 Ubuntu sshd[2684]: Failed password for vboxuser from 192.168.68.8 port 32808 ssh2
+2025-09-27T06:17:30.064323+00:00 Ubuntu sshd[2687]: Failed password for vboxuser from 192.168.68.8 port 32810 ssh2
+2025-09-27T06:17:31.898625+00:00 Ubuntu sshd[2681]: Failed password for vboxuser from 192.168.68.8 port 32782 ssh2
+2025-09-27T06:17:32.225160+00:00 Ubuntu sshd[2684]: Failed password for vboxuser from 192.168.68.8 port 32808 ssh2
+2025-09-27T06:17:32.245402+00:00 Ubuntu sshd[2687]: Failed password for vboxuser from 192.168.68.8 port 32810 ssh2
+2025-09-27T06:17:32.354015+00:00 Ubuntu sshd[2683]: Failed password for vboxuser from 192.168.68.8 port 32794 ssh2
+2025-09-27T06:17:35.633879+00:00 Ubuntu sshd[2681]: Failed password for vboxuser from 192.168.68.8 port 32782 ssh2
+2025-09-27T06:17:35.902638+00:00 Ubuntu sshd[2683]: Failed password for vboxuser from 192.168.68.8 port 32794 ssh2
+2025-09-27T06:17:35.985647+00:00 Ubuntu sshd[2684]: Failed password for vboxuser from 192.168.68.8 port 32808 ssh2
+2025-09-27T06:17:36.010479+00:00 Ubuntu sshd[2687]: Failed password for vboxuser from 192.168.68.8 port 32810 ssh2
+2025-09-27T06:17:36.285824+00:00 Ubuntu sshd[2683]: Connection closed by authenticating user vboxuser 192.168.68.8 port 32794 [preauth]
+2025-09-27T06:17:36.285940+00:00 Ubuntu sshd[2683]: PAM 4 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.68.8  user=vboxuser
+2025-09-27T06:17:36.285968+00:00 Ubuntu sshd[2683]: PAM service(sshd) ignoring max retries; 5 > 3
+2025-09-27T06:17:36.367737+00:00 Ubuntu sshd[2684]: Connection closed by authenticating user vboxuser 192.168.68.8 port 32808 [preauth]
+2025-09-27T06:17:36.368173+00:00 Ubuntu sshd[2684]: PAM 4 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.68.8  user=vboxuser
+2025-09-27T06:17:36.368251+00:00 Ubuntu sshd[2684]: PAM service(sshd) ignoring max retries; 5 > 3
+2025-09-27T06:17:36.391883+00:00 Ubuntu sshd[2687]: Connection closed by authenticating user vboxuser 192.168.68.8 port 32810 [preauth]
+2025-09-27T06:17:36.392675+00:00 Ubuntu sshd[2687]: PAM 4 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.68.8  user=vboxuser
+2025-09-27T06:17:36.392749+00:00 Ubuntu sshd[2687]: PAM service(sshd) ignoring max retries; 5 > 3
+2025-09-27T06:17:38.009508+00:00 Ubuntu sshd[2681]: Failed password for vboxuser from 192.168.68.8 port 32782 ssh2
+2025-09-27T06:17:40.009395+00:00 Ubuntu sshd[2681]: error: maximum authentication attempts exceeded for vboxuser from 192.168.68.8 port 32782 ssh2 [preauth]
+2025-09-27T06:17:40.009522+00:00 Ubuntu sshd[2681]: Disconnecting authenticating user vboxuser 192.168.68.8 port 32782: Too many authentication failures [preauth]
+2025-09-27T06:17:40.009577+00:00 Ubuntu sshd[2681]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.68.8  user=vboxuser
+2025-09-27T06:17:40.009623+00:00 Ubuntu sshd[2681]: PAM service(sshd) ignoring max retries; 6 > 3
+2025-09-27T06:19:15.417346+00:00 Ubuntu sudo: vboxuser : TTY=pts/0 ; PWD=/home/vboxuser ; USER=root ; COMMAND=/usr/bin/cat /var/log/auth.log
+2025-09-27T06:19:15.418058+00:00 Ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vboxuser(uid=1000)
+2025-09-27T06:19:15.441408+00:00 Ubuntu sudo: pam_unix(sudo:session): session closed for user root
+2025-09-27T06:20:35.776367+00:00 Ubuntu sshd[2701]: Accepted password for vboxuser from 192.168.68.8 port 33140 ssh2
+2025-09-27T06:20:35.778433+00:00 Ubuntu sshd[2701]: pam_unix(sshd:session): session opened for user vboxuser(uid=1000) by vboxuser(uid=0)
+2025-09-27T06:20:35.785807+00:00 Ubuntu systemd-logind[675]: New session 5 of user vboxuser.
+2025-09-27T06:20:37.556155+00:00 Ubuntu sshd[2773]: Received disconnect from 192.168.68.8 port 33140:11: disconnected by user
+2025-09-27T06:20:37.557459+00:00 Ubuntu sshd[2773]: Disconnected from user vboxuser 192.168.68.8 port 33140
+2025-09-27T06:20:37.557688+00:00 Ubuntu sshd[2701]: pam_unix(sshd:session): session closed for user vboxuser
+2025-09-27T06:20:37.574579+00:00 Ubuntu systemd-logind[675]: Session 5 logged out. Waiting for processes to exit.
+2025-09-27T06:20:37.581754+00:00 Ubuntu systemd-logind[675]: Removed session 5.
+2025-09-27T06:25:01.399153+00:00 Ubuntu CRON[2791]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-09-27T06:25:01.399437+00:00 Ubuntu CRON[2790]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-09-27T06:25:01.403728+00:00 Ubuntu CRON[2790]: pam_unix(cron:session): session closed for user root
+2025-09-27T06:25:01.414600+00:00 Ubuntu CRON[2791]: pam_unix(cron:session): session closed for user root
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         2025-11-06T04:43:18.623904+00:00 Ubuntu systemd-logind[591]: Watching system buttons on /dev/input/event0 (Power Button)
+2025-11-06T04:43:18.623906+00:00 Ubuntu systemd-logind[591]: Watching system buttons on /dev/input/event1 (Sleep Button)
+2025-11-06T04:43:18.623909+00:00 Ubuntu systemd-logind[591]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+2025-11-06T04:43:18.623911+00:00 Ubuntu systemd-logind[591]: New seat seat0.
+2025-11-06T04:43:18.640129+00:00 Ubuntu polkitd[557]: Loading rules from directory /etc/polkit-1/rules.d
+2025-11-06T04:43:18.640144+00:00 Ubuntu polkitd[557]: Loading rules from directory /usr/share/polkit-1/rules.d
+2025-11-06T04:43:18.640147+00:00 Ubuntu polkitd[557]: Finished loading, compiling and executing 16 rules
+2025-11-06T04:43:18.640154+00:00 Ubuntu polkitd[557]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+2025-11-06T04:43:21.430250+00:00 Ubuntu sshd[1037]: Server listening on 0.0.0.0 port 22.
+2025-11-06T04:43:21.430376+00:00 Ubuntu sshd[1037]: Server listening on :: port 22.
+2025-11-06T04:43:21.846021+00:00 Ubuntu gdm-launch-environment]: pam_unix(gdm-launch-environment:session): session opened for user gdm(uid=120) by (uid=0)
+2025-11-06T04:43:21.882653+00:00 Ubuntu systemd-logind[591]: New session c1 of user gdm.
+2025-11-06T04:43:21.926337+00:00 Ubuntu (systemd): pam_unix(systemd-user:session): session opened for user gdm(uid=120) by gdm(uid=0)
+2025-11-06T04:43:25.441597+00:00 Ubuntu polkitd[557]: Registered Authentication Agent for unix-session:c1 (system bus name :1.42 [/usr/bin/gnome-shell], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+2025-11-06T04:44:00.206707+00:00 Ubuntu gdm-password]: pam_unix(gdm-password:auth): authentication failure; logname= uid=0 euid=0 tty=/dev/tty1 ruser= rhost=  user=vboxuser
+2025-11-06T04:44:09.318422+00:00 Ubuntu gdm-password]: gkr-pam: unable to locate daemon control file
+2025-11-06T04:44:09.319579+00:00 Ubuntu gdm-password]: gkr-pam: stashed password to try later in open session
+2025-11-06T04:44:09.334876+00:00 Ubuntu gdm-password]: pam_unix(gdm-password:session): session opened for user vboxuser(uid=1000) by vboxuser(uid=0)
+2025-11-06T04:44:09.363024+00:00 Ubuntu systemd-logind[591]: New session 2 of user vboxuser.
+2025-11-06T04:44:09.422815+00:00 Ubuntu (systemd): pam_unix(systemd-user:session): session opened for user vboxuser(uid=1000) by vboxuser(uid=0)
+2025-11-06T04:44:09.947076+00:00 Ubuntu gdm-password]: gkr-pam: unlocked login keyring
+2025-11-06T04:44:10.966034+00:00 Ubuntu gnome-keyring-daemon[1673]: The PKCS#11 component was already initialized
+2025-11-06T04:44:10.966532+00:00 Ubuntu gnome-keyring-daemon[1868]: discover_other_daemon: 1
+2025-11-06T04:44:10.975056+00:00 Ubuntu gnome-keyring-daemon[1673]: The Secret Service was already initialized
+2025-11-06T04:44:10.975627+00:00 Ubuntu gnome-keyring-daemon[1870]: discover_other_daemon: 1
+2025-11-06T04:44:11.007736+00:00 Ubuntu gnome-keyring-daemon[1874]: discover_other_daemon: 1
+2025-11-06T04:44:13.647300+00:00 Ubuntu polkitd[557]: Registered Authentication Agent for unix-session:2 (system bus name :1.80 [/usr/bin/gnome-shell], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+2025-11-06T04:44:15.964431+00:00 Ubuntu gdm-launch-environment]: pam_unix(gdm-launch-environment:session): session closed for user gdm
+2025-11-06T04:44:15.998734+00:00 Ubuntu systemd-logind[591]: Session c1 logged out. Waiting for processes to exit.
+2025-11-06T04:44:16.043312+00:00 Ubuntu polkitd[557]: Unregistered Authentication Agent for unix-session:c1 (system bus name :1.42, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+2025-11-06T04:44:16.066044+00:00 Ubuntu systemd-logind[591]: Removed session c1.
+2025-11-06T04:45:05.017149+00:00 Ubuntu CRON[2624]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-06T04:45:05.026904+00:00 Ubuntu CRON[2624]: pam_unix(cron:session): session closed for user root
+2025-11-06T04:45:18.695421+00:00 Ubuntu pkexec: pam_unix(polkit-1:session): session opened for user root(uid=0) by vboxuser(uid=1000)
+2025-11-06T04:45:18.696393+00:00 Ubuntu pkexec[2706]: vboxuser: Executing command [USER=root] [TTY=unknown] [CWD=/home/vboxuser] [COMMAND=/usr/lib/update-notifier/package-system-locked]
+2025-11-06T04:46:24.229439+00:00 Ubuntu polkitd[557]: Identity `unix-group:admin' is not valid, ignoring: No UNIX group with name admin: No such file or directory
+2025-11-06T04:46:27.031379+00:00 Ubuntu polkitd[557]: Operator of unix-session:2 FAILED to authenticate to gain authorization for action org.debian.apt.install-or-remove-packages for system-bus-name::1.112 [/usr/bin/python3 /usr/bin/update-manager --no-update --no-focus-on-map] (owned by unix-user:vboxuser)
+2025-11-06T04:47:51.461120+00:00 Ubuntu sshd[2895]: Received disconnect from 192.168.104.8 port 48714:11: Bye Bye [preauth]
+2025-11-06T04:47:51.461499+00:00 Ubuntu sshd[2895]: Disconnected from authenticating user root 192.168.104.8 port 48714 [preauth]
+2025-11-06T04:47:51.989388+00:00 Ubuntu sshd[2897]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.104.8  user=root
+2025-11-06T04:47:52.022691+00:00 Ubuntu sshd[2899]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.104.8  user=root
+2025-11-06T04:47:53.638839+00:00 Ubuntu sshd[2897]: Failed password for root from 192.168.104.8 port 48718 ssh2
+2025-11-06T04:47:54.142284+00:00 Ubuntu sshd[2899]: Failed password for root from 192.168.104.8 port 48720 ssh2
+2025-11-06T04:47:56.400607+00:00 Ubuntu sshd[2897]: Failed password for root from 192.168.104.8 port 48718 ssh2
+2025-11-06T04:47:56.464646+00:00 Ubuntu sshd[2899]: Failed password for root from 192.168.104.8 port 48720 ssh2
+2025-11-06T04:47:56.918811+00:00 Ubuntu sshd[2897]: Received disconnect from 192.168.104.8 port 48718:11: Bye Bye [preauth]
+2025-11-06T04:47:56.919013+00:00 Ubuntu sshd[2897]: Disconnected from authenticating user root 192.168.104.8 port 48718 [preauth]
+2025-11-06T04:47:56.919485+00:00 Ubuntu sshd[2897]: PAM 1 more authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.104.8  user=root
+2025-11-06T04:47:56.933701+00:00 Ubuntu sshd[2899]: Received disconnect from 192.168.104.8 port 48720:11: Bye Bye [preauth]
+2025-11-06T04:47:56.935965+00:00 Ubuntu sshd[2899]: Disconnected from authenticating user root 192.168.104.8 port 48720 [preauth]
+2025-11-06T04:47:56.936513+00:00 Ubuntu sshd[2899]: PAM 1 more authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.104.8  user=root
+2025-11-06T04:47:57.236464+00:00 Ubuntu sshd[2902]: Invalid user admin from 192.168.104.8 port 48750
+2025-11-06T04:47:57.260832+00:00 Ubuntu sshd[2901]: Invalid user admin from 192.168.104.8 port 48738
+2025-11-06T04:47:57.266597+00:00 Ubuntu sshd[2902]: pam_unix(sshd:auth): check pass; user unknown
+2025-11-06T04:47:57.266805+00:00 Ubuntu sshd[2902]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.104.8 
+2025-11-06T04:47:57.274189+00:00 Ubuntu sshd[2901]: pam_unix(sshd:auth): check pass; user unknown
+2025-11-06T04:47:57.274524+00:00 Ubuntu sshd[2901]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.104.8 
+2025-11-06T04:47:59.407620+00:00 Ubuntu sshd[2902]: Failed password for invalid user admin from 192.168.104.8 port 48750 ssh2
+2025-11-06T04:47:59.415258+00:00 Ubuntu sshd[2901]: Failed password for invalid user admin from 192.168.104.8 port 48738 ssh2
+2025-11-06T04:48:01.430430+00:00 Ubuntu sshd[2901]: pam_unix(sshd:auth): check pass; user unknown
+2025-11-06T04:48:01.431682+00:00 Ubuntu sshd[2902]: pam_unix(sshd:auth): check pass; user unknown
+2025-11-06T04:48:03.119124+00:00 Ubuntu sshd[2902]: Failed password for invalid user admin from 192.168.104.8 port 48750 ssh2
+2025-11-06T04:48:03.120149+00:00 Ubuntu sshd[2901]: Failed password for invalid user admin from 192.168.104.8 port 48738 ssh2
+2025-11-06T04:48:03.514238+00:00 Ubuntu sshd[2902]: Received disconnect from 192.168.104.8 port 48750:11: Bye Bye [preauth]
+2025-11-06T04:48:03.514441+00:00 Ubuntu sshd[2902]: Disconnected from invalid user admin 192.168.104.8 port 48750 [preauth]
+2025-11-06T04:48:03.514632+00:00 Ubuntu sshd[2901]: Received disconnect from 192.168.104.8 port 48738:11: Bye Bye [preauth]
+2025-11-06T04:48:03.514740+00:00 Ubuntu sshd[2901]: Disconnected from invalid user admin 192.168.104.8 port 48738 [preauth]
+2025-11-06T04:48:03.514835+00:00 Ubuntu sshd[2901]: PAM 1 more authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.104.8 
+2025-11-06T04:48:03.516208+00:00 Ubuntu sshd[2902]: PAM 1 more authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.104.8 
+2025-11-06T04:48:03.827688+00:00 Ubuntu sshd[2906]: Invalid user user from 192.168.104.8 port 59796
+2025-11-06T04:48:03.857967+00:00 Ubuntu sshd[2905]: Invalid user user from 192.168.104.8 port 59786
+2025-11-06T04:48:03.873738+00:00 Ubuntu sshd[2906]: pam_unix(sshd:auth): check pass; user unknown
+2025-11-06T04:48:03.873853+00:00 Ubuntu sshd[2906]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.104.8 
+2025-11-06T04:48:03.906771+00:00 Ubuntu sshd[2905]: pam_unix(sshd:auth): check pass; user unknown
+2025-11-06T04:48:03.906850+00:00 Ubuntu sshd[2905]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.104.8 
+2025-11-06T04:48:05.503450+00:00 Ubuntu sshd[2906]: Failed password for invalid user user from 192.168.104.8 port 59796 ssh2
+2025-11-06T04:48:05.535641+00:00 Ubuntu sshd[2905]: Failed password for invalid user user from 192.168.104.8 port 59786 ssh2
+2025-11-06T04:48:06.001247+00:00 Ubuntu sshd[2906]: pam_unix(sshd:auth): check pass; user unknown
+2025-11-06T04:48:06.057186+00:00 Ubuntu sshd[2905]: pam_unix(sshd:auth): check pass; user unknown
+2025-11-06T04:48:08.097182+00:00 Ubuntu sshd[2905]: Failed password for invalid user user from 192.168.104.8 port 59786 ssh2
+2025-11-06T04:48:08.207446+00:00 Ubuntu sshd[2905]: Received disconnect from 192.168.104.8 port 59786:11: Bye Bye [preauth]
+2025-11-06T04:48:08.207958+00:00 Ubuntu sshd[2905]: Disconnected from invalid user user 192.168.104.8 port 59786 [preauth]
+2025-11-06T04:48:08.208067+00:00 Ubuntu sshd[2905]: PAM 1 more authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.104.8 
+2025-11-06T04:48:08.237965+00:00 Ubuntu sshd[2906]: Failed password for invalid user user from 192.168.104.8 port 59796 ssh2
+2025-11-06T04:48:08.461334+00:00 Ubuntu sshd[2909]: Invalid user test from 192.168.104.8 port 44998
+2025-11-06T04:48:08.494004+00:00 Ubuntu sshd[2909]: pam_unix(sshd:auth): check pass; user unknown
+2025-11-06T04:48:08.494202+00:00 Ubuntu sshd[2909]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.104.8 
+2025-11-06T04:48:10.144172+00:00 Ubuntu sshd[2909]: Failed password for invalid user test from 192.168.104.8 port 44998 ssh2
+2025-11-06T04:48:10.249779+00:00 Ubuntu sshd[2906]: Received disconnect from 192.168.104.8 port 59796:11: Bye Bye [preauth]
+2025-11-06T04:48:10.249978+00:00 Ubuntu sshd[2906]: Disconnected from invalid user user 192.168.104.8 port 59796 [preauth]
+2025-11-06T04:48:10.250088+00:00 Ubuntu sshd[2906]: PAM 1 more authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.104.8 
+2025-11-06T04:48:10.500323+00:00 Ubuntu sshd[2911]: Invalid user test from 192.168.104.8 port 45002
+2025-11-06T04:48:10.550129+00:00 Ubuntu sshd[2911]: pam_unix(sshd:auth): check pass; user unknown
+2025-11-06T04:48:10.550309+00:00 Ubuntu sshd[2911]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.104.8 
+2025-11-06T04:48:10.589820+00:00 Ubuntu sshd[2909]: pam_unix(sshd:auth): check pass; user unknown
+2025-11-06T04:48:12.475089+00:00 Ubuntu sshd[2911]: Failed password for invalid user test from 192.168.104.8 port 45002 ssh2
+2025-11-06T04:48:12.515187+00:00 Ubuntu sshd[2909]: Failed password for invalid user test from 192.168.104.8 port 44998 ssh2
+2025-11-06T04:48:12.730790+00:00 Ubuntu sshd[2911]: pam_unix(sshd:auth): check pass; user unknown
+2025-11-06T04:48:12.736337+00:00 Ubuntu sshd[2909]: Received disconnect from 192.168.104.8 port 44998:11: Bye Bye [preauth]
+2025-11-06T04:48:12.736505+00:00 Ubuntu sshd[2909]: Disconnected from invalid user test 192.168.104.8 port 44998 [preauth]
+2025-11-06T04:48:12.736603+00:00 Ubuntu sshd[2909]: PAM 1 more authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.104.8 
+2025-11-06T04:48:13.001583+00:00 Ubuntu sshd[2913]: Invalid user administrator from 192.168.104.8 port 45016
+2025-11-06T04:48:13.039517+00:00 Ubuntu sshd[2913]: pam_unix(sshd:auth): check pass; user unknown
+2025-11-06T04:48:13.040036+00:00 Ubuntu sshd[2913]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.104.8 
+2025-11-06T04:48:14.709158+00:00 Ubuntu sshd[2913]: Failed password for invalid user administrator from 192.168.104.8 port 45016 ssh2
+2025-11-06T04:48:15.263415+00:00 Ubuntu sshd[2911]: Failed password for invalid user test from 192.168.104.8 port 45002 ssh2
+2025-11-06T04:48:16.364098+00:00 Ubuntu sshd[2913]: pam_unix(sshd:auth): check pass; user unknown
+2025-11-06T04:48:16.944762+00:00 Ubuntu sshd[2911]: Received disconnect from 192.168.104.8 port 45002:11: Bye Bye [preauth]
+2025-11-06T04:48:16.944987+00:00 Ubuntu sshd[2911]: Disconnected from invalid user test 192.168.104.8 port 45002 [preauth]
+2025-11-06T04:48:16.945617+00:00 Ubuntu sshd[2911]: PAM 1 more authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.104.8 
+2025-11-06T04:48:17.197654+00:00 Ubuntu sshd[2915]: Invalid user administrator from 192.168.104.8 port 45028
+2025-11-06T04:48:17.235147+00:00 Ubuntu sshd[2915]: pam_unix(sshd:auth): check pass; user unknown
+2025-11-06T04:48:17.235418+00:00 Ubuntu sshd[2915]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.104.8 
+2025-11-06T04:48:18.443987+00:00 Ubuntu sshd[2913]: Failed password for invalid user administrator from 192.168.104.8 port 45016 ssh2
+2025-11-06T04:48:19.120585+00:00 Ubuntu sshd[2915]: Failed password for invalid user administrator from 192.168.104.8 port 45028 ssh2
+2025-11-06T04:48:19.644845+00:00 Ubuntu sshd[2913]: pam_unix(sshd:auth): check pass; user unknown
+2025-11-06T04:48:20.512348+00:00 Ubuntu sshd[2915]: Connection closed by invalid user administrator 192.168.104.8 port 45028 [preauth]
+2025-11-06T04:48:21.138286+00:00 Ubuntu sshd[2913]: Failed password for invalid user administrator from 192.168.104.8 port 45016 ssh2
+2025-11-06T04:48:21.324013+00:00 Ubuntu sshd[2913]: Connection closed by invalid user administrator 192.168.104.8 port 45016 [preauth]
+2025-11-06T04:48:21.324543+00:00 Ubuntu sshd[2913]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.104.8 
+2025-11-06T04:50:12.195023+00:00 Ubuntu sudo: vboxuser : TTY=pts/0 ; PWD=/home/vboxuser ; USER=root ; COMMAND=/usr/bin/cat /var/log/auth.log
+2025-11-06T04:50:12.196139+00:00 Ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vboxuser(uid=1000)
+2025-11-06T04:50:12.216806+00:00 Ubuntu sudo: pam_unix(sudo:session): session closed for user root
+2025-11-06T04:54:30.518720+00:00 Ubuntu sshd[3596]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.104.8  user=vboxuser
+2025-11-06T04:54:32.609148+00:00 Ubuntu sshd[3596]: Failed password for vboxuser from 192.168.104.8 port 47100 ssh2
+2025-11-06T04:55:01.043743+00:00 Ubuntu CRON[3599]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-11-06T04:55:01.049846+00:00 Ubuntu CRON[3599]: pam_unix(cron:session): session closed for user root
+2025-11-06T04:55:01.429492+00:00 Ubuntu sudo: vboxuser : TTY=pts/0 ; PWD=/home/vboxuser ; USER=root ; COMMAND=/usr/sbin/ufw allow 22/tcp
+2025-11-06T04:55:01.440532+00:00 Ubuntu sudo: pam_unix(sudo:session): session opened for user root(uid=0) by vboxuser(uid=1000)
+2025-11-06T04:55:01.600690+00:00 Ubuntu sudo: pam_unix(sudo:session): session closed for user root
+2025-11-06T04:55:14.362256+00:00 Ubuntu sshd[3596]: Accepted password for vboxuser from 192.168.104.8 port 47100 ssh2
+2025-11-06T04:55:14.364177+00:00 Ubuntu sshd[3596]: pam_unix(sshd:session): session opened for user vboxuser(uid=1000) by vboxuser(uid=0)
+2025-11-06T04:55:14.368435+00:00 Ubuntu systemd-logind[591]: New session 6 of user vboxuser.

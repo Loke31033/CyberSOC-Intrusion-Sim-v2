@@ -1,10 +1,10 @@
-🔥 Abnormal temperature 75.74°C detected at 2025-11-05 21:44:16
-⚠️ High vibration 8.17 detected at 2025-11-05 21:44:16
-🔥 Abnormal temperature 73.27°C detected at 2025-11-05 21:44:37
-⚠️ High vibration 7.34 detected at 2025-11-05 21:44:37
-🚨 Motion detected at 2025-11-05 21:44:48
-🚨 Motion detected at 2025-11-05 21:44:56
-⚠️ High vibration 8.52 detected at 2025-11-05 21:45:07
-🚨 Motion detected at 2025-11-05 21:45:07
-⚠️ High vibration 8.7 detected at 2025-11-05 21:45:18
-🚨 Motion detected at 2025-11-05 21:45:18
+⚠ High vibration 7.63 at 2025-12-14 19:08:02
+⚠ High vibration 8.26 at 2025-12-14 19:08:12
+🚨 Motion detected at 2025-12-14 19:08:22
+🚨 Motion detected at 2025-12-14 19:08:42
+🚨 Motion detected at 2025-12-14 19:09:46
+🔥 High temperature 73.21°C at 2025-12-14 19:09:56
+⚠ High vibration 9.08 at 2025-12-14 19:09:56
+🚨 Motion detected at 2025-12-22 17:36:24
+🚨 Motion detected at 2025-12-22 17:36:26
+🚨 Motion detected at 2025-12-22 18:35:04

@@ -1,0 +1,19 @@
+From: attacker@evil.com
+To: victim@company.com
+Subject: Urgent Account Verification Required
+Date: Fri, 20 Dec 2025 21:55:00 +0530
+Message-ID: <12345@evil.com>
+MIME-Version: 1.0
+Content-Type: text/plain
+
+Dear User,
+
+Your account has been suspended due to suspicious activity.
+Please verify immediately by clicking the link below:
+
+http://evil-login.example.com
+
+Failure to act will result in permanent suspension.
+
+Regards,
+IT Support

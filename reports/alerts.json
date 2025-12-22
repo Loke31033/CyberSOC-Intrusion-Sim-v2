@@ -1,0 +1,562 @@
+[
+    {
+        "alert_id": "ALERT-LOG-1",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[MEDIUM] Brute-force detected from 192.168.237.230",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-2",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Brute-force detected from 192.168.237.230",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-3",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[MEDIUM] Brute-force detected from 192.168.195.66",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-4",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Brute-force detected from 192.168.195.66",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-5",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[MEDIUM] Brute-force detected from 10.254.1.66",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-6",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Brute-force detected from 10.254.1.66",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-7",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[MEDIUM] Brute-force detected from 192.168.56.102",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-8",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Brute-force detected from 192.168.56.102",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-9",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[MEDIUM] Brute-force detected from 192.168.43.8",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-10",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Brute-force detected from 192.168.43.8",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-11",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[MEDIUM] Brute-force detected from 192.168.68.8",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-12",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Brute-force detected from 192.168.68.8",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-13",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[MEDIUM] Brute-force detected from 192.168.104.8",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-14",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Brute-force detected from 192.168.104.8",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-15",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-16",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-17",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-18",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-19",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-20",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-21",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-22",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-23",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-24",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-25",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-26",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-27",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-28",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-29",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-30",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-31",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-32",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-33",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-34",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-35",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-36",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-37",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-38",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-39",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-40",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-41",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-42",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-43",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-44",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-45",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-46",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-47",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-48",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-49",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-50",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-51",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-52",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-53",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-54",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-55",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-56",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-57",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-58",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-59",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-60",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-61",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-62",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-63",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-64",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-65",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-66",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-67",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-68",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-LOG-69",
+        "source": "LOG",
+        "severity": "HIGH",
+        "description": "[HIGH] Privilege escalation via sudo",
+        "timestamp": "2025-12-20 22:09:25",
+        "status": "OPEN"
+    },
+    {
+        "alert_id": "ALERT-PHISH-70",
+        "source": "EMAIL",
+        "severity": "HIGH",
+        "description": "Phishing email detected (High): test_phish.eml",
+        "timestamp": "2025-12-21 22:23:11",
+        "status": "OPEN"
+    }
+]
