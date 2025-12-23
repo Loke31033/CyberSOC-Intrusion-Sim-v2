@@ -3,6 +3,8 @@ from flask_cors import CORS
 import os, json, threading, subprocess, psutil, platform, time, random
 from datetime import datetime
 from flask import send_from_directory
+from db import init_db, get_db
+import sqlite3
 
 # -------------------------------------------------
 # Flask App Initialization (FIXED)
@@ -19,6 +21,36 @@ app = Flask(
     static_url_path="/static",
     template_folder="../frontend/build"
 )
+
+init_db()
+def insert_test_alerts():
+    conn = sqlite3.connect("soc.db")
+    cur = conn.cursor()
+
+    cur.execute("""
+        INSERT INTO alerts (alert_id, severity, source, description, status, timestamp)
+        VALUES (?, ?, ?, ?, ?, datetime('now'))
+    """, (
+        "ALERT-001",
+        "HIGH",
+        "PhishGuard",
+        "Suspicious phishing email detected with malicious link",
+        "OPEN"
+    ))
+
+    cur.execute("""
+        INSERT INTO alerts (alert_id, severity, source, description, status, timestamp)
+        VALUES (?, ?, ?, ?, ?, datetime('now'))
+    """, (
+        "ALERT-002",
+        "MEDIUM",
+        "Sysmon",
+        "Multiple failed login attempts detected",
+        "OPEN"
+    ))
+
+    conn.commit()
+    conn.close()
 
 
 # -------------------------------------------------
@@ -273,8 +305,13 @@ def generate_log_alerts_if_needed():
         })
         alert_id += 1
 
-    with open(alerts_file, "w") as f:
-        json.dump(alerts, f, indent=4)
+    insert_alert(
+    alert_id=f"ALERT-LOG-{alert_id}",
+    source="LOG",
+    severity="HIGH",
+    description=line
+)
+
 
 def generate_email_alerts_if_needed():
     alerts_file = os.path.join(REPORTS_DIR, 'alerts.json')
@@ -343,19 +380,142 @@ def generate_email_alerts_if_needed():
 # =================================================
 # ✅ PHASE-3 STEP-2: ALERTS API
 # =================================================
-@app.route('/api/alerts')
+@app.route("/api/alerts")
 def get_alerts():
-    generate_log_alerts_if_needed()   # ← ONLY NEW LINE
+    conn = sqlite3.connect("soc.db")
+    cur = conn.cursor()
 
-    alerts_file = os.path.join(REPORTS_DIR, 'alerts.json')
-    if not os.path.exists(alerts_file):
-        return jsonify([])
+    cur.execute("""
+        SELECT alert_id, source, severity, description, status, timestamp
+        FROM alerts
+        ORDER BY timestamp DESC
+    """)
+
+    rows = cur.fetchall()
+    conn.close()
+
+    alerts = []
+    for r in rows:
+        alerts.append({
+            "alert_id": r[0],
+            "source": r[1],
+            "severity": r[2],
+            "description": r[3],
+            "status": r[4],
+            "timestamp": r[5]
+        })
+
+    return jsonify(alerts)
+
+# -----------------------------
+# ACKNOWLEDGE ALERT (SOC ACTION)
+# -----------------------------
+@app.route('/api/alerts/<alert_id>/ack', methods=['POST'])
+def acknowledge_alert(alert_id):
+    try:
+        conn = sqlite3.connect('soc.db')
+        cur = conn.cursor()
+
+        cur.execute("""
+            UPDATE alerts
+            SET status = 'ACKNOWLEDGED'
+            WHERE alert_id = ?
+        """, (alert_id,))
+
+        conn.commit()
+        conn.close()
+
+        return jsonify({
+            "message": f"Alert {alert_id} acknowledged successfully"
+        })
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+# -----------------------------
+# RESOLVE / CLOSE ALERT (SOC)
+# -----------------------------
+@app.route('/api/alerts/<alert_id>/close', methods=['POST'])
+def close_alert(alert_id):
+    try:
+        conn = sqlite3.connect('soc.db')
+        cur = conn.cursor()
+
+        cur.execute("""
+            UPDATE alerts
+            SET status = 'CLOSED'
+            WHERE alert_id = ?
+        """, (alert_id,))
+
+        conn.commit()
+        conn.close()
+
+        return jsonify({
+            "message": f"Alert {alert_id} closed successfully"
+        })
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+# -----------------------------
+# ADD ANALYST NOTE (SOC)
+# -----------------------------
+@app.route('/api/alerts/<alert_id>/notes', methods=['POST'])
+def add_alert_note(alert_id):
+    data = request.json
+    analyst = data.get("analyst", "SOC-Analyst")
+    note = data.get("note", "")
 
     try:
-        with open(alerts_file) as f:
-            return jsonify(json.load(f))
+        conn = sqlite3.connect('soc.db')
+        cur = conn.cursor()
+
+        cur.execute("""
+            INSERT INTO alert_notes (alert_id, analyst, note, created_at)
+            VALUES (?, ?, ?, datetime('now'))
+        """, (alert_id, analyst, note))
+
+        conn.commit()
+        conn.close()
+
+        return jsonify({"message": "Note added successfully"})
+
     except Exception as e:
-        return jsonify({"error": str(e)})
+        return jsonify({"error": str(e)}), 500
+
+# -----------------------------
+# GET ALERT NOTES (SOC)
+# -----------------------------
+@app.route('/api/alerts/<alert_id>/notes', methods=['GET'])
+def get_alert_notes(alert_id):
+    try:
+        conn = sqlite3.connect('soc.db')
+        cur = conn.cursor()
+
+        cur.execute("""
+            SELECT analyst, note, created_at
+            FROM alert_notes
+            WHERE alert_id = ?
+            ORDER BY created_at DESC
+        """, (alert_id,))
+
+        rows = cur.fetchall()
+        conn.close()
+
+        notes = []
+        for r in rows:
+            notes.append({
+                "analyst": r[0],
+                "note": r[1],
+                "timestamp": r[2]
+            })
+
+        return jsonify(notes)
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
 
 
 # ==============================
@@ -380,5 +540,12 @@ def serve_static_files(path):
 # START APP
 # -------------------------------------------------
 if __name__ == "__main__":
-    print("✅ CyberSOC Backend Running → http://127.0.0.1:5000")
+    print("Initializing SOC database...")
+    init_db()
+
+    print("Inserting test alerts...")
+    insert_test_alerts()
+
+    print("CyberSOC Backend Running -> http://127.0.0.1:5000")
     app.run(debug=True)
+
