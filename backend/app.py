@@ -1,7 +1,7 @@
 from flask import Flask, jsonify, send_file, request
 from flask_cors import CORS
 import os, json, threading, subprocess, psutil, platform, time, random
-from datetime import datetime
+from datetime import datetime, timedelta
 from flask import send_from_directory
 from db import init_db, get_db
 import sqlite3
@@ -23,34 +23,6 @@ app = Flask(
 )
 
 init_db()
-def insert_test_alerts():
-    conn = sqlite3.connect("soc.db")
-    cur = conn.cursor()
-
-    cur.execute("""
-        INSERT INTO alerts (alert_id, severity, source, description, status, timestamp)
-        VALUES (?, ?, ?, ?, ?, datetime('now'))
-    """, (
-        "ALERT-001",
-        "HIGH",
-        "PhishGuard",
-        "Suspicious phishing email detected with malicious link",
-        "OPEN"
-    ))
-
-    cur.execute("""
-        INSERT INTO alerts (alert_id, severity, source, description, status, timestamp)
-        VALUES (?, ?, ?, ?, ?, datetime('now'))
-    """, (
-        "ALERT-002",
-        "MEDIUM",
-        "Sysmon",
-        "Multiple failed login attempts detected",
-        "OPEN"
-    ))
-
-    conn.commit()
-    conn.close()
 
 
 # -------------------------------------------------
@@ -217,6 +189,7 @@ def assign_case():
             c["assigned_to"] = data["analyst"]
             c["status"] = "IN-PROGRESS"
 
+
     with open(cases_file, "w") as f:
         json.dump(cases, f, indent=4)
 
@@ -376,6 +349,47 @@ def generate_email_alerts_if_needed():
     with open(alerts_file, "w") as f:
         json.dump(alerts, f, indent=4)
 
+# ---------------- SLA ENGINE ----------------
+
+def get_sla_minutes(severity):
+    if severity == "HIGH":
+        return 15
+    elif severity == "MEDIUM":
+        return 60
+    else:
+        return 240
+
+
+def calculate_sla_deadline(created_time, sla_minutes):
+    created_dt = datetime.strptime(created_time, "%Y-%m-%d %H:%M:%S")
+    deadline = created_dt + timedelta(minutes=sla_minutes)
+    return deadline.strftime("%Y-%m-%d %H:%M:%S")
+
+
+def get_sla_status(deadline):
+    now = datetime.now()
+    deadline_dt = datetime.strptime(deadline, "%Y-%m-%d %H:%M:%S")
+    return "BREACHED" if now > deadline_dt else "ON_TRACK"
+
+def calculate_sla_remaining(deadline_str):
+    try:
+        deadline = datetime.strptime(deadline_str, "%Y-%m-%d %H:%M:%S")
+        now = datetime.now()
+        diff = deadline - now
+
+        seconds = int(diff.total_seconds())
+        sign = "-" if seconds < 0 else ""
+        seconds = abs(seconds)
+
+        minutes = seconds // 60
+        secs = seconds % 60
+
+        return f"{sign}{minutes}m {secs}s"
+    except Exception:
+        return "N/A"
+
+
+
 
 # =================================================
 # ✅ PHASE-3 STEP-2: ALERTS API
@@ -395,17 +409,36 @@ def get_alerts():
     conn.close()
 
     alerts = []
+
     for r in rows:
+        alert_id = r[0]
+        source = r[1]
+        severity = r[2]
+        description = r[3]
+        status = r[4]
+        timestamp = r[5]
+
+        # SLA CALCULATION (READ TIME)
+        sla_minutes = get_sla_minutes(severity)
+        sla_deadline = calculate_sla_deadline(timestamp, sla_minutes)
+        sla_status = get_sla_status(sla_deadline)
+        sla_remaining = calculate_sla_remaining(sla_deadline)
+
         alerts.append({
-            "alert_id": r[0],
-            "source": r[1],
-            "severity": r[2],
-            "description": r[3],
-            "status": r[4],
-            "timestamp": r[5]
+            "alert_id": alert_id,
+            "source": source,
+            "severity": severity,
+            "description": description,
+            "status": status,
+            "timestamp": timestamp,
+            "sla_deadline": sla_deadline,
+            "sla_status": sla_status,
+            "sla_remaining": sla_remaining,
+
         })
 
     return jsonify(alerts)
+
 
 # -----------------------------
 # ACKNOWLEDGE ALERT (SOC ACTION)
@@ -542,9 +575,6 @@ def serve_static_files(path):
 if __name__ == "__main__":
     print("Initializing SOC database...")
     init_db()
-
-    print("Inserting test alerts...")
-    insert_test_alerts()
 
     print("CyberSOC Backend Running -> http://127.0.0.1:5000")
     app.run(debug=True)
