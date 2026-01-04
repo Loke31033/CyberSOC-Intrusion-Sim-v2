@@ -1,175 +1,223 @@
-// src/App.js
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React, { useState, useEffect } from 'react';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+  Link
+} from 'react-router-dom';
+import {
+  AppBar,
+  Toolbar,
+  Drawer,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+  Container,
+  Box,
+  Typography,
+  IconButton,
+  Badge,
+  Alert,
+  CircularProgress,
+  Paper
+} from '@mui/material';
+import {
+  Dashboard as DashboardIcon,
+  Security as SecurityIcon,
+  Warning as WarningIcon,
+  SensorDoor as SensorIcon,
+  Timeline as TimelineIcon,
+  Assessment as AssessmentIcon,
+  Settings as SettingsIcon,
+  Logout as LogoutIcon,
+  Menu as MenuIcon,
+  Notifications as NotificationsIcon,
+  Storage as StorageIcon,
+  Email as EmailIcon,
+  CloudDownload as DownloadIcon
+} from '@mui/icons-material';
+import axios from 'axios';
+import './App.css';
+
+// Import Pages
+import Login from './pages/Login';
+import Dashboard from './pages/Dashboard';
+import AlertsPage from './pages/Alerts';
+import CasesPage from './pages/Cases';
+import SensorsPage from './pages/Sensors';
+import ReportsPage from './pages/Reports';
+import SystemHealthPage from './pages/SystemHealth';
+import IOCPage from './pages/IOCs';
+import TimelinePage from './pages/Timeline';
+
+// API Base URL
+const API_BASE = 'http://localhost:5000/api';
 
 function App() {
-  const [alerts, setAlerts] = useState([]);
-  const [timeline, setTimeline] = useState([]);
-  const [selectedAlert, setSelectedAlert] = useState(null);
-  const [filter, setFilter] = useState("ALL");
-  const [status, setStatus] = useState({});
-  const [notes, setNotes] = useState({});
-  const [lastUpdated, setLastUpdated] = useState("");
-
-  /* ================= FETCH ================= */
-
-  const fetchSOCData = async () => {
-    const [a, t] = await Promise.all([
-      axios.get("http://127.0.0.1:5000/api/alerts"),
-      axios.get("http://127.0.0.1:5000/api/timeline"),
-    ]);
-    setAlerts(a.data || []);
-    setTimeline(t.data || []);
-    setLastUpdated(new Date().toLocaleTimeString());
-  };
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [notificationCount, setNotificationCount] = useState(0);
 
   useEffect(() => {
-    fetchSOCData();
-    const interval = setInterval(fetchSOCData, 10000);
-    return () => clearInterval(interval);
+    const token = localStorage.getItem('token');
+    const userData = localStorage.getItem('user');
+    
+    if (token && userData) {
+      setUser(JSON.parse(userData));
+      axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+    }
+    setLoading(false);
+    
+    // Fetch notification count
+    if (token) {
+      fetchNotificationCount();
+    }
   }, []);
 
-  /* ================= FILTER & SORT ================= */
-
-  const severityRank = { HIGH: 3, MEDIUM: 2, LOW: 1 };
-
-  const visibleAlerts = alerts
-    .filter(a => filter === "ALL" || a.source === filter)
-    .sort((a, b) => severityRank[b.severity] - severityRank[a.severity]);
-
-  /* ================= UI HELPERS ================= */
-
-  const sevColor = s =>
-    s === "HIGH" ? "#dc2626" : s === "MEDIUM" ? "#f59e0b" : "#22c55e";
-
-  const card = {
-    background: "#141b2d",
-    borderRadius: "12px",
-    padding: "16px",
-    marginBottom: "20px",
-    boxShadow: "0 0 14px rgba(0,255,255,0.12)",
+  const fetchNotificationCount = async () => {
+    try {
+      const response = await axios.get(`${API_BASE}/alerts`);
+      const highSeverityAlerts = response.data.filter(alert => 
+        alert.severity === 'HIGH' && alert.status === 'OPEN'
+      );
+      setNotificationCount(highSeverityAlerts.length);
+    } catch (error) {
+      console.error('Error fetching notification count:', error);
+    }
   };
 
-  /* ================= UI ================= */
+  const handleLogin = (userData, token) => {
+    setUser(userData);
+    localStorage.setItem('token', token);
+    localStorage.setItem('user', JSON.stringify(userData));
+    axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+  };
+
+  const handleLogout = () => {
+    setUser(null);
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
+    delete axios.defaults.headers.common['Authorization'];
+  };
+
+  if (loading) {
+    return (
+      <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+        <CircularProgress />
+      </Box>
+    );
+  }
+
+  if (!user) {
+    return <Login onLogin={handleLogin} />;
+  }
 
   return (
-    <div style={{ background: "#0a0f1c", minHeight: "100vh", color: "#e5e7eb" }}>
-
-      {/* ===== SOC HEADER ===== */}
-      <header style={{
-        background: "#020617",
-        padding: "14px 24px",
-        borderBottom: "1px solid #1f2937",
-        display: "flex",
-        justifyContent: "space-between"
-      }}>
-        <div>
-          <strong style={{ color: "#00e0ff" }}>Security Operations Center</strong>
-          <div style={{ fontSize: "12px", color: "#9ca3af" }}>
-            Unified Threat Monitoring • Production
-          </div>
-        </div>
-        <div style={{ fontSize: "12px", color: "#22c55e" }}>
-          ● Live • Last update {lastUpdated}
-        </div>
-      </header>
-
-      <div style={{ padding: "20px" }}>
-
-        {/* ===== KPI BAR ===== */}
-        <div style={{ display: "flex", gap: "20px", flexWrap: "wrap" }}>
-          <div style={card}><h2>{alerts.length}</h2><p>Open Incidents</p></div>
-          <div style={card}><h2>{alerts.filter(a => a.severity === "HIGH").length}</h2><p>High Severity</p></div>
-          <div style={card}><h2>{alerts.filter(a => a.source === "EMAIL").length}</h2><p>Email Threats</p></div>
-        </div>
-
-        {/* ===== FILTER ===== */}
-        <div style={{ margin: "20px 0" }}>
-          {["ALL", "LOG", "EMAIL"].map(f => (
-            <button key={f}
-              onClick={() => setFilter(f)}
-              style={{
-                marginRight: "10px",
-                padding: "6px 12px",
-                borderRadius: "6px",
-                border: "none",
-                cursor: "pointer",
-                background: filter === f ? "#00e0ff" : "#1f2937",
-                color: "#000",
-                fontWeight: "bold"
-              }}>
-              {f}
-            </button>
-          ))}
-        </div>
-
-        {/* ===== ALERT QUEUE ===== */}
-        <div style={card}>
-          <h3 style={{ color: "#00e0ff" }}>Incident Queue</h3>
-          {visibleAlerts.map((a, i) => (
-            <div key={i}
-              onClick={() => setSelectedAlert(a)}
-              style={{
-                padding: "10px",
-                marginBottom: "8px",
-                background: "#020617",
-                borderLeft: `6px solid ${sevColor(a.severity)}`,
-                cursor: "pointer"
-              }}>
-              <strong style={{ color: sevColor(a.severity) }}>
-                [{a.severity}]
-              </strong>{" "}
-              {a.description}
-              <div style={{ fontSize: "12px", color: "#9ca3af" }}>
-                {a.timestamp} | {a.source} | {status[a.alert_id] || "OPEN"}
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* ===== INCIDENT DETAILS ===== */}
-        {selectedAlert && (
-          <div style={card}>
-            <h3 style={{ color: "#facc15" }}>Incident Investigation</h3>
-            <p><b>Description:</b> {selectedAlert.description}</p>
-            <p><b>Source:</b> {selectedAlert.source}</p>
-            <p><b>Severity:</b> {selectedAlert.severity}</p>
-
-            <label>Status:</label>
-            <select
-              value={status[selectedAlert.alert_id] || "OPEN"}
-              onChange={e => setStatus({ ...status, [selectedAlert.alert_id]: e.target.value })}
+    <Router>
+      <Box sx={{ display: 'flex' }}>
+        {/* App Bar */}
+        <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
+          <Toolbar>
+            <IconButton
+              color="inherit"
+              edge="start"
+              sx={{ mr: 2 }}
+              onClick={() => setSidebarOpen(!sidebarOpen)}
             >
-              <option>OPEN</option>
-              <option>ACKNOWLEDGED</option>
-              <option>CLOSED</option>
-            </select>
+              <MenuIcon />
+            </IconButton>
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+              🚀 CyberSOC Platform
+            </Typography>
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+              <IconButton color="inherit">
+                <Badge badgeContent={notificationCount} color="error">
+                  <NotificationsIcon />
+                </Badge>
+              </IconButton>
+              <Typography variant="body2">
+                Welcome, {user.full_name || user.username}
+              </Typography>
+              <IconButton color="inherit" onClick={handleLogout}>
+                <LogoutIcon />
+              </IconButton>
+            </Box>
+          </Toolbar>
+        </AppBar>
 
-            <textarea
-              placeholder="Analyst investigation notes..."
-              value={notes[selectedAlert.alert_id] || ""}
-              onChange={e => setNotes({ ...notes, [selectedAlert.alert_id]: e.target.value })}
-              style={{ width: "100%", marginTop: "10px", background: "#020617", color: "#fff" }}
-            />
-          </div>
-        )}
+        {/* Sidebar */}
+        <Drawer
+          variant="permanent"
+          sx={{
+            width: 240,
+            flexShrink: 0,
+            [`& .MuiDrawer-paper`]: { width: 240, boxSizing: 'border-box' },
+          }}
+        >
+          <Toolbar />
+          <Box sx={{ overflow: 'auto' }}>
+            <List>
+              <ListItem button component={Link} to="/">
+                <ListItemIcon><DashboardIcon /></ListItemIcon>
+                <ListItemText primary="Dashboard" />
+              </ListItem>
+              <ListItem button component={Link} to="/alerts">
+                <ListItemIcon>
+                  <Badge badgeContent={notificationCount} color="error">
+                    <WarningIcon />
+                  </Badge>
+                </ListItemIcon>
+                <ListItemText primary="Alerts" />
+              </ListItem>
+              <ListItem button component={Link} to="/cases">
+                <ListItemIcon><SecurityIcon /></ListItemIcon>
+                <ListItemText primary="Cases" />
+              </ListItem>
+              <ListItem button component={Link} to="/sensors">
+                <ListItemIcon><SensorIcon /></ListItemIcon>
+                <ListItemText primary="Sensors" />
+              </ListItem>
+              <ListItem button component={Link} to="/timeline">
+                <ListItemIcon><TimelineIcon /></ListItemIcon>
+                <ListItemText primary="Timeline" />
+              </ListItem>
+              <ListItem button component={Link} to="/iocs">
+                <ListItemIcon><StorageIcon /></ListItemIcon>
+                <ListItemText primary="IOCs" />
+              </ListItem>
+              <ListItem button component={Link} to="/reports">
+                <ListItemIcon><AssessmentIcon /></ListItemIcon>
+                <ListItemText primary="Reports" />
+              </ListItem>
+              <ListItem button component={Link} to="/system-health">
+                <ListItemIcon><SettingsIcon /></ListItemIcon>
+                <ListItemText primary="System Health" />
+              </ListItem>
+            </List>
+          </Box>
+        </Drawer>
 
-        {/* ===== FORENSIC TIMELINE ===== */}
-        <div style={card}>
-          <h3 style={{ color: "#00e0ff" }}>Forensic Timeline Reconstruction</h3>
-          {timeline.map((t, i) => (
-            <div key={i} style={{ fontSize: "13px", marginBottom: "4px" }}>
-              {t.timestamp} — {t.description}
-            </div>
-          ))}
-        </div>
-
-      </div>
-
-      <footer style={{ textAlign: "center", fontSize: "12px", color: "#6b7280", padding: "10px" }}>
-        SOC Console • Startup Deployment Ready
-      </footer>
-    </div>
+        {/* Main Content */}
+        <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+          <Toolbar />
+          <Container maxWidth="xl">
+            <Routes>
+              <Route path="/" element={<Dashboard />} />
+              <Route path="/alerts" element={<AlertsPage />} />
+              <Route path="/cases" element={<CasesPage />} />
+              <Route path="/sensors" element={<SensorsPage />} />
+              <Route path="/timeline" element={<TimelinePage />} />
+              <Route path="/iocs" element={<IOCPage />} />
+              <Route path="/reports" element={<ReportsPage />} />
+              <Route path="/system-health" element={<SystemHealthPage />} />
+            </Routes>
+          </Container>
+        </Box>
+      </Box>
+    </Router>
   );
 }
 

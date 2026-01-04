@@ -548,6 +548,178 @@ def get_alert_notes(alert_id):
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+# =================================================
+# 🔐 INCIDENT FSM (STRICT STATE MACHINE)
+# =================================================
+
+VALID_STATES = {
+    "OPEN": ["ACKNOWLEDGED"],
+    "ACKNOWLEDGED": ["CLOSED"],
+    "CLOSED": []
+}
+
+def is_valid_transition(old, new):
+    return new in VALID_STATES.get(old, [])
+
+@app.route("/api/alerts/<alert_id>/state", methods=["POST"])
+def change_alert_state(alert_id):
+    data = request.json
+    new_state = data.get("state")
+
+    if not new_state:
+        return jsonify({"error": "State missing"}), 400
+
+    conn = sqlite3.connect("soc.db")
+    cur = conn.cursor()
+
+    cur.execute("SELECT status FROM alerts WHERE alert_id=?", (alert_id,))
+    row = cur.fetchone()
+
+    if not row:
+        conn.close()
+        return jsonify({"error": "Alert not found"}), 404
+
+    old_state = row[0]
+
+    if not is_valid_transition(old_state, new_state):
+        conn.close()
+        return jsonify({
+            "error": "Invalid transition",
+            "from": old_state,
+            "allowed": VALID_STATES.get(old_state, [])
+        }), 400
+
+    cur.execute(
+        "UPDATE alerts SET status=? WHERE alert_id=?",
+        (new_state, alert_id)
+    )
+    conn.commit()
+    conn.close()
+
+    # forensic trace
+    timeline = os.path.join(REPORTS_DIR, "timeline.csv")
+    with open(timeline, "a") as f:
+        f.write(f"{datetime.now()},{alert_id} moved {old_state} → {new_state}\n")
+
+    return jsonify({"message": "State updated successfully"})
+
+
+# =================================================
+# 📊 SOC METRICS API
+# =================================================
+
+@app.route("/api/soc/metrics")
+def soc_metrics():
+    conn = sqlite3.connect("soc.db")
+    cur = conn.cursor()
+
+    cur.execute("SELECT COUNT(*) FROM alerts")
+    total = cur.fetchone()[0]
+
+    cur.execute("SELECT COUNT(*) FROM alerts WHERE status='CLOSED'")
+    closed = cur.fetchone()[0]
+
+    cur.execute("""
+        SELECT julianday('now') - julianday(timestamp)
+        FROM alerts WHERE status='CLOSED'
+    """)
+    mttr_rows = cur.fetchall()
+
+    conn.close()
+
+    mttr = round(sum(r[0] for r in mttr_rows) / len(mttr_rows), 2) if mttr_rows else 0
+    breach_rate = round(((total - closed) / total) * 100, 2) if total else 0
+
+    return jsonify({
+        "total_alerts": total,
+        "closed_alerts": closed,
+        "mttr_days": mttr,
+        "sla_breach_rate_percent": breach_rate
+    })
+
+
+# =================================================
+# 🚨 AUTO-ESCALATION ENGINE (SAFE BACKGROUND)
+# =================================================
+
+def auto_escalate():
+    while True:
+        try:
+            conn = sqlite3.connect("soc.db")
+            cur = conn.cursor()
+
+            cur.execute("""
+                SELECT alert_id, severity, timestamp
+                FROM alerts
+                WHERE status!='CLOSED'
+            """)
+            alerts = cur.fetchall()
+
+            for a in alerts:
+                alert_id, severity, ts = a
+                mins = get_sla_minutes(severity)
+                deadline = datetime.strptime(ts, "%Y-%m-%d %H:%M:%S") + timedelta(minutes=mins)
+
+                if datetime.now() > deadline and severity != "HIGH":
+                    cur.execute(
+                        "UPDATE alerts SET severity='HIGH' WHERE alert_id=?",
+                        (alert_id,)
+                    )
+
+                    with open(os.path.join(REPORTS_DIR, "timeline.csv"), "a") as f:
+                        f.write(f"{datetime.now()},AUTO-ESCALATED {alert_id}\n")
+
+            conn.commit()
+            conn.close()
+
+        except Exception:
+            pass
+
+        time.sleep(60)  # every 1 minute
+
+
+threading.Thread(target=auto_escalate, daemon=True).start()
+
+
+# =================================================
+# 🔎 SPLUNK-STYLE SEARCH API
+# =================================================
+
+@app.route("/api/search")
+def splunk_search():
+    q = """
+        SELECT alert_id, source, severity, description, status, timestamp
+        FROM alerts WHERE 1=1
+    """
+    args = []
+
+    for field in ["severity", "status", "source"]:
+        if field in request.args:
+            q += f" AND {field}=?"
+            args.append(request.args[field])
+
+    if "text" in request.args:
+        q += " AND description LIKE ?"
+        args.append(f"%{request.args['text']}%")
+
+    conn = sqlite3.connect("soc.db")
+    cur = conn.cursor()
+    cur.execute(q, args)
+    rows = cur.fetchall()
+    conn.close()
+
+    return jsonify([
+        {
+            "alert_id": r[0],
+            "source": r[1],
+            "severity": r[2],
+            "description": r[3],
+            "status": r[4],
+            "timestamp": r[5]
+        } for r in rows
+    ])
+
+
 
 
 
@@ -578,4 +750,3 @@ if __name__ == "__main__":
 
     print("CyberSOC Backend Running -> http://127.0.0.1:5000")
     app.run(debug=True)
-
