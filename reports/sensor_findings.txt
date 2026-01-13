@@ -1,10 +1,10 @@
-⚠ High vibration 7.63 at 2025-12-14 19:08:02
-⚠ High vibration 8.26 at 2025-12-14 19:08:12
-🚨 Motion detected at 2025-12-14 19:08:22
-🚨 Motion detected at 2025-12-14 19:08:42
-🚨 Motion detected at 2025-12-14 19:09:46
-🔥 High temperature 73.21°C at 2025-12-14 19:09:56
-⚠ High vibration 9.08 at 2025-12-14 19:09:56
-🚨 Motion detected at 2025-12-22 17:36:24
-🚨 Motion detected at 2025-12-22 17:36:26
-🚨 Motion detected at 2025-12-22 18:35:04
+🔥 High temperature 78.64°C at 2026-01-12 10:46:36
+🚨 Motion detected at 2026-01-12 10:46:40
+🚨 Motion detected at 2026-01-12 10:46:44
+🚨 Motion detected at 2026-01-12 10:46:48
+⚠ High vibration 9.26 at 2026-01-12 10:46:52
+🔥 High temperature 79.27°C at 2026-01-12 10:46:56
+🔥 High temperature 76.72°C at 2026-01-12 10:47:01
+🚨 Motion detected at 2026-01-12 10:47:01
+🔥 High temperature 71.53°C at 2026-01-12 10:47:06
+🚨 Motion detected at 2026-01-12 10:47:06

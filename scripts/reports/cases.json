@@ -1,0 +1,20 @@
+[
+    {
+        "incident_id": "INC-2026-0001",
+        "timestamp": "2026-01-13T10:02:00",
+        "description": "Brute-force detected from 192.168.1.50",
+        "severity": "MEDIUM"
+    },
+    {
+        "incident_id": "INC-2026-0002",
+        "timestamp": "2026-01-13T10:05:00",
+        "description": "Privilege escalation via sudo",
+        "severity": "HIGH"
+    },
+    {
+        "incident_id": "INC-2026-0003",
+        "timestamp": "2026-01-13T10:10:00",
+        "description": "Suspicious malware execution activity",
+        "severity": "HIGH"
+    }
+]

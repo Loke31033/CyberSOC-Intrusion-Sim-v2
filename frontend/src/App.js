@@ -1,224 +1,190 @@
-import React, { useState, useEffect } from 'react';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-  Link
-} from 'react-router-dom';
-import {
-  AppBar,
-  Toolbar,
-  Drawer,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-  Container,
-  Box,
-  Typography,
-  IconButton,
-  Badge,
-  Alert,
-  CircularProgress,
-  Paper
-} from '@mui/material';
-import {
-  Dashboard as DashboardIcon,
-  Security as SecurityIcon,
-  Warning as WarningIcon,
-  SensorDoor as SensorIcon,
-  Timeline as TimelineIcon,
-  Assessment as AssessmentIcon,
-  Settings as SettingsIcon,
-  Logout as LogoutIcon,
-  Menu as MenuIcon,
-  Notifications as NotificationsIcon,
-  Storage as StorageIcon,
-  Email as EmailIcon,
-  CloudDownload as DownloadIcon
-} from '@mui/icons-material';
-import axios from 'axios';
-import './App.css';
+import React, { useState, useEffect, useCallback } from 'react';
+import { ShieldAlert, Clock, Activity, History, CheckCircle, Search, X, FileText, User } from 'lucide-react';
 
-// Import Pages
-import Login from './pages/Login';
-import Dashboard from './pages/Dashboard';
-import AlertsPage from './pages/Alerts';
-import CasesPage from './pages/Cases';
-import SensorsPage from './pages/Sensors';
-import ReportsPage from './pages/Reports';
-import SystemHealthPage from './pages/SystemHealth';
-import IOCPage from './pages/IOCs';
-import TimelinePage from './pages/Timeline';
+const App = () => {
+  const [alerts, setAlerts] = useState([]);
+  const [metrics, setMetrics] = useState({});
+  const [health, setHealth] = useState({});
+  const [timeline, setTimeline] = useState([]);
+  const [selectedIncident, setSelectedIncident] = useState(null);
+  const [searchQuery, setSearchQuery] = useState("");
 
-// API Base URL
-const API_BASE = 'http://localhost:5000/api';
-
-function App() {
-  const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [notificationCount, setNotificationCount] = useState(0);
-
-  useEffect(() => {
-    const token = localStorage.getItem('token');
-    const userData = localStorage.getItem('user');
-    
-    if (token && userData) {
-      setUser(JSON.parse(userData));
-      axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-    }
-    setLoading(false);
-    
-    // Fetch notification count
-    if (token) {
-      fetchNotificationCount();
+  // 1. DATA REFRESH LOGIC (Syncs with app.py)
+  const fetchAllData = useCallback(async () => {
+    try {
+      const [aRes, mRes, hRes] = await Promise.all([
+        fetch('http://127.0.0.1:5000/api/alerts').then(res => res.json()),
+        fetch('http://127.0.0.1:5000/api/soc/metrics').then(res => res.json()),
+        fetch('http://127.0.0.1:5000/api/system_health').then(res => res.json())
+      ]);
+      setAlerts(aRes);
+      setMetrics(mRes);
+      setHealth(hRes);
+    } catch (err) {
+      console.error("Backend offline or connection refused.");
     }
   }, []);
 
-  const fetchNotificationCount = async () => {
+  useEffect(() => {
+    fetchAllData();
+    const interval = setInterval(fetchAllData, 5000); 
+    return () => clearInterval(interval);
+  }, [fetchAllData]);
+
+  // 2. INCIDENT LIFECYCLE MANAGEMENT (FSM)
+  const handleStateChange = async (id, nextState) => {
+    await fetch(`http://127.0.0.1:5000/api/alerts/${id}/state`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ state: nextState, analyst: "Analyst-01" })
+    });
+    fetchAllData(); // Refresh UI immediately after update
+  };
+
+  // 3. FORENSIC TIMELINE RECONSTRUCTION
+  const openForensics = async (incident) => {
+    setSelectedIncident(incident);
     try {
-      const response = await axios.get(`${API_BASE}/alerts`);
-      const highSeverityAlerts = response.data.filter(alert => 
-        alert.severity === 'HIGH' && alert.status === 'OPEN'
-      );
-      setNotificationCount(highSeverityAlerts.length);
-    } catch (error) {
-      console.error('Error fetching notification count:', error);
+      const res = await fetch('http://127.0.0.1:5000/api/timeline');
+      const data = await res.json();
+      // Filter the timeline to show actions related to this specific Incident ID
+      const filtered = data.filter(e => e.id === incident.id);
+      setTimeline(filtered);
+    } catch (err) {
+      console.error("Forensic Retrieval Error");
     }
   };
 
-  const handleLogin = (userData, token) => {
-    setUser(userData);
-    localStorage.setItem('token', token);
-    localStorage.setItem('user', JSON.stringify(userData));
-    axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-  };
-
-  const handleLogout = () => {
-    setUser(null);
-    localStorage.removeItem('token');
-    localStorage.removeItem('user');
-    delete axios.defaults.headers.common['Authorization'];
-  };
-
-  if (loading) {
-    return (
-      <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-        <CircularProgress />
-      </Box>
-    );
-  }
-
-  if (!user) {
-    return <Login onLogin={handleLogin} />;
-  }
-
   return (
-    <Router>
-      <Box sx={{ display: 'flex' }}>
-        {/* App Bar */}
-        <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
-          <Toolbar>
-            <IconButton
-              color="inherit"
-              edge="start"
-              sx={{ mr: 2 }}
-              onClick={() => setSidebarOpen(!sidebarOpen)}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              🚀 CyberSOC Platform
-            </Typography>
-            <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-              <IconButton color="inherit">
-                <Badge badgeContent={notificationCount} color="error">
-                  <NotificationsIcon />
-                </Badge>
-              </IconButton>
-              <Typography variant="body2">
-                Welcome, {user.full_name || user.username}
-              </Typography>
-              <IconButton color="inherit" onClick={handleLogout}>
-                <LogoutIcon />
-              </IconButton>
-            </Box>
-          </Toolbar>
-        </AppBar>
+    <div className="min-h-screen bg-black text-slate-100 p-6 font-mono">
+      {/* HEADER: SOC ANALYTICS */}
+      <header className="flex justify-between items-end mb-8 border-b border-slate-800 pb-4">
+        <div>
+          <h1 className="text-2xl font-black text-white flex items-center gap-2 uppercase">
+            <ShieldAlert className="text-red-600 animate-pulse" /> SOC Command Center
+          </h1>
+          <p className="text-[10px] text-slate-500 tracking-widest uppercase">
+            Platform Health: <span className="text-green-500">{health.status}</span> | OS: {health.os} | Uptime: {health.uptime_hours}h
+          </p>
+        </div>
+        <div className="flex gap-3">
+           <StatusPill title="Total Incidents" value={metrics.total_alerts} icon={Activity} color="text-cyan-400" />
+           <StatusPill title="SLA Breach Rate" value={`${metrics.sla_breach_rate_percent}%`} icon={Clock} color="text-red-500" />
+           <div className="flex items-center gap-2 bg-slate-800 px-3 py-1.5 rounded border border-slate-700">
+              <User size={14} className="text-cyan-400" />
+              <span className="text-[10px] font-bold uppercase text-slate-300">Analyst-01</span>
+           </div>
+        </div>
+      </header>
 
-        {/* Sidebar */}
-        <Drawer
-          variant="permanent"
-          sx={{
-            width: 240,
-            flexShrink: 0,
-            [`& .MuiDrawer-paper`]: { width: 240, boxSizing: 'border-box' },
-          }}
-        >
-          <Toolbar />
-          <Box sx={{ overflow: 'auto' }}>
-            <List>
-              <ListItem button component={Link} to="/">
-                <ListItemIcon><DashboardIcon /></ListItemIcon>
-                <ListItemText primary="Dashboard" />
-              </ListItem>
-              <ListItem button component={Link} to="/alerts">
-                <ListItemIcon>
-                  <Badge badgeContent={notificationCount} color="error">
-                    <WarningIcon />
-                  </Badge>
-                </ListItemIcon>
-                <ListItemText primary="Alerts" />
-              </ListItem>
-              <ListItem button component={Link} to="/cases">
-                <ListItemIcon><SecurityIcon /></ListItemIcon>
-                <ListItemText primary="Cases" />
-              </ListItem>
-              <ListItem button component={Link} to="/sensors">
-                <ListItemIcon><SensorIcon /></ListItemIcon>
-                <ListItemText primary="Sensors" />
-              </ListItem>
-              <ListItem button component={Link} to="/timeline">
-                <ListItemIcon><TimelineIcon /></ListItemIcon>
-                <ListItemText primary="Timeline" />
-              </ListItem>
-              <ListItem button component={Link} to="/iocs">
-                <ListItemIcon><StorageIcon /></ListItemIcon>
-                <ListItemText primary="IOCs" />
-              </ListItem>
-              <ListItem button component={Link} to="/reports">
-                <ListItemIcon><AssessmentIcon /></ListItemIcon>
-                <ListItemText primary="Reports" />
-              </ListItem>
-              <ListItem button component={Link} to="/system-health">
-                <ListItemIcon><SettingsIcon /></ListItemIcon>
-                <ListItemText primary="System Health" />
-              </ListItem>
-            </List>
-          </Box>
-        </Drawer>
+      {/* INCIDENT QUEUE */}
+      <div className="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-2xl">
+        <div className="bg-slate-800/40 p-3 border-b border-slate-800 flex justify-between items-center">
+            <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400 px-2 border-l-2 border-red-600">Active Incident Feed</span>
+            <div className="flex items-center gap-2 bg-black/40 px-3 py-1 rounded">
+                <Search size={14} className="text-slate-500" />
+                <input 
+                    className="bg-transparent border-none text-[10px] focus:outline-none text-white w-40" 
+                    placeholder="Search incidents..."
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                />
+            </div>
+        </div>
+        
+        <table className="w-full text-left text-[11px]">
+          <thead className="text-slate-500 border-b border-slate-800 bg-black/20 uppercase">
+            <tr>
+              <th className="p-4">Incident ID</th>
+              <th className="p-4">Severity</th>
+              <th className="p-4">SLA Countdown</th>
+              <th className="p-4">Status</th>
+              <th className="p-4 text-center">Investigation</th>
+              <th className="p-4 text-center">Lifecycle Action</th>
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-slate-800">
+            {alerts
+              .filter(a => a.desc?.toLowerCase().includes(searchQuery.toLowerCase()) || a.id.includes(searchQuery))
+              .map(alert => (
+              <tr key={alert.id} className="hover:bg-slate-800/40 transition-colors">
+                <td className="p-4 font-bold text-cyan-500">{alert.id}</td>
+                <td className="p-4">
+                  <span className={`px-2 py-0.5 rounded-sm font-bold ${alert.severity === 'HIGH' ? 'bg-red-900/30 text-red-500' : 'bg-yellow-900/30 text-yellow-500'}`}>
+                    {alert.severity}
+                  </span>
+                </td>
+                <td className={`p-4 font-mono font-bold ${alert.sla === 'BREACHED' ? 'text-red-500 animate-pulse' : 'text-emerald-400'}`}>
+                  {alert.sla}
+                </td>
+                <td className="p-4 italic text-slate-500 uppercase">{alert.status}</td>
+                <td className="p-4 text-center">
+                  <button onClick={() => openForensics(alert)} className="text-cyan-400 hover:text-white flex items-center gap-1 mx-auto transition">
+                    <History size={14} /> Reconstruct Timeline
+                  </button>
+                </td>
+                <td className="p-4 text-center">
+                  {alert.status === 'OPEN' && (
+                    <button onClick={() => handleStateChange(alert.id, 'ACKNOWLEDGED')} className="bg-cyan-700 hover:bg-cyan-600 px-4 py-1 rounded text-white font-bold transition w-32 shadow-lg">ACKNOWLEDGE</button>
+                  )}
+                  {alert.status === 'ACKNOWLEDGED' && (
+                    <button onClick={() => handleStateChange(alert.id, 'CLOSED')} className="bg-emerald-700 hover:bg-emerald-600 px-4 py-1 rounded text-white font-bold transition w-32 shadow-lg">RESOLVE</button>
+                  )}
+                  {alert.status === 'CLOSED' && (
+                    <div className="flex items-center justify-center gap-1 text-slate-600">
+                         <CheckCircle size={14} /> INCIDENT CLOSED
+                    </div>
+                  )}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
 
-        {/* Main Content */}
-        <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-          <Toolbar />
-          <Container maxWidth="xl">
-            <Routes>
-              <Route path="/" element={<Dashboard />} />
-              <Route path="/alerts" element={<AlertsPage />} />
-              <Route path="/cases" element={<CasesPage />} />
-              <Route path="/sensors" element={<SensorsPage />} />
-              <Route path="/timeline" element={<TimelinePage />} />
-              <Route path="/iocs" element={<IOCPage />} />
-              <Route path="/reports" element={<ReportsPage />} />
-              <Route path="/system-health" element={<SystemHealthPage />} />
-            </Routes>
-          </Container>
-        </Box>
-      </Box>
-    </Router>
+      {/* FORENSIC SIDE PANEL (TIMELINE RECONSTRUCTION) */}
+      {selectedIncident && (
+        <div className="fixed inset-y-0 right-0 w-[420px] bg-slate-900 border-l border-slate-700 shadow-2xl p-6 z-50 animate-in slide-in-from-right overflow-y-auto">
+          <div className="flex justify-between items-center mb-8 border-b border-slate-800 pb-4">
+            <h2 className="text-sm font-bold flex items-center gap-2 uppercase">
+                <FileText className="text-cyan-400" /> Evidence Logs: {selectedIncident.id}
+            </h2>
+            <button onClick={() => setSelectedIncident(null)} className="text-slate-500 hover:text-white"><X size={20}/></button>
+          </div>
+
+          <div className="bg-black/40 p-4 rounded border border-slate-800 mb-8">
+             <div className="text-[9px] text-slate-500 uppercase font-bold mb-1">Source Analysis</div>
+             <p className="text-xs text-slate-200 italic">"{selectedIncident.desc}"</p>
+          </div>
+
+          <h3 className="text-[10px] font-bold text-slate-500 uppercase mb-6 flex items-center gap-2">
+            <History size={14} /> Action Trace (Audit Trail)
+          </h3>
+          
+          <div className="space-y-6 relative before:absolute before:inset-0 before:ml-2 before:w-0.5 before:bg-slate-800">
+            {timeline.length > 0 ? timeline.map((event, i) => (
+              <div key={i} className="relative pl-8">
+                <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-cyan-600 border-4 border-slate-900"></div>
+                <p className="text-[9px] text-slate-500 font-bold">{event.timestamp}</p>
+                <p className="text-[11px] text-slate-300 leading-snug">{event.description}</p>
+              </div>
+            )) : (
+                <div className="pl-8 text-[10px] text-slate-600 italic">No forensic history found for this ID.</div>
+            )}
+          </div>
+        </div>
+      )}
+    </div>
   );
-}
+};
+
+const StatusPill = ({ title, value, icon: Icon, color }) => (
+  <div className="flex items-center gap-2 bg-slate-900/80 border border-slate-800 px-3 py-1.5 rounded shadow-sm">
+    <Icon size={14} className={color} />
+    <div>
+      <div className="text-[7px] text-slate-500 uppercase font-bold leading-none mb-0.5">{title}</div>
+      <div className="text-[12px] font-black leading-none">{value}</div>
+    </div>
+  </div>
+);
 
 export default App;

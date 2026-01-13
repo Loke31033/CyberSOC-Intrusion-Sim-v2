@@ -21,7 +21,7 @@ print(f"📁 Templates directory: {templates_dir}")
 
 # Import backend function
 try:
-    from backend import check_email_auth
+    from phishguard_auth import check_email_auth
     print("✅ Backend module loaded successfully")
 except ImportError as e:
     print(f"❌ Backend import error: {e}")
