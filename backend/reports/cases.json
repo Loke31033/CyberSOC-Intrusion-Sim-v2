@@ -1,12 +1,12 @@
 [
     {
-        "incident_id": "INC-2026-0015",
+        "incident_id": "INC-2026-0031",
         "timestamp": "2026-01-13T11:02:00",
         "description": "Brute-force detected from 192.168.1.100",
         "severity": "MEDIUM"
     },
     {
-        "incident_id": "INC-2026-0016",
+        "incident_id": "INC-2026-0032",
         "timestamp": "2026-01-13T11:05:00",
         "description": "Suspicious malware execution activity",
         "severity": "HIGH"

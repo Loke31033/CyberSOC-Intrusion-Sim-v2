@@ -1,16 +1,16 @@
 Timestamp,Description
-2026-01-13 10:49:34,2025-11-05T13:54:18.790425,temperature,78.27
-2026-01-13 10:49:34,2025-11-05T13:54:18.790425,motion,0
-2026-01-13 10:49:34,2025-11-05T13:54:18.790425,vibration,2.67
-2026-01-13 10:49:34,2025-11-05T13:54:23.828457,temperature,28.96
-2026-01-13 10:49:34,2025-11-05T13:54:23.828457,motion,0
-2026-01-13 10:49:34,2025-11-05T13:54:23.828457,vibration,8.75
-2026-01-13 10:49:34,2025-11-05T13:54:29.122468,temperature,30.77
-2026-01-13 10:49:34,2025-11-05T13:54:29.122468,motion,0
-2026-01-13 10:49:34,2025-11-05T13:54:29.122468,vibration,2.72
-2026-01-13 10:49:34,2025-11-05T13:54:34.123942,temperature,34.53
-2026-01-13 10:49:34,2025-11-05T13:54:34.123942,motion,0
-2026-01-13 10:49:34,2025-11-05T13:54:34.123942,vibration,0.89
+2026-01-13 12:08:47,2025-11-05T13:54:18.790425,temperature,78.27
+2026-01-13 12:08:47,2025-11-05T13:54:18.790425,motion,0
+2026-01-13 12:08:47,2025-11-05T13:54:18.790425,vibration,2.67
+2026-01-13 12:08:47,2025-11-05T13:54:23.828457,temperature,28.96
+2026-01-13 12:08:47,2025-11-05T13:54:23.828457,motion,0
+2026-01-13 12:08:47,2025-11-05T13:54:23.828457,vibration,8.75
+2026-01-13 12:08:47,2025-11-05T13:54:29.122468,temperature,30.77
+2026-01-13 12:08:47,2025-11-05T13:54:29.122468,motion,0
+2026-01-13 12:08:47,2025-11-05T13:54:29.122468,vibration,2.72
+2026-01-13 12:08:47,2025-11-05T13:54:34.123942,temperature,34.53
+2026-01-13 12:08:47,2025-11-05T13:54:34.123942,motion,0
+2026-01-13 12:08:47,2025-11-05T13:54:34.123942,vibration,0.89
 Jul 31 10:30:47,lokeshwar-VirtualBox kernel: Linux version 6.14.0-24-generic (buildd@lcy02-amd64-010) (x86_64-linux-gnu-gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, GNU ld (GNU Binutils for Ubuntu) 2.42) #24~24.04.3-Ubuntu SMP PREEMPT_DYNAMIC Mon Jul  7 16:39:17 UTC 2 (Ubuntu 6.14.0-24.24~24.04.3-generic 6.14.6)
 Jul 31 10:30:47,lokeshwar-VirtualBox kernel: Command line: BOOT_IMAGE=/boot/vmlinuz-6.14.0-24-generic root=UUID=bb8ce4b7-2af6-4496-aee7-7aab5227527b ro quiet splash
 Jul 31 10:30:47,lokeshwar-VirtualBox kernel: KERNEL supported cpus:
@@ -1160,23 +1160,23 @@ Jul 31 10:31:52,lokeshwar-VirtualBox (udev-worker)[1679]: vboxguest: /etc/udev/r
 Jul 31 10:31:52,lokeshwar-VirtualBox (udev-worker)[1680]: vboxuser: /etc/udev/rules.d/60-vboxadd.rules:2 Only network interfaces can be renamed, ignoring NAME="vboxuser".
 Jul 31 10:31:53,lokeshwar-VirtualBox vboxadd-service.sh[1692]: Starting VirtualBox Guest Addition service.
 Jul 31 10:31:53,lokeshwar-VirtualBox kernel: 05:01:53.133575 main     VBoxService 7.1.8 r168469 (verbosity: 0) linux.amd64 (Apr 11 2025 16:47:52) release log
-2026-01-13 10:49:34,05:01:53.13357
+2026-01-13 12:08:47,05:01:53.13357
 Jul 31 10:31:53,lokeshwar-VirtualBox kernel: 05:01:53.137563 main     OS Product: Linux
 Jul 31 10:31:53,lokeshwar-VirtualBox kernel: 05:01:53.139633 main     OS Release: 6.14.0-24-generic
 Jul 31 10:31:53,lokeshwar-VirtualBox kernel: 05:01:53.146177 main     OS Version: #24~24.04.3-Ubuntu SMP PREEMPT_DYNAMIC Mon Jul  7 16:39:17 UTC 2
 Jul 31 10:31:53,lokeshwar-VirtualBox kernel: 05:01:53.149796 main     Executable: /opt/VBoxGuestAdditions-7.1.8/sbin/VBoxService
-2026-01-13 10:49:34,05:01:53.149807 main     Process ID: 1695
-2026-01-13 10:49:34,0
+2026-01-13 12:08:47,05:01:53.149807 main     Process ID: 1695
+2026-01-13 12:08:47,0
 Jul 31 10:31:53,lokeshwar-VirtualBox kernel: 05:01:53.170320 main     7.1.8 r168469 started. Verbose level = 0
 Jul 31 10:31:53,lokeshwar-VirtualBox kernel: 05:01:53.186168 main     vbglR3GuestCtrlDetectPeekGetCancelSupport: Supported (#1)
 Jul 31 10:31:53,lokeshwar-VirtualBox vboxadd-service.sh[1701]: VirtualBox Guest Addition service started.
 Jul 31 10:31:53,lokeshwar-VirtualBox kernel: 05:01:53.196790 main     VBoxClient 7.1.8 r168469 (verbosity: 0) linux.amd64 (Apr 11 2025 16:47:56) release log
-2026-01-13 10:49:34,05:01:53.196794
+2026-01-13 12:08:47,05:01:53.196794
 Jul 31 10:31:53,lokeshwar-VirtualBox kernel: 05:01:53.197737 main     OS Product: Linux
 Jul 31 10:31:53,lokeshwar-VirtualBox kernel: 05:01:53.200574 main     OS Release: 6.14.0-24-generic
 Jul 31 10:31:53,lokeshwar-VirtualBox kernel: 05:01:53.207363 main     OS Version: #24~24.04.3-Ubuntu SMP PREEMPT_DYNAMIC Mon Jul  7 16:39:17 UTC 2
 Jul 31 10:31:53,lokeshwar-VirtualBox kernel: 05:01:53.237271 main     Executable: /opt/VBoxGuestAdditions-7.1.8/bin/VBoxDRMClient
-2026-01-13 10:49:34,05:01:53.237275 main     Process ID: 1699
+2026-01-13 12:08:47,05:01:53.237275 main     Process ID: 1699
 Jul 31 10:31:53,lokeshwar-VirtualBox kernel: 05:01:53.245979 main     VBoxDRMClient: Error: unable to find DRM device
 Jul 31 10:31:54,lokeshwar-VirtualBox vboxadd[1974]: VirtualBox Guest Additions: kernel modules were not reloaded
 Jul 31 10:31:55,lokeshwar-VirtualBox vboxadd[775]: VirtualBox Guest Additions: kernel modules and services were not reloaded
@@ -1454,46 +1454,46 @@ Jul 31 10:32:17,lokeshwar-VirtualBox /usr/libexec/gdm-wayland-session[2285]: dbu
 Jul 31 10:32:19,lokeshwar-VirtualBox kernel: workqueue: e1000_watchdog [e1000] hogged CPU for >10000us 5 times, consider switching to WQ_UNBOUND
 Jul 31 10:32:21,lokeshwar-VirtualBox kernel: workqueue: blk_mq_run_work_fn hogged CPU for >10000us 35 times, consider switching to WQ_UNBOUND
 Jul 31 10:32:21,lokeshwar-VirtualBox gnome-shell[2329]: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.Failed: Set global engine failed: Operation was cancelled
-2026-01-13 10:49:34,
-2026-01-13 10:49:34,Stack trace:
-2026-01-13 10:49:34,_promisify/proto[asyncFunc]/</<@resource:///org/gnome/gjs/modules/core/overrides/Gio.js:453:45
-2026-01-13 10:49:34,@resource:///org/gnome/shell/ui/init.js:21:20
-2026-01-13 10:49:34,### Promise created here: ###
-2026-01-13 10:49:34,_setEngine@resource:///org/gnome/shell/misc/ibusManager.js:291:30
-2026-01-13 10:49:34,setEngine@resource:///org/gnome/shell/misc/ibusManager.js:314:24
-2026-01-13 10:49:34,activateInputSource@resource:///org/gnome/shell/ui/status/keyboard.js:527:31
-2026-01-13 10:49:34,_callHandlers@resource:///org/gnome/gjs/modules/core/_signals.js:130:42
-2026-01-13 10:49:34,_emit@resource:///org/gnome/gjs/modules/core/_signals.js:119:10
-2026-01-13 10:49:34,activate@resource:///org/gnome/shell/ui/status/keyboard.js:68:14
-2026-01-13 10:49:34,_inputSourcesChanged@resource:///org/gnome/shell/ui/status/keyboard.js:661:33
-2026-01-13 10:49:34,reload@resource:///org/gnome/shell/ui/status/keyboard.js:396:14
-2026-01-13 10:49:34,_ibusSetContentType@resource:///org/gnome/shell/ui/status/keyboard.js:736:14
-2026-01-13 10:49:34,_callHandlers@resource:///org/gnome/gjs/modules/core/_signals.js:130:42
-2026-01-13 10:49:34,_emit@resource:///org/gnome/gjs/modules/core/_signals.js:119:10
-2026-01-13 10:49:34,_setContentType@resource:///org/gnome/shell/misc/ibusManager.js:266:14
-2026-01-13 10:49:34,@resource:///org/gnome/shell/ui/init.js:21:20
-2026-01-13 10:49:34,
+2026-01-13 12:08:47,
+2026-01-13 12:08:47,Stack trace:
+2026-01-13 12:08:47,_promisify/proto[asyncFunc]/</<@resource:///org/gnome/gjs/modules/core/overrides/Gio.js:453:45
+2026-01-13 12:08:47,@resource:///org/gnome/shell/ui/init.js:21:20
+2026-01-13 12:08:47,### Promise created here: ###
+2026-01-13 12:08:47,_setEngine@resource:///org/gnome/shell/misc/ibusManager.js:291:30
+2026-01-13 12:08:47,setEngine@resource:///org/gnome/shell/misc/ibusManager.js:314:24
+2026-01-13 12:08:47,activateInputSource@resource:///org/gnome/shell/ui/status/keyboard.js:527:31
+2026-01-13 12:08:47,_callHandlers@resource:///org/gnome/gjs/modules/core/_signals.js:130:42
+2026-01-13 12:08:47,_emit@resource:///org/gnome/gjs/modules/core/_signals.js:119:10
+2026-01-13 12:08:47,activate@resource:///org/gnome/shell/ui/status/keyboard.js:68:14
+2026-01-13 12:08:47,_inputSourcesChanged@resource:///org/gnome/shell/ui/status/keyboard.js:661:33
+2026-01-13 12:08:47,reload@resource:///org/gnome/shell/ui/status/keyboard.js:396:14
+2026-01-13 12:08:47,_ibusSetContentType@resource:///org/gnome/shell/ui/status/keyboard.js:736:14
+2026-01-13 12:08:47,_callHandlers@resource:///org/gnome/gjs/modules/core/_signals.js:130:42
+2026-01-13 12:08:47,_emit@resource:///org/gnome/gjs/modules/core/_signals.js:119:10
+2026-01-13 12:08:47,_setContentType@resource:///org/gnome/shell/misc/ibusManager.js:266:14
+2026-01-13 12:08:47,@resource:///org/gnome/shell/ui/init.js:21:20
+2026-01-13 12:08:47,
 Jul 31 10:32:29,lokeshwar-VirtualBox gdm-password][2735]: pam_unix(gdm-password:auth): authentication failure; logname= uid=0 euid=0 tty=/dev/tty1 ruser= rhost=  user=lokeshwar
 Jul 31 10:32:34,lokeshwar-VirtualBox gnome-shell[2329]: Gio.DBusError: GDBus.Error:org.freedesktop.DBus.Error.Failed: Set global engine failed: Operation was cancelled
-2026-01-13 10:49:34,
-2026-01-13 10:49:34,Stack trace:
-2026-01-13 10:49:34,_promisify/proto[asyncFunc]/</<@resource:///org/gnome/gjs/modules/core/overrides/Gio.js:453:45
-2026-01-13 10:49:34,@resource:///org/gnome/shell/ui/init.js:21:20
-2026-01-13 10:49:34,### Promise created here: ###
-2026-01-13 10:49:34,_setEngine@resource:///org/gnome/shell/misc/ibusManager.js:291:30
-2026-01-13 10:49:34,setEngine@resource:///org/gnome/shell/misc/ibusManager.js:314:24
-2026-01-13 10:49:34,activateInputSource@resource:///org/gnome/shell/ui/status/keyboard.js:527:31
-2026-01-13 10:49:34,_callHandlers@resource:///org/gnome/gjs/modules/core/_signals.js:130:42
-2026-01-13 10:49:34,_emit@resource:///org/gnome/gjs/modules/core/_signals.js:119:10
-2026-01-13 10:49:34,activate@resource:///org/gnome/shell/ui/status/keyboard.js:68:14
-2026-01-13 10:49:34,_inputSourcesChanged@resource:///org/gnome/shell/ui/status/keyboard.js:661:33
-2026-01-13 10:49:34,reload@resource:///org/gnome/shell/ui/status/keyboard.js:396:14
-2026-01-13 10:49:34,_ibusSetContentType@resource:///org/gnome/shell/ui/status/keyboard.js:736:14
-2026-01-13 10:49:34,_callHandlers@resource:///org/gnome/gjs/modules/core/_signals.js:130:42
-2026-01-13 10:49:34,_emit@resource:///org/gnome/gjs/modules/core/_signals.js:119:10
-2026-01-13 10:49:34,_setContentType@resource:///org/gnome/shell/misc/ibusManager.js:266:14
-2026-01-13 10:49:34,@resource:///org/gnome/shell/ui/init.js:21:20
-2026-01-13 10:49:34,
+2026-01-13 12:08:47,
+2026-01-13 12:08:47,Stack trace:
+2026-01-13 12:08:47,_promisify/proto[asyncFunc]/</<@resource:///org/gnome/gjs/modules/core/overrides/Gio.js:453:45
+2026-01-13 12:08:47,@resource:///org/gnome/shell/ui/init.js:21:20
+2026-01-13 12:08:47,### Promise created here: ###
+2026-01-13 12:08:47,_setEngine@resource:///org/gnome/shell/misc/ibusManager.js:291:30
+2026-01-13 12:08:47,setEngine@resource:///org/gnome/shell/misc/ibusManager.js:314:24
+2026-01-13 12:08:47,activateInputSource@resource:///org/gnome/shell/ui/status/keyboard.js:527:31
+2026-01-13 12:08:47,_callHandlers@resource:///org/gnome/gjs/modules/core/_signals.js:130:42
+2026-01-13 12:08:47,_emit@resource:///org/gnome/gjs/modules/core/_signals.js:119:10
+2026-01-13 12:08:47,activate@resource:///org/gnome/shell/ui/status/keyboard.js:68:14
+2026-01-13 12:08:47,_inputSourcesChanged@resource:///org/gnome/shell/ui/status/keyboard.js:661:33
+2026-01-13 12:08:47,reload@resource:///org/gnome/shell/ui/status/keyboard.js:396:14
+2026-01-13 12:08:47,_ibusSetContentType@resource:///org/gnome/shell/ui/status/keyboard.js:736:14
+2026-01-13 12:08:47,_callHandlers@resource:///org/gnome/gjs/modules/core/_signals.js:130:42
+2026-01-13 12:08:47,_emit@resource:///org/gnome/gjs/modules/core/_signals.js:119:10
+2026-01-13 12:08:47,_setContentType@resource:///org/gnome/shell/misc/ibusManager.js:266:14
+2026-01-13 12:08:47,@resource:///org/gnome/shell/ui/init.js:21:20
+2026-01-13 12:08:47,
 Jul 31 10:32:37,lokeshwar-VirtualBox kernel: workqueue: ata_sff_pio_task hogged CPU for >10000us 4 times, consider switching to WQ_UNBOUND
 Jul 31 10:32:41,lokeshwar-VirtualBox gdm-password][2742]: gkr-pam: unable to locate daemon control file
 Jul 31 10:32:41,lokeshwar-VirtualBox gdm-password][2742]: gkr-pam: stashed password to try later in open session
@@ -1700,10 +1700,10 @@ Jul 31 10:32:55,lokeshwar-VirtualBox systemd[2754]: snap.snapd-desktop-integrati
 Jul 31 10:32:55,lokeshwar-VirtualBox spice-vdagent[3152]: vdagent virtio channel /dev/virtio-ports/com.redhat.spice.0 does not exist, exiting
 Jul 31 10:32:55,lokeshwar-VirtualBox systemd[2754]: Finished gnome-session-signal-init.service - Signal initialization done to GNOME Session Manager.
 Jul 31 10:32:56,lokeshwar-VirtualBox gnome-shell[3010]: Gio.UnixInputStream has been moved to a separate platform-specific library. Please update your code to use GioUnix.InputStream instead.
-2026-01-13 10:49:34,0 inhibit() ["resource:///org/gnome/shell/misc/loginManager.js":209:8]
-2026-01-13 10:49:34,1 InterpretGeneratorResume() ["self-hosted":1461:33]
-2026-01-13 10:49:34,2 AsyncFunctionNext() ["self-hosted":852:26]
-2026-01-13 10:49:34,3 anonymous() ["resource:///org/gnome/shell/ui/init.js":21:19]
+2026-01-13 12:08:47,0 inhibit() ["resource:///org/gnome/shell/misc/loginManager.js":209:8]
+2026-01-13 12:08:47,1 InterpretGeneratorResume() ["self-hosted":1461:33]
+2026-01-13 12:08:47,2 AsyncFunctionNext() ["self-hosted":852:26]
+2026-01-13 12:08:47,3 anonymous() ["resource:///org/gnome/shell/ui/init.js":21:19]
 Jul 31 10:32:56,lokeshwar-VirtualBox gnome-session-binary[2969]: Entering running state
 Jul 31 10:32:56,lokeshwar-VirtualBox gnome-session[2969]: gnome-session-binary[2969]: GnomeDesktop-WARNING: Could not create transient scope for PID 3152: GDBus.Error:org.freedesktop.DBus.Error.UnixProcessIdUnknown: Failed to set unit properties: No such process
 Jul 31 10:32:56,lokeshwar-VirtualBox gnome-session-binary[2969]: GnomeDesktop-WARNING: Could not create transient scope for PID 3152: GDBus.Error:org.freedesktop.DBus.Error.UnixProcessIdUnknown: Failed to set unit properties: No such process
@@ -1891,7 +1891,7 @@ Jul 31 10:33:08,lokeshwar-VirtualBox gnome-shell[3010]: Registering session with
 Jul 31 10:33:08,lokeshwar-VirtualBox gnome-shell[2329]: Connection to xwayland lost
 Jul 31 10:33:08,lokeshwar-VirtualBox gnome-shell[2329]: Xwayland terminated, exiting since it was mandatory
 Jul 31 10:33:08,lokeshwar-VirtualBox gnome-shell[2329]: JS ERROR: Gio.IOErrorEnum: Xwayland exited unexpectedly
-2026-01-13 10:49:34,@resource:///org/gnome/shell/ui/init.js:21:20
+2026-01-13 12:08:47,@resource:///org/gnome/shell/ui/init.js:21:20
 Jul 31 10:33:08,lokeshwar-VirtualBox gdm-launch-environment][2232]: pam_unix(gdm-launch-environment:session): session closed for user gdm
 Jul 31 10:33:08,lokeshwar-VirtualBox gsd-media-keys[3131]: Failed to grab accelerator for keybinding settings:playback-repeat
 Jul 31 10:33:08,lokeshwar-VirtualBox gsd-media-keys[3131]: Failed to grab accelerator for keybinding settings:hibernate
@@ -1931,7 +1931,7 @@ Jul 31 10:33:12,lokeshwar-VirtualBox systemd[2754]: Starting xdg-desktop-portal-
 Jul 31 10:33:12,lokeshwar-VirtualBox vboxclient.desktop[3735]: 05:03:12.583479 main     VBoxClient 7.1.8 r168469 (verbosity: 0) linux.amd64 (Apr 11 2025 16:47:53) release log
 Jul 31 10:33:12,lokeshwar-VirtualBox vboxclient.desktop[3735]: 05:03:12.583490 main     Log opened 2025-07-31T05:03:12.580756000Z
 Jul 31 10:33:12,lokeshwar-VirtualBox kernel: 05:03:12.583479 main     VBoxClient 7.1.8 r168469 (verbosity: 0) linux.amd64 (Apr 11 2025 16:47:53) release log
-2026-01-13 10:49:34,05:03:12.583490
+2026-01-13 12:08:47,05:03:12.583490
 Jul 31 10:33:12,lokeshwar-VirtualBox kernel: 05:03:12.588148 main     OS Product: Linux
 Jul 31 10:33:12,lokeshwar-VirtualBox vboxclient.desktop[3735]: 05:03:12.588148 main     OS Product: Linux
 Jul 31 10:33:12,lokeshwar-VirtualBox kernel: 05:03:12.590052 main     OS Release: 6.14.0-24-generic
@@ -1939,8 +1939,8 @@ Jul 31 10:33:12,lokeshwar-VirtualBox vboxclient.desktop[3735]: 05:03:12.590052 m
 Jul 31 10:33:12,lokeshwar-VirtualBox kernel: 05:03:12.593093 main     OS Version: #24~24.04.3-Ubuntu SMP PREEMPT_DYNAMIC Mon Jul  7 16:39:17 UTC 2
 Jul 31 10:33:12,lokeshwar-VirtualBox vboxclient.desktop[3735]: 05:03:12.593093 main     OS Version: #24~24.04.3-Ubuntu SMP PREEMPT_DYNAMIC Mon Jul  7 16:39:17 UTC 2
 Jul 31 10:33:12,lokeshwar-VirtualBox kernel: 05:03:12.594719 main     Executable: /opt/VBoxGuestAdditions-7.1.8/bin/VBoxClient
-2026-01-13 10:49:34,05:03:12.594723 main     Process ID: 3735
-2026-01-13 10:49:34,05:
+2026-01-13 12:08:47,05:03:12.594723 main     Process ID: 3735
+2026-01-13 12:08:47,05:
 Jul 31 10:33:12,lokeshwar-VirtualBox kernel: 05:03:12.595324 main      VBoxClient 7.1.8 r168469 started. Verbose level = 0
 Jul 31 10:33:12,lokeshwar-VirtualBox vboxclient.desktop[3735]: 05:03:12.594719 main     Executable: /opt/VBoxGuestAdditions-7.1.8/bin/VBoxClient
 Jul 31 10:33:12,lokeshwar-VirtualBox vboxclient.desktop[3735]: 05:03:12.594723 main     Process ID: 3735
@@ -1968,14 +1968,14 @@ Jul 31 10:33:12,lokeshwar-VirtualBox vboxclient.desktop[3746]: 05:03:12.744125 m
 Jul 31 10:33:12,lokeshwar-VirtualBox vboxclient.desktop[3746]: 05:03:12.744129 main     Process ID: 3746
 Jul 31 10:33:12,lokeshwar-VirtualBox vboxclient.desktop[3746]: 05:03:12.744130 main     Package type: LINUX_64BITS_GENERIC
 Jul 31 10:33:12,lokeshwar-VirtualBox kernel: 05:03:12.706581 main     VBoxClient 7.1.8 r168469 (verbosity: 0) linux.amd64 (Apr 11 2025 16:47:53) release log
-2026-01-13 10:49:34,05:03:12.706586
+2026-01-13 12:08:47,05:03:12.706586
 Jul 31 10:33:12,lokeshwar-VirtualBox kernel: 05:03:12.737845 main     OS Product: Linux
 Jul 31 10:33:12,lokeshwar-VirtualBox kernel: 05:03:12.739790 main     OS Release: 6.14.0-24-generic
 Jul 31 10:33:12,lokeshwar-VirtualBox kernel: 05:03:12.741574 main     OS Version: #24~24.04.3-Ubuntu SMP PREEMPT_DYNAMIC Mon Jul  7 16:39:17 UTC 2
 Jul 31 10:33:12,lokeshwar-VirtualBox vboxclient.desktop[3746]: 05:03:12.759328 main      VBoxClient 7.1.8 r168469 started. Verbose level = 0
 Jul 31 10:33:12,lokeshwar-VirtualBox kernel: 05:03:12.744125 main     Executable: /opt/VBoxGuestAdditions-7.1.8/bin/VBoxClient
-2026-01-13 10:49:34,05:03:12.744129 main     Process ID: 3746
-2026-01-13 10:49:34,05:
+2026-01-13 12:08:47,05:03:12.744129 main     Process ID: 3746
+2026-01-13 12:08:47,05:
 Jul 31 10:33:12,lokeshwar-VirtualBox kernel: 05:03:12.759328 main      VBoxClient 7.1.8 r168469 started. Verbose level = 0
 Jul 31 10:33:12,lokeshwar-VirtualBox vboxclient.desktop[3746]: 05:03:12.760288 main      rtldrNativeLoad: dlopen('libwayland-client.so', RTLD_NOW | RTLD_LOCAL) failed: libwayland-client.so: cannot open shared object file: No such file or directory
 Jul 31 10:33:12,lokeshwar-VirtualBox vboxclient.desktop[3746]: 05:03:12.767653 main      rtldrNativeLoad: dlopen('libX11.so', RTLD_NOW | RTLD_LOCAL) failed: libX11.so: cannot open shared object file: No such file or directory
@@ -2001,13 +2001,13 @@ Jul 31 10:33:12,lokeshwar-VirtualBox kernel: 05:03:12.835027 main      Daemonizi
 Jul 31 10:33:12,lokeshwar-VirtualBox kernel: 05:03:12.842417 main      Initializing service ...
 Jul 31 10:33:12,lokeshwar-VirtualBox kernel: 05:03:12.842854 main      Service is not supported on this platform, skipping
 Jul 31 10:33:12,lokeshwar-VirtualBox kernel: 05:03:12.844251 main     VBoxClient 7.1.8 r168469 (verbosity: 0) linux.amd64 (Apr 11 2025 16:47:53) release log
-2026-01-13 10:49:34,05:03:12.844255
+2026-01-13 12:08:47,05:03:12.844255
 Jul 31 10:33:12,lokeshwar-VirtualBox kernel: 05:03:12.846874 main     OS Product: Linux
 Jul 31 10:33:12,lokeshwar-VirtualBox kernel: 05:03:12.847574 main     OS Release: 6.14.0-24-generic
 Jul 31 10:33:12,lokeshwar-VirtualBox kernel: 05:03:12.848372 main     OS Version: #24~24.04.3-Ubuntu SMP PREEMPT_DYNAMIC Mon Jul  7 16:39:17 UTC 2
 Jul 31 10:33:12,lokeshwar-VirtualBox kernel: 05:03:12.852315 main     Executable: /opt/VBoxGuestAdditions-7.1.8/bin/VBoxClient
-2026-01-13 10:49:34,05:03:12.852320 main     Process ID: 3754
-2026-01-13 10:49:34,05:
+2026-01-13 12:08:47,05:03:12.852320 main     Process ID: 3754
+2026-01-13 12:08:47,05:
 Jul 31 10:33:12,lokeshwar-VirtualBox kernel: 05:03:12.853413 main      VBoxClient 7.1.8 r168469 started. Verbose level = 0
 Jul 31 10:33:12,lokeshwar-VirtualBox kernel: 05:03:12.854087 main      rtldrNativeLoad: dlopen('libwayland-client.so', RTLD_NOW | RTLD_LOCAL) failed: libwayland-client.so:
 Jul 31 10:33:12,lokeshwar-VirtualBox vboxclient.desktop[3754]: 05:03:12.917823 main      Session type is: VBGHDISPLAYSERVERTYPE_XWAYLAND
@@ -2022,7 +2022,7 @@ Jul 31 10:33:12,lokeshwar-VirtualBox kernel: 05:03:12.959305 main      Service i
 Jul 31 10:33:12,lokeshwar-VirtualBox vboxclient.desktop[3760]: 05:03:12.966051 main     VBoxClient 7.1.8 r168469 (verbosity: 0) linux.amd64 (Apr 11 2025 16:47:53) release log
 Jul 31 10:33:12,lokeshwar-VirtualBox vboxclient.desktop[3760]: 05:03:12.966056 main     Log opened 2025-07-31T05:03:12.966036000Z
 Jul 31 10:33:12,lokeshwar-VirtualBox kernel: 05:03:12.966051 main     VBoxClient 7.1.8 r168469 (verbosity: 0) linux.amd64 (Apr 11 2025 16:47:53) release log
-2026-01-13 10:49:34,05:03:12.966056
+2026-01-13 12:08:47,05:03:12.966056
 Jul 31 10:33:12,lokeshwar-VirtualBox kernel: 05:03:12.967830 main     OS Product: Linux
 Jul 31 10:33:12,lokeshwar-VirtualBox kernel: 05:03:12.971347 main     OS Release: 6.14.0-24-generic
 Jul 31 10:33:12,lokeshwar-VirtualBox kernel: 05:03:12.971909 main     OS Version: #24~24.04.3-Ubuntu SMP PREEMPT_DYNAMIC Mon Jul  7 16:39:17 UTC 2
@@ -2033,8 +2033,8 @@ Jul 31 10:33:12,lokeshwar-VirtualBox vboxclient.desktop[3760]: 05:03:12.977951 m
 Jul 31 10:33:12,lokeshwar-VirtualBox vboxclient.desktop[3760]: 05:03:12.977955 main     Process ID: 3760
 Jul 31 10:33:12,lokeshwar-VirtualBox vboxclient.desktop[3760]: 05:03:12.977956 main     Package type: LINUX_64BITS_GENERIC
 Jul 31 10:33:12,lokeshwar-VirtualBox kernel: 05:03:12.977951 main     Executable: /opt/VBoxGuestAdditions-7.1.8/bin/VBoxClient
-2026-01-13 10:49:34,05:03:12.977955 main     Process ID: 3760
-2026-01-13 10:49:34,05:
+2026-01-13 12:08:47,05:03:12.977955 main     Process ID: 3760
+2026-01-13 12:08:47,05:
 Jul 31 10:33:12,lokeshwar-VirtualBox kernel: 05:03:12.991184 main      VBoxClient 7.1.8 r168469 started. Verbose level = 0
 Jul 31 10:33:12,lokeshwar-VirtualBox vboxclient.desktop[3760]: 05:03:12.991184 main      VBoxClient 7.1.8 r168469 started. Verbose level = 0
 Jul 31 10:33:12,lokeshwar-VirtualBox vboxclient.desktop[3760]: 05:03:12.992554 main      rtldrNativeLoad: dlopen('libwayland-client.so', RTLD_NOW | RTLD_LOCAL) failed: libwayland-client.so: cannot open shared object file: No such file or directory
@@ -2050,7 +2050,7 @@ Jul 31 10:33:13,lokeshwar-VirtualBox vboxclient.desktop[3760]: 05:03:13.013239 m
 Jul 31 10:33:13,lokeshwar-VirtualBox gnome-shell[3736]: libEGL warning: DRI3: Screen seems not DRI3 capable
 Jul 31 10:33:13,lokeshwar-VirtualBox gnome-shell[3736]: libEGL warning: DRI3: Screen seems not DRI3 capable
 Jul 31 10:33:13,lokeshwar-VirtualBox kernel: 05:03:13.122241 main     VBoxClient 7.1.8 r168469 (verbosity: 0) linux.amd64 (Apr 11 2025 16:47:53) release log
-2026-01-13 10:49:34,05:03:13.122246
+2026-01-13 12:08:47,05:03:13.122246
 Jul 31 10:33:13,lokeshwar-VirtualBox kernel: 05:03:13.124650 main      Service started
 Jul 31 10:33:13,lokeshwar-VirtualBox kernel: 05:03:13.130599 main      Creating worker thread ...
 Jul 31 10:33:13,lokeshwar-VirtualBox kernel: 05:03:13.135461 main      Service started
@@ -2069,8 +2069,8 @@ Jul 31 10:33:13,lokeshwar-VirtualBox kernel: 05:03:13.232865 main     OS Product
 Jul 31 10:33:13,lokeshwar-VirtualBox kernel: 05:03:13.234786 main     OS Release: 6.14.0-24-generic
 Jul 31 10:33:13,lokeshwar-VirtualBox kernel: 05:03:13.236347 main     OS Version: #24~24.04.3-Ubuntu SMP PREEMPT_DYNAMIC Mon Jul  7 16:39:17 UTC 2
 Jul 31 10:33:13,lokeshwar-VirtualBox kernel: 05:03:13.237232 main     Executable: /opt/VBoxGuestAdditions-7.1.8/bin/VBoxClient
-2026-01-13 10:49:34,05:03:13.237235 main     Process ID: 3764
-2026-01-13 10:49:34,05:
+2026-01-13 12:08:47,05:03:13.237235 main     Process ID: 3764
+2026-01-13 12:08:47,05:
 Jul 31 10:33:13,lokeshwar-VirtualBox kernel: 05:03:13.237900 main      VBoxClient 7.1.8 r168469 started. Verbose level = 0
 Jul 31 10:33:13,lokeshwar-VirtualBox kernel: 05:03:13.238570 main      rtldrNativeLoad: dlopen('libwayland-client.so', RTLD_NOW | RTLD_LOCAL) failed: libwayland-client.so:
 Jul 31 10:33:13,lokeshwar-VirtualBox kernel: 05:03:13.239891 main      rtldrNativeLoad: dlopen('libX11.so', RTLD_NOW | RTLD_LOCAL) failed: libX11.so: cannot open shared obj
@@ -2092,13 +2092,13 @@ Jul 31 10:33:13,lokeshwar-VirtualBox kernel: 05:03:13.455252 main     VBoxClient
 Jul 31 10:33:13,lokeshwar-VirtualBox systemd[1]: geoclue.service: Deactivated successfully.
 Jul 31 10:33:13,lokeshwar-VirtualBox gnome-shell[3736]: libEGL warning: egl: failed to create dri2 screen
 Jul 31 10:33:13,lokeshwar-VirtualBox kernel: 05:03:13.473696 main     VBoxClient 7.1.8 r168469 (verbosity: 0) linux.amd64 (Apr 11 2025 16:47:53) release log
-2026-01-13 10:49:34,05:03:13.473701
+2026-01-13 12:08:47,05:03:13.473701
 Jul 31 10:33:13,lokeshwar-VirtualBox kernel: 05:03:13.474502 main     OS Product: Linux
 Jul 31 10:33:13,lokeshwar-VirtualBox kernel: 05:03:13.475359 main     OS Release: 6.14.0-24-generic
 Jul 31 10:33:13,lokeshwar-VirtualBox kernel: 05:03:13.475638 main     OS Version: #24~24.04.3-Ubuntu SMP PREEMPT_DYNAMIC Mon Jul  7 16:39:17 UTC 2
 Jul 31 10:33:13,lokeshwar-VirtualBox kernel: 05:03:13.476353 main     Executable: /opt/VBoxGuestAdditions-7.1.8/bin/VBoxClient
-2026-01-13 10:49:34,05:03:13.476355 main     Process ID: 3778
-2026-01-13 10:49:34,05:
+2026-01-13 12:08:47,05:03:13.476355 main     Process ID: 3778
+2026-01-13 12:08:47,05:
 Jul 31 10:33:13,lokeshwar-VirtualBox kernel: 05:03:13.521231 main      VBoxClient 7.1.8 r168469 started. Verbose level = 0
 Jul 31 10:33:13,lokeshwar-VirtualBox kernel: 05:03:13.522529 main      rtldrNativeLoad: dlopen('libwayland-client.so', RTLD_NOW | RTLD_LOCAL) failed: libwayland-client.so:
 Jul 31 10:33:13,lokeshwar-VirtualBox kernel: 05:03:13.524012 main      rtldrNativeLoad: dlopen('libX11.so', RTLD_NOW | RTLD_LOCAL) failed: libX11.so: cannot open shared obj
@@ -2758,7 +2758,7 @@ Jul 31 10:43:30,lokeshwar-VirtualBox sudo[4361]: pam_unix(sudo:session): session
 2025-07-22T11:21:23.758042+05:30,lokeshwar-VirtualBox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by lokeshwar(uid=1000)
 2025-07-22T11:21:23.770760+05:30,lokeshwar-VirtualBox su[3936]: (to deepak) root on pts/1
 2025-07-22T11:21:23.818909+05:30,lokeshwar-VirtualBox su[3936]: pam_unix(su-l:session): session opened for user deepak(uid=1001) by lokeshwar(uid=0)
-2026-01-13 10:49:34,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              2025-07-23T13:02:32.206005+05:30 lokeshwar-VirtualBox systemd-logind[713]: New seat seat0.
+2026-01-13 12:08:47,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              2025-07-23T13:02:32.206005+05:30 lokeshwar-VirtualBox systemd-logind[713]: New seat seat0.
 2025-07-23T13:02:32.206011+05:30,lokeshwar-VirtualBox systemd-logind[713]: Watching system buttons on /dev/input/event0 (Power Button)
 2025-07-23T13:02:32.206015+05:30,lokeshwar-VirtualBox systemd-logind[713]: Watching system buttons on /dev/input/event1 (Sleep Button)
 2025-07-23T13:02:32.206041+05:30,lokeshwar-VirtualBox systemd-logind[713]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
@@ -11256,7 +11256,7 @@ Jul 31 10:43:30,lokeshwar-VirtualBox sudo[4361]: pam_unix(sudo:session): session
 2025-07-22T11:20:57.543407+05:30,lokeshwar-VirtualBox systemd[1]: update-notifier-download.service: Deactivated successfully.
 2025-07-22T11:20:57.543874+05:30,lokeshwar-VirtualBox systemd[1]: Finished update-notifier-download.service - Download data for packages that failed at package install time.
 2025-07-22T11:21:08.877991+05:30,lokeshwar-VirtualBox kernel: clocksource: Long readout interval, skipping watchdog check: cs_nsec: 4576905203 wd_nsec: 4576903675
-2026-01-13 10:49:34,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   2025-07-23T13:02:32.190174+05:30 lokeshwar-VirtualBox kernel: Linux version 6.14.0-24-generic (buildd@lcy02-amd64-010) (x86_64-linux-gnu-gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, GNU ld (GNU Binutils for Ubuntu) 2.42) #24~24.04.3-Ubuntu SMP PREEMPT_DYNAMIC Mon Jul  7 16:39:17 UTC 2 (Ubuntu 6.14.0-24.24~24.04.3-generic 6.14.6)
+2026-01-13 12:08:47,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   2025-07-23T13:02:32.190174+05:30 lokeshwar-VirtualBox kernel: Linux version 6.14.0-24-generic (buildd@lcy02-amd64-010) (x86_64-linux-gnu-gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, GNU ld (GNU Binutils for Ubuntu) 2.42) #24~24.04.3-Ubuntu SMP PREEMPT_DYNAMIC Mon Jul  7 16:39:17 UTC 2 (Ubuntu 6.14.0-24.24~24.04.3-generic 6.14.6)
 2025-07-23T13:02:32.190335+05:30,lokeshwar-VirtualBox kernel: Command line: BOOT_IMAGE=/boot/vmlinuz-6.14.0-24-generic root=UUID=bb8ce4b7-2af6-4496-aee7-7aab5227527b ro quiet splash
 2025-07-23T13:02:32.190339+05:30,lokeshwar-VirtualBox kernel: KERNEL supported cpus:
 2025-07-23T13:02:32.190340+05:30,lokeshwar-VirtualBox kernel:   Intel GenuineIntel
@@ -13728,7 +13728,7 @@ Jul 31 10:43:30,lokeshwar-VirtualBox sudo[4361]: pam_unix(sudo:session): session
 2025-07-23T13:06:38.911270+05:30,lokeshwar-VirtualBox gnome-shell[2866]: DING: ** Message: 13:06:38.909: Connecting to org.freedesktop.Tracker3.Miner.Files
 2025-07-23T13:06:38.933258+05:30,lokeshwar-VirtualBox gnome-shell[2866]: DING: GNOME nautilus 46.4
 2025-07-23T13:06:40.926532+05:30,lokeshwar-VirtualBox gnome-shell[2866]: Launching DING process
-2026-01-13 10:49:34,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           2025-07-23T13:08:14.923759+05:30 lokeshwar-VirtualBox systemd[1]: Mounted dev-hugepages.mount - Huge Pages File System.
+2026-01-13 12:08:47,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           2025-07-23T13:08:14.923759+05:30 lokeshwar-VirtualBox systemd[1]: Mounted dev-hugepages.mount - Huge Pages File System.
 2025-07-23T13:08:14.975907+05:30,lokeshwar-VirtualBox systemd[1]: Mounted dev-mqueue.mount - POSIX Message Queue File System.
 2025-07-23T13:08:14.975941+05:30,lokeshwar-VirtualBox systemd[1]: Mounted sys-kernel-debug.mount - Kernel Debug File System.
 2025-07-23T13:08:14.975947+05:30,lokeshwar-VirtualBox systemd[1]: Mounted sys-kernel-tracing.mount - Kernel Trace File System.
@@ -17762,7 +17762,7 @@ Jul 31 10:43:30,lokeshwar-VirtualBox sudo[4361]: pam_unix(sudo:session): session
 2025-07-25T15:58:45.682734+05:30,lokeshwar-VirtualBox tracker-miner-fs-3[3788]: (tracker-extract-3:3788): GLib-GIO-WARNING **: 15:58:45.674: Error creating IO channel for /proc/self/mountinfo: Invalid argument (g-io-error-quark, 13)
 2025-07-25T15:58:58.944913+05:30,lokeshwar-VirtualBox systemd[2635]: Started app-gnome-ubuntu\x2dadvantage\x2dnotification-3799.scope - Application launched by gnome-session-binary.
 2025-07-25T15:58:58.952328+05:30,lokeshwar-VirtualBox systemd[2635]: Started app-gnome-update\x2dnotifier-3794.scope - Application launched by gnome-session-binary.
-2026-01-13 10:49:34,                                                                                                                              2025-07-29T15:05:23.042266+05:30 lokeshwar-VirtualBox systemd[1]: modprobe@dm_mod.service: Deactivated successfully.
+2026-01-13 12:08:47,                                                                                                                              2025-07-29T15:05:23.042266+05:30 lokeshwar-VirtualBox systemd[1]: modprobe@dm_mod.service: Deactivated successfully.
 2025-07-29T15:05:23.090883+05:30,lokeshwar-VirtualBox systemd[1]: Finished modprobe@dm_mod.service - Load Kernel Module dm_mod.
 2025-07-29T15:05:23.091104+05:30,lokeshwar-VirtualBox systemd[1]: modprobe@drm.service: Deactivated successfully.
 2025-07-29T15:05:23.091114+05:30,lokeshwar-VirtualBox systemd[1]: Finished modprobe@drm.service - Load Kernel Module drm.
@@ -22693,7 +22693,7 @@ Jul 31 11:28:37,lokeshwar-VirtualBox sshd[4965]: pam_unix(sshd:auth): check pass
 Jul 31 11:28:40,lokeshwar-VirtualBox sshd[4965]: Failed password for invalid user ubuntu from 192.168.237.230 port 47550 ssh2
 Jul 31 11:28:40,lokeshwar-VirtualBox sshd[4965]: Connection closed by invalid user ubuntu 192.168.237.230 port 47550 [preauth]
 Jul 31 11:28:40,lokeshwar-VirtualBox sshd[4965]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.237.230
-2026-01-13 10:49:34,-- Boot c4ba08a7ab7e4383b5298d3f842cacac --
+2026-01-13 12:08:47,-- Boot c4ba08a7ab7e4383b5298d3f842cacac --
 Jul 31 11:40:14,lokeshwar-VirtualBox systemd[1]: Starting ssh.service - OpenBSD Secure Shell server...
 Jul 31 11:40:14,lokeshwar-VirtualBox sshd[3820]: Server listening on 0.0.0.0 port 22.
 Jul 31 11:40:14,lokeshwar-VirtualBox sshd[3820]: Server listening on :: port 22.
@@ -22708,12 +22708,12 @@ Jul 31 11:47:47,lokeshwar-VirtualBox sshd[4135]: pam_unix(sshd:session): session
 Jul 31 11:50:49,lokeshwar-VirtualBox sshd[4209]: Accepted password for lokeshwar from 192.168.237.72 port 54882 ssh2
 Jul 31 11:50:49,lokeshwar-VirtualBox sshd[4209]: pam_unix(sshd:session): session opened for user lokeshwar(uid=1000) by lokeshwar(uid=0)
 Jul 31 11:50:49,lokeshwar-VirtualBox sshd[4209]: pam_unix(sshd:session): session closed for user lokeshwar
-2026-01-13 10:49:34,-- Boot 672b4d38d7964cc38452dd5bb3b5d30f --
+2026-01-13 12:08:47,-- Boot 672b4d38d7964cc38452dd5bb3b5d30f --
 Jul 31 14:17:25,lokeshwar-VirtualBox systemd[1]: Starting ssh.service - OpenBSD Secure Shell server...
 Jul 31 14:17:26,lokeshwar-VirtualBox sshd[3960]: Server listening on 0.0.0.0 port 22.
 Jul 31 14:17:26,lokeshwar-VirtualBox sshd[3960]: Server listening on :: port 22.
 Jul 31 14:17:26,lokeshwar-VirtualBox systemd[1]: Started ssh.service - OpenBSD Secure Shell server.
-2026-01-13 10:49:34,-- Boot 0cab5cce4b324288a758f8eadd7c4d15 --
+2026-01-13 12:08:47,-- Boot 0cab5cce4b324288a758f8eadd7c4d15 --
 Jul 31 14:28:14,lokeshwar-VirtualBox systemd[1]: Starting ssh.service - OpenBSD Secure Shell server...
 Jul 31 14:28:15,lokeshwar-VirtualBox sshd[1066]: Server listening on 0.0.0.0 port 22.
 Jul 31 14:28:15,lokeshwar-VirtualBox sshd[1066]: Server listening on :: port 22.
@@ -22762,32 +22762,32 @@ Jul 31 15:06:52,lokeshwar-VirtualBox sshd[4256]: Connection closed by authentica
 Jul 31 15:06:52,lokeshwar-VirtualBox sshd[4256]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.195.66  user=lokeshwar
 Jul 31 15:14:04,lokeshwar-VirtualBox sshd[4396]: Accepted password for lokeshwar from 192.168.195.66 port 36686 ssh2
 Jul 31 15:14:04,lokeshwar-VirtualBox sshd[4396]: pam_unix(sshd:session): session opened for user lokeshwar(uid=1000) by lokeshwar(uid=0)
-2026-01-13 10:49:34,-- Boot d75328b2f4684596b1a2e20d02fce4d3 --
+2026-01-13 12:08:47,-- Boot d75328b2f4684596b1a2e20d02fce4d3 --
 Jul 31 19:04:58,lokeshwar-VirtualBox systemd[1]: Starting ssh.service - OpenBSD Secure Shell server...
 Jul 31 19:04:59,lokeshwar-VirtualBox sshd[1068]: Server listening on 0.0.0.0 port 22.
 Jul 31 19:04:59,lokeshwar-VirtualBox sshd[1068]: Server listening on :: port 22.
 Jul 31 19:04:59,lokeshwar-VirtualBox systemd[1]: Started ssh.service - OpenBSD Secure Shell server.
-2026-01-13 10:49:34,-- Boot a0c9b8d90a064d2a9bd58b5caece9cb2 --
+2026-01-13 12:08:47,-- Boot a0c9b8d90a064d2a9bd58b5caece9cb2 --
 Jul 31 20:42:16,lokeshwar-VirtualBox systemd[1]: Starting ssh.service - OpenBSD Secure Shell server...
 Jul 31 20:42:18,lokeshwar-VirtualBox sshd[1070]: Server listening on 0.0.0.0 port 22.
 Jul 31 20:42:18,lokeshwar-VirtualBox sshd[1070]: Server listening on :: port 22.
 Jul 31 20:42:18,lokeshwar-VirtualBox systemd[1]: Started ssh.service - OpenBSD Secure Shell server.
-2026-01-13 10:49:34,-- Boot d9e095742ced4432b34726042c42b2e8 --
+2026-01-13 12:08:47,-- Boot d9e095742ced4432b34726042c42b2e8 --
 Jul 31 20:49:09,lokeshwar-VirtualBox systemd[1]: Starting ssh.service - OpenBSD Secure Shell server...
 Jul 31 20:49:10,lokeshwar-VirtualBox sshd[1074]: Server listening on 0.0.0.0 port 22.
 Jul 31 20:49:10,lokeshwar-VirtualBox sshd[1074]: Server listening on :: port 22.
 Jul 31 20:49:10,lokeshwar-VirtualBox systemd[1]: Started ssh.service - OpenBSD Secure Shell server.
-2026-01-13 10:49:34,-- Boot 3fef9bddd1464ff795d504cd028b396b --
+2026-01-13 12:08:47,-- Boot 3fef9bddd1464ff795d504cd028b396b --
 Jul 31 20:56:55,lokeshwar-VirtualBox systemd[1]: Starting ssh.service - OpenBSD Secure Shell server...
 Jul 31 20:56:56,lokeshwar-VirtualBox sshd[1173]: Server listening on 0.0.0.0 port 22.
 Jul 31 20:56:56,lokeshwar-VirtualBox sshd[1173]: Server listening on :: port 22.
 Jul 31 20:56:56,lokeshwar-VirtualBox systemd[1]: Started ssh.service - OpenBSD Secure Shell server.
-2026-01-13 10:49:34,-- Boot c705b97b1e18461cbe6ae94aed0212a2 --
+2026-01-13 12:08:47,-- Boot c705b97b1e18461cbe6ae94aed0212a2 --
 Jul 31 21:02:13,lokeshwar-VirtualBox systemd[1]: Starting ssh.service - OpenBSD Secure Shell server...
 Jul 31 21:02:14,lokeshwar-VirtualBox sshd[1192]: Server listening on 0.0.0.0 port 22.
 Jul 31 21:02:14,lokeshwar-VirtualBox sshd[1192]: Server listening on :: port 22.
 Jul 31 21:02:14,lokeshwar-VirtualBox systemd[1]: Started ssh.service - OpenBSD Secure Shell server.
-2026-01-13 10:49:34,-- Boot 3bb09b0ac72d4d26841de936bb2f314d --
+2026-01-13 12:08:47,-- Boot 3bb09b0ac72d4d26841de936bb2f314d --
 Jul 31 21:05:49,lokeshwar-VirtualBox systemd[1]: Starting ssh.service - OpenBSD Secure Shell server...
 Jul 31 21:05:50,lokeshwar-VirtualBox sshd[1210]: Server listening on 0.0.0.0 port 22.
 Jul 31 21:05:50,lokeshwar-VirtualBox sshd[1210]: Server listening on :: port 22.
@@ -23892,12 +23892,12 @@ Jul 31 22:01:50,lokeshwar-VirtualBox sshd[4678]: Accepted password for lokeshwar
 Jul 31 22:01:50,lokeshwar-VirtualBox sshd[4678]: pam_unix(sshd:session): session opened for user lokeshwar(uid=1000) by lokeshwar(uid=0)
 Jul 31 22:03:49,lokeshwar-VirtualBox sshd[4746]: Accepted password for lokeshwar from 10.254.1.66 port 37440 ssh2
 Jul 31 22:03:49,lokeshwar-VirtualBox sshd[4746]: pam_unix(sshd:session): session opened for user lokeshwar(uid=1000) by lokeshwar(uid=0)
-2026-01-13 10:49:34,-- Boot 58ac5580f0a44f78b62321f497e156f4 --
+2026-01-13 12:08:47,-- Boot 58ac5580f0a44f78b62321f497e156f4 --
 Jul 31 22:09:43,lokeshwar-VirtualBox systemd[1]: Starting ssh.service - OpenBSD Secure Shell server...
 Jul 31 22:09:43,lokeshwar-VirtualBox sshd[1204]: Server listening on 0.0.0.0 port 22.
 Jul 31 22:09:43,lokeshwar-VirtualBox sshd[1204]: Server listening on :: port 22.
 Jul 31 22:09:43,lokeshwar-VirtualBox systemd[1]: Started ssh.service - OpenBSD Secure Shell server.
-2026-01-13 10:49:34,-- Boot 2b4aa2fa511f4c928c30cb2fd7481c1d --
+2026-01-13 12:08:47,-- Boot 2b4aa2fa511f4c928c30cb2fd7481c1d --
 Jul 31 22:19:23,lokeshwar-VirtualBox systemd[1]: Starting ssh.service - OpenBSD Secure Shell server...
 Jul 31 22:19:24,lokeshwar-VirtualBox sshd[1201]: Server listening on 0.0.0.0 port 22.
 Jul 31 22:19:24,lokeshwar-VirtualBox sshd[1201]: Server listening on :: port 22.
@@ -24262,7 +24262,7 @@ Jul 31 22:26:26,lokeshwar-VirtualBox sshd[3843]: pam_unix(sshd:session): session
 2025-10-15T10:09:18.134301+05:30,kali systemd-logind[599]: New session 4 of user lokeshwar.
 2025-10-15T10:09:19.154937+05:30,kali lightdm: gkr-pam: unlocked login keyring
 2025-10-15T10:09:28.959757+05:30,kali systemd-logind[599]: Removed session 1.
-2026-01-13 10:49:34,                                                                                                                                                                                                                                                     2025-10-15T12:06:03.209533+05:30 kali systemd-logind[602]: New seat seat0.
+2026-01-13 12:08:47,                                                                                                                                                                                                                                                     2025-10-15T12:06:03.209533+05:30 kali systemd-logind[602]: New seat seat0.
 2025-10-15T12:06:03.209542+05:30,kali systemd-logind[602]: Watching system buttons on /dev/input/event1 (Power Button)
 2025-10-15T12:06:03.209547+05:30,kali systemd-logind[602]: Watching system buttons on /dev/input/event2 (Sleep Button)
 2025-10-15T12:06:03.209551+05:30,kali systemd-logind[602]: Watching system buttons on /dev/input/event0 (AT Translated Set 2 keyboard)
@@ -25623,4 +25623,7 @@ Jul 31 22:26:26,lokeshwar-VirtualBox sshd[3843]: pam_unix(sshd:session): session
 2025-10-24T19:24:42.138182+05:30,kali-splunk sudo: pam_unix(sudo:session): session closed for user root
 2025-10-24T19:25:01.883569+05:30,kali-splunk CRON[11254]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
 2025-10-24T19:25:02.208694+05:30,kali-splunk CRON[11254]: pam_unix(cron:session): session closed for user root
-2026-01-13 12:00:08, INC-2026-0001, Analyst transitioned state to CLOSED
+2026-01-13 18:44:36, ALERT-001, Analyst transitioned state to ACKNOWLEDGED
+2026-01-13 18:50:53, ALERT-001, Analyst transitioned state to CLOSED
+2026-01-13 19:19:39, INC-2026-0002, INVESTIGATION NOTE: 192.168.56.2
+
